@@ -16,12 +16,12 @@ function validateNameInput(event){
     if(nameInputValue == '') return;
 
     if (nameInputValue.length < 2){
-        nameInputError.innerText = 'ERROR! Name should have atleast 2 characters';
+        nameInputError.innerText = 'Name should have atleast 2 characters';
     }else{
         nameInputError.innerText='';
     }
     if (nameInputValue.length > 15){
-        nameInputError.innerText = 'ERROR! Name should not have more than 15 characters';
+        nameInputError.innerText = 'Name should not have more than 15 characters';
     }
 }
 
@@ -39,11 +39,11 @@ function validateEmailInput(event){
 
     //should be required and throw error if empty
     if(emailInputValue == ''){
-        emailInputError.innerText = 'ERROR! Must enter email address';
+        emailInputError.innerText = 'Must enter email address';
     }
 
     if(!emailInputValue.match(mailformat)){
-        emailInputError.innerText = 'ERROR! Invalid email address';
+        emailInputError.innerText = 'Invalid email address';
     }else{
         emailInputError.innerText = '';
     }
@@ -61,7 +61,7 @@ function validatePasswordInput(event){
     var passwordInputError = document.getElementById('password-error');
 
     if(passwordInputValue == ''){
-       passwordInputError.innerText = 'ERROR! Must enter a new password';
+       passwordInputError.innerText = 'Must enter a new password';
     }
 
     if(passwordInputValue.length < 6){
@@ -80,7 +80,7 @@ function validateConfirmpasswordInput(event){
     var password = document.getElementById('password').value;
 
     if(confirmpasswordInputValue == ''){
-        confirmpasswordInputError.innerText = 'ERROR! Must enter a new password';
+        confirmpasswordInputError.innerText = 'Must enter a new password';
      }
 
     if(!confirmpasswordInputValue.match(password)){
@@ -88,4 +88,25 @@ function validateConfirmpasswordInput(event){
     }else{
         confirmpasswordInputError.innerText = '';
     }
+}
+
+
+
+var btnArrowUp = document.getElementById("btnArrowUp");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    btnArrowUp.style.display = "block";
+  } else {
+    btnArrowUp.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Hello World</h1>
+    <form>
+        <p><span>
+            <label for="name">Name:</label></span>
+            <input id="name" type="text" placeholder="Name"/>
+            <span id = "name-error" class="error"></span>
+        </p>
+        <p><span>
+            <label for="email">E-mail:</label></span>
+            <input id="email" type="text" placeholder="Email" required/>
+            <span id = "email-error" class="error"></span>
+        </p>
+        <p><span>
+            <label for="password">Password:</label></span>
+            <input id="password" type="password" placeholder="New password" required/>
+            <span id = "password-error" class="error"></span>
+        </p>
+        <p><span>
+            <label for="confirmpassword">Confirm Password:</label></span>
+            <input id="confirmpassword" type="password" placeholder="Confirm password" required/>
+            <span id = "confirmpassword-error" class="error"></span>
+        </p>
+        <p>
+            <span>
+            <button class ="button">Gå med</button></span>
+            <button class ="btnArrowUp">pil</button>
+        </p>
+    </form>
+</div>
+    <script src="main.js"></script>
+</body>
+</html>

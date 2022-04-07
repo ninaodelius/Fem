@@ -27,8 +27,9 @@ function validateNameInput(event){
 
 var emailInput = document.getElementById('email');
 
-emailInput.addEventListener('focus', validateEmailInput);
+//emailInput.addEventListener('focus', validateEmailInput);
 emailInput.addEventListener('blur', validateEmailInput);
+nameInput.addEventListener('input', validateEmailInput);
 
 function validateEmailInput(event){
     var emailInputValue = event.target.value;

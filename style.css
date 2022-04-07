@@ -55,11 +55,11 @@ border-color: red;
 
 .btnArrowUp {
     background-color: #F59467;
-    height: 40px;
-    width: 160px;
+    height: 80px;
+    width: 80px;
     border: none;
-    border-radius: 20px;
-    color: #444444;
+    border-radius: 40px;
+    color: #FFFFFF;
     text-align: center;
     font-size: 1.25rem;
     line-height: 1.5rem;

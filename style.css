@@ -9,23 +9,25 @@ body{
     background-image: url(./Images/Gradient\ background.png);
     background-repeat: no-repeat;
     background-size: auto;
+    background-position: center;
+    margin-top: 5%;
 
 }
 
 h2 {
-    width: 146px;
-    height: 80px;
-    margin: 0 104px 34px 79px;
     font-size: 70px;
     font-weight: 900;
-    line-height: 1.14;
-    display: flex;
-
 }
 .container {
     margin-top: 10rem;
-    text-align: center;
     display: flex;
+}
+
+.content {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
 }
 
 ::placeholder{

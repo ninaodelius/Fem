@@ -60,7 +60,7 @@ border-color: blue;
     line-height: 1.5rem;
     font-weight: 700;
     font-family: "Nunito", sans-serif;
-    transition: 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s;
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
@@ -70,12 +70,12 @@ border-color: blue;
   
 .button:hover {
     background-color: #F1A15F;
-    filter:drop-shadow(0px 5px 3px #999);
+   box-shadow: 0px 5px 3px #999;
   }
 
 .button:active {
     background-color: #FAEDE6;
-    filter:drop-shadow(0px 2px 2px #999);
+   box-shadow: 0px 2px 2px #999;
 }
 
 #btnArrowUp {
@@ -116,7 +116,7 @@ border-color: blue;
 #socialFooter{
     height:100px;
     display:inline-block;  
-    float:right;
+    float: right;
     position: relative;
     justify-content: end;
     display: flex;

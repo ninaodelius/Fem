@@ -88,3 +88,31 @@ border-color: blue;
     bottom: 0;
     
 }
+<<<<<<< HEAD
+=======
+
+#socialFooter{
+    height:100px;
+    display:inline-block;  
+    float:right;
+    position: relative;
+}
+
+#facebookLogo{
+    background-image: url(/Images/facebook\ icon.png);
+    background-repeat: no-repeat;
+    width: 50px;
+}
+
+#instagramLogo{
+    background-image: url(/Images/instagram\ icon.png);
+    background-repeat: no-repeat;
+    width: 50px;
+}
+
+#emailLogo{
+    background-image: url(/Images/email\ icon.png);
+    background-repeat: no-repeat;
+    width: 50px;
+}
+>>>>>>> 2a28f726cb95acc0aad1d0375d7cc1be5310269d

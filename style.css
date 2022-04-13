@@ -102,7 +102,9 @@ border-color: blue;
 
 #socialFooter{
     height:100px;
-    position:right;
+    display:inline-block;  
+    float:right;
+    position: relative;
 }
 
 #facebookLogo{

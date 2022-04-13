@@ -11,11 +11,25 @@ body{
     background-size: auto;
 
 }
-.container {
-    text-align: center;
-    display: block;
 
-    
+h2 {
+    width: 146px;
+    height: 80px;
+    margin: 0 104px 34px 79px;
+    object-fit: contain;
+    font-size: 70px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--text-body-black);
+}
+.container {
+    margin-top: 10rem;
+    text-align: center;
+    display: flex;
 }
 
 ::placeholder{
@@ -98,13 +112,18 @@ border-color: blue;
     position: fixed;
     bottom: 0;
     z-index: -1;
+    display: flex;
 }
 
 #socialFooter{
-    height:100px;
-    display:inline-block;  
-    float:right;
-    position: relative;
+    display: flex;
+    align-self: flex-end;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    width: 200px;
+    height: 200px;
+    bottom:0;
 }
 
 #facebookLogo{

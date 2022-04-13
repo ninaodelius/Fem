@@ -1,21 +1,11 @@
-*{
-    margin:0;
-    padding:0;
-}
-
 body{
     font-family: "Nunito", sans-serif;
     margin: 0px;
-    background-image: url(./Images/Gradient\ background.png);
-    background-repeat: no-repeat;
-    background-size: auto;
-
 }
 .container {
     text-align: center;
     display: block;
-
-    
+    grid-template-columns: 1fr;
 }
 
 ::placeholder{
@@ -72,7 +62,7 @@ border-color: blue;
     width: 80px;
     border: none;
     border-radius: 40px;
-    background-image: url(./Images/Arrow.png);
+    background-image: url(/Arrow.png);
     background-position: center;
     background-repeat: no-repeat;
     transition: 0.3s;
@@ -90,48 +80,11 @@ border-color: blue;
     background-color: #FAEDE6;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 #footer {
     background-image: url(/footer\ bg.png);
-=======
-#mainFooter {
-    background-image: url(./Images/footer\ bg.png);
->>>>>>> origin/nina
     width: 100%;
-    height: 30%;
     background-size: 100% 100%;
     position: fixed;
     bottom: 0;
-<<<<<<< HEAD
     
 }
->>>>>>> origin/nina
-=======
-    z-index: -1;
-}
-
-#socialFooter{
-    height:100px;
-    position:right;
-}
-
-#facebookLogo{
-    background-image: url(/Images/facebook\ icon.png);
-    background-repeat: no-repeat;
-    width: 50px;
-}
-
-#instagramLogo{
-    background-image: url(/Images/instagram\ icon.png);
-    background-repeat: no-repeat;
-    width: 50px;
-}
-
-#emailLogo{
-    background-image: url(/Images/email\ icon.png);
-    background-repeat: no-repeat;
-    width: 50px;
-}
->>>>>>> origin/nina

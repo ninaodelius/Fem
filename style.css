@@ -16,15 +16,11 @@ h2 {
     width: 146px;
     height: 80px;
     margin: 0 104px 34px 79px;
-    object-fit: contain;
     font-size: 70px;
     font-weight: 900;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 1.14;
-    letter-spacing: normal;
-    text-align: left;
-    color: var(--text-body-black);
+    display: flex;
+
 }
 .container {
     margin-top: 10rem;
@@ -124,12 +120,16 @@ border-color: blue;
     width: 200px;
     height: 200px;
     bottom:0;
+    font-weight: bold;
+    text-align:end;
+    
 }
 
 #facebookLogo{
     background-image: url(/Images/facebook\ icon.png);
     background-repeat: no-repeat;
     width: 50px;
+
 }
 
 #instagramLogo{

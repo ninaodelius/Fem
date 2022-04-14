@@ -137,8 +137,19 @@ border-color: blue;
 }
 
 #emailLogo{
+}
+
+.emailText{
+    width: 109px;
+  height: 38px;
+  flex-grow: 0;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.29;
+  text-align: left;
 
 }
+
 
 .menteeOrMentorCard{
     background-color: #686464;
@@ -179,6 +190,7 @@ border-color: blue;
     border-radius: 10px;
     font-size:14pt;
     line-height: 1.4;
+    padding-left: 32px; 
   }
 
   #password{
@@ -188,6 +200,7 @@ border-color: blue;
     border-radius: 10px;
     font-size:14pt;
     line-height: 1.4;
+    padding-left: 32px; 
   }
 
   .checkbox{

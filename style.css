@@ -159,3 +159,38 @@ border-color: blue;
   #women3{
       
   }
+
+  .bliMedlem{
+    color: #826ac5;
+    font-weight: 900;
+    font-size: 24px;
+  }
+
+  .glmtLsenord{
+    color: #826ac5;
+    font-weight: 900;
+    font-size: 14px;
+  }
+
+  #email{
+    width: 353px;
+    height: 40px;
+    border:#fcbd8a;
+    border-radius: 10px;
+    font-size:14pt;
+    line-height: 1.4;
+  }
+
+  #password{
+    width: 353px;
+    height: 40px;
+    border:#fcbd8a;
+    border-radius: 10px;
+    font-size:14pt;
+    line-height: 1.4;
+  }
+
+  .checkbox{
+      width: 24px;
+      height: 24px;
+  }

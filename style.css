@@ -10,7 +10,8 @@ body{
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center;
-    margin-top: 5%;
+    
+    margin-top: 20%;
 
 }
 
@@ -142,8 +143,19 @@ border-color: blue;
 }
 
 #emailLogo{
+}
+
+.emailText{
+    width: 109px;
+  height: 38px;
+  flex-grow: 0;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.29;
+  text-align: left;
 
 }
+
 
 .menteeOrMentorCard{
     background-color: #686464;
@@ -163,4 +175,41 @@ border-color: blue;
   }
   #women3{
       
+  }
+
+  .bliMedlem{
+    color: #826ac5;
+    font-weight: 900;
+    font-size: 24px;
+  }
+
+  .glmtLsenord{
+    color: #826ac5;
+    font-weight: 900;
+    font-size: 14px;
+  }
+
+  #email{
+    width: 353px;
+    height: 40px;
+    border:#fcbd8a;
+    border-radius: 10px;
+    font-size:14pt;
+    line-height: 1.4;
+    padding-left: 32px; 
+  }
+
+  #password{
+    width: 353px;
+    height: 40px;
+    border:#fcbd8a;
+    border-radius: 10px;
+    font-size:14pt;
+    line-height: 1.4;
+    padding-left: 32px; 
+  }
+
+  .checkbox{
+      width: 24px;
+      height: 24px;
   }

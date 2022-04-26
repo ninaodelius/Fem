@@ -13,4 +13,25 @@ a {
 
 * {
   box-sizing: border-box;
-}
+    --white: #FFFFFF;
+    --mandarin: #F59467;
+    --dark-black: #000000;
+    --purple: #826AC5;
+    --light-beige: #FFF9F3;
+    --navy-dark: #374146;
+    --grey25: #DDDDDD;
+    --grey50: #999999;
+    --light-orange: #FCBD8A;
+    --purple-blue: #758EE7;
+    --forrest-green: #5FAA5D;
+    --violet: #7879F1;
+    --happy-orange: #F1A15F;
+    --dark-orange: #DB794E;
+    --light-purple: #B3A5DB;
+    --info: #2DAEC8;
+    --message: #F3C33C;
+    --error: #FD7747;
+    --success: #2EAE69;
+    --warning: #E13B43;
+  }
+

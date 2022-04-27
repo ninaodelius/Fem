@@ -1,5 +1,5 @@
 {
-  "name": "weme",
+  "name": "weme-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,12 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "^12.1.5",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "next": "12.1.5",
+    "react": "18.0.0",
+    "react-dom": "18.0.0"
   },
   "devDependencies": {
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.5"
   }
 }
+

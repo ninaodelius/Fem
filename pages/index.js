@@ -16,7 +16,7 @@ const handleClick = () => {
 
   return (
   <>
-    <Link href="/sign-in.jsx" passHref><Button />e</Link>
+    <Link href="/sign-in.jsx" passHref><Button /></Link>
     <Button disabled={false}>Nina hej</Button>
     <Link href="/sign-in.jsx">Sign in</Link>
     <br></br>

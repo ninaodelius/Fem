@@ -20,7 +20,7 @@ const handleClick = () => {
     <Button disabled={false}>Nina hej</Button>
     <Link href='auth/sign-in' passHref>Sign in</Link>
     <br></br>
-    <Link href="/sign-up.jsx">Robins shit</Link>
+    <Link href="auth/sign-up">Robins shit</Link>
     
   </>
   )

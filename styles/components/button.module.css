@@ -1,0 +1,31 @@
+.btn-container{
+    background-color: #fff;
+}
+
+.btn{
+    background-color: #FCBD8A;
+    height: 2.5rem;
+    width: 10rem;
+    border: none;
+    border-radius: 1.25rem;
+    color: #444444;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    font-family: 'Nunito';
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: (0px 2px 4px #999);
+}
+.btn:hover{
+    background-color: var(--happy-orange);
+    
+}
+
+.btn:disabled {
+    pointer-events: none;
+    background-color: #999;
+}

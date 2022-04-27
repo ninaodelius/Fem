@@ -27,4 +27,5 @@
 
 .btn:disabled {
     pointer-events: none;
+    background-color: #999;
 }

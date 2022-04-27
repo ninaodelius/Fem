@@ -3,8 +3,9 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Button from '../components/button.jsx'
 
+
 export default function Home() {
   return (
-    <Button>Logga in</Button>
+    <Button disabled={false}>Logga in</Button>
   )
 }

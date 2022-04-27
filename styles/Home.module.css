@@ -108,6 +108,10 @@
   margin-left: 0.5rem;
 }
 
+.btn:disabled{
+  pointer-events: none;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

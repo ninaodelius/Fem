@@ -1,12 +1,10 @@
 import styles from '../styles/components/button.module.css'
 import React, { useState } from 'react';
 
-export default function Button({children}){
-    const [isActive, setIsActive] = useState(null);
+export default function Button({children, disabled}){
     return (
-        <div className='btn-container'>
-            <button className={styles.btn} disabled={!isActive}>{children}</button>
-        </div>
+            <button className={styles.btn} disabled={disabled} >{children}</button>
+       
         
     )
 }

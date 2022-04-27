@@ -39,4 +39,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 >>>>>>> d5c8b82816e6d910227d78b58549cc31672b4d39
 =======
 >>>>>>> cc9da3ab2fe87387b2bdd0d9b2fd1cf057a32787
+<<<<<<< HEAD
 >>>>>>> 3d41483aa24e2f46d331439e66ac68eadf622ad5
+=======
+>>>>>>> origin
+>>>>>>> 25d554a4ad37cab9798a3f39ced044aad2044722

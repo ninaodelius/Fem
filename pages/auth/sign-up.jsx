@@ -11,7 +11,7 @@ export default function SignUp(){
   
   return (
     <>
-    <Button disabled={false}>Robins shit</Button>
+    <p>Här händer det grejer!</p>
     </>
   )
 }

@@ -1,4 +1,4 @@
-.login-form {
+.loginform {
     padding-top: 100px;
     display: flex;
       text-align: center;
@@ -6,14 +6,12 @@
       gap: 20px;
       min-height: 100vh;
       font-family: 'Nunito';
-      background-image: url("./images/background.png");
+      /*background-image: url("./images/background.png");*/
       background-repeat: no-repeat;
       background-position: center;
     }
     
-    input[type="email"],
-    input[type="text"],
-    input[type="password"] {
+    .input{
       font-family: 'Nunito';
       height: 40px;
       width: 353px;
@@ -23,16 +21,16 @@
       padding-left: 32px;
       border-radius: 5px;
     }
-    form{
+    .form{
       margin-bottom: 300px;
   }
     
-    .button-container {
+    .buttoncontainer {
       display: flex;
       justify-content: center;
       margin-bottom: 40px;
     }
-    .checkbox-container{
+    .checkboxcontainer{
       font-size: 14px;
       margin-top: 0px;
       margin-bottom: 109px;
@@ -41,11 +39,11 @@
       justify-content: center;
     }
   
-    .checkbox-container p{
+    .checkboxcontainer p{
       margin-left: 120px;
       color: #826ac5;
     }
-    h2{
+    .h2{
       color: #826ac5;
     }
    

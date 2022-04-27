@@ -1,4 +1,5 @@
-import Button from "../../components/button"
+import Button from "../../components/button";
+import Style from "../../styles/sign-in.css";
 
 export default function SignIn(){
     return(

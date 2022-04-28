@@ -32,9 +32,9 @@ export default function SignUpTwo() {
            </label>
           </div>
           <div className='button-container'>
-            <Link to= '/mentor'><Button>Nästa</Button></Link>
           </div>
          </form>
+         
       </div>
   )
 }

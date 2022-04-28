@@ -1,29 +1,32 @@
-import Button from "../../components/button"
+import Button from '../../components/button'
+import styles from '/styles/auth/signin.module.css'
+import Link from 'next/link'
 
 export default function SignIn(){
     return(
-        <div className='login-form'>
-            <div className='title1'>WEME</div>
-                <div className='form'>
-                <form>
-                <div className='input-container'>
+        <div className={styles.loginform}>
+            <div className={styles.title1}>WEME</div>
+                <div className={styles.form}>
+                <form className={styles.form}>
+                <div className={styles.inputcontainer}>
                     <label>
-                    <input type="email" name="email" placeholder="E-mail"/>
+                    <input className={styles.input} type="email" name="email" placeholder="E-mail"/>
                     </label> 
                 </div>
-                <div className='input-container'>
+                <div className={styles.inputcontainer}>
                 <label>
-                    <input type="text" name="password" placeholder="Lösenord" />
+                    <input className={styles.input} type="text" name="password" placeholder="Lösenord" />
                 </label>
                 </div>
-                <div className="checkbox-container">
+                <div className={styles.checkboxcontainer}>
                 <input type="checkbox" id="remember" name="remember" value="Kom ihåg mig!"></input>
                 <label for="remember"> Kom ihåg mig?</label>
-                <p>Glömt lösenord?</p>
+                <Link href="/auth/forgot-password"><a className={styles.link}>Glömt lösenord?</a></Link>
                 </div>
-                <div className='button-container'>
+                <div className={styles.buttoncontainer}>
                     <Button>Logga in</Button>
                 </div>
+                <Link href="/auth/sign-up"><a className={styles.link}>Bli medlem</a></Link>
                 </form>
         </div>
 </div>

@@ -21,12 +21,12 @@ export default function SignIn(){
                 <div className={styles.checkboxcontainer}>
                 <input type="checkbox" id="remember" name="remember" value="Kom ihåg mig!"></input>
                 <label for="remember"> Kom ihåg mig?</label>
-                <p>Glömt lösenord?</p>
+                <Link href="/auth/forgot-password"><a className={styles.link}>Glömt lösenord?</a></Link>
                 </div>
                 <div className={styles.buttoncontainer}>
                     <Button>Logga in</Button>
                 </div>
-                <Link href="/auth/sign-up">Bli medlem</Link>
+                <Link href="/auth/sign-up"><a className={styles.link}>Bli medlem</a></Link>
                 </form>
         </div>
 </div>

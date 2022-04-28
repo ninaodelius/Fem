@@ -66,9 +66,15 @@
       color: #444444;
     }
     
-    .input-container {
+    .inputcontainer {
       display: flex;
       flex-direction: column;
       gap: 8px;
       margin: 10px;
+    }
+    .link{
+      color: var(--purple)
+    }
+    .link:hover{
+      color: #999999;
     }

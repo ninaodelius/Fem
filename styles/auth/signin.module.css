@@ -1,3 +1,10 @@
+.password-toggle-icon{
+  display:flex;
+  position: inherit;
+  z-index: 100;
+  cursor: pointer;
+}
+
 .loginform {
     padding-top: 100px;
     display: flex;
@@ -57,6 +64,8 @@
     }
     
     .title1 {
+      display:flex;
+      text-align: center;
       font-size: 70px;
       height: 80px;
       font-family: "Nunito";
@@ -66,15 +75,10 @@
       color: #444444;
     }
     
-    .inputcontainer {
+    .input-container {
       display: flex;
       flex-direction: column;
       gap: 8px;
       margin: 10px;
     }
-    .link{
-      color: var(--purple)
-    }
-    .link:hover{
-      color: #999999;
-    }
+

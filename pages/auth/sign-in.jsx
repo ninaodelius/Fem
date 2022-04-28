@@ -1,5 +1,6 @@
 import Button from '../../components/button'
 import styles from '/styles/auth/signin.module.css'
+import Link from 'next/link'
 
 export default function SignIn(){
     return(
@@ -25,6 +26,7 @@ export default function SignIn(){
                 <div className={styles.buttoncontainer}>
                     <Button>Logga in</Button>
                 </div>
+                <Link href="/auth/sign-up">Bli medlem</Link>
                 </form>
         </div>
 </div>

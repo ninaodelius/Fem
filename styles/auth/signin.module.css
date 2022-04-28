@@ -72,9 +72,9 @@
       gap: 8px;
       margin: 10px;
     }
-    .member{
+    .link{
       color: var(--purple)
     }
-    .member:hover{
+    .link:hover{
       color: #999999;
     }

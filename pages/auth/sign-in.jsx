@@ -26,7 +26,7 @@ export default function SignIn(){
                 <div className={styles.buttoncontainer}>
                     <Button>Logga in</Button>
                 </div>
-                <Link href="/auth/sign-up">Bli medlem</Link>
+                <Link href="/auth/sign-up"><a className={styles.link}>Bli medlem</a></Link>
                 </form>
         </div>
 </div>

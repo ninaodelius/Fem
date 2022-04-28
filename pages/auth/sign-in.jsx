@@ -18,11 +18,11 @@ const SignIn = () => {
                 <form className={styles.form}>
                 <div className={styles.inputcontainer}>
                     <label>
-                    <input className={styles.input} type="text" name="email" placeholder="E-mail" required/>
+                    <input className={styles.input} type="email" name="email" placeholder="E-mail" required/><span id = "email-error" class="error"></span>
                     </label> 
                 </div>
                 <div className={styles.inputcontainer}>
-                    <input className={styles.input} placeholder="Lösenord" type={showPassword ? "text" : "password"}  />
+                    <input className={styles.input} placeholder="Lösenord" type={showPassword ? "text" : "password"}  required/>
                     <span className="password-toggle-icon" onClick={() => setShowPassword(showPassword => !showPassword)}>{showPassword ? <VisibilityIcon/> : <VisibilityOffIcon/>}</span>
                 </div>
                 <div className={styles.checkboxcontainer}>

@@ -1,6 +1,6 @@
 .password-toggle-icon{
   display:flex;
-  position: absolute;
+  position: inherit;
   z-index: 100;
   cursor: pointer;
 }
@@ -64,6 +64,8 @@
     }
     
     .title1 {
+      display:flex;
+      text-align: center;
       font-size: 70px;
       height: 80px;
       font-family: "Nunito";

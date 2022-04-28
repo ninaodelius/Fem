@@ -1,3 +1,11 @@
+.password-toggle-icon{
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
 .loginform {
     padding-top: 100px;
     display: flex;
@@ -72,3 +80,4 @@
       gap: 8px;
       margin: 10px;
     }
+

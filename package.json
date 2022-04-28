@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@svgr/webpack": "^6.2.1",
     "next": "12.1.5",
+    "next-images": "^1.8.4",
     "react": "18.0.0",
     "react-dom": "18.0.0"
   },
@@ -18,4 +20,3 @@
     "eslint-config-next": "12.1.5"
   }
 }
-

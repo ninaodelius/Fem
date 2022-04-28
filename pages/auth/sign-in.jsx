@@ -21,7 +21,7 @@ export default function SignIn(){
                 <div className={styles.checkboxcontainer}>
                 <input type="checkbox" id="remember" name="remember" value="Kom ihåg mig!"></input>
                 <label for="remember"> Kom ihåg mig?</label>
-                <p>Glömt lösenord?</p>
+                <Link href="/auth/forgot-password"><a className={styles.link}>Glömt lösenord?</a></Link>
                 </div>
                 <div className={styles.buttoncontainer}>
                     <Button>Logga in</Button>

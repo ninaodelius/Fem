@@ -31,7 +31,7 @@ export default function SignUpOne() {
           <label for="remember"> lorem ipsum</label>
         </div>
           <div className='button-container'>
-            <Link href= '/about' passHref><Button /></Link>
+            <Link href= '/sign-up-step2' passHref><Button /></Link>
           </div>
          </form>
       </div>

@@ -1,5 +1,10 @@
+import styles from '../styles/components/buttonround.module.css'
+
 export default function buttonround(){
-        return (
-            <button className="btn-round"><img src={Arrow} /></button>
-          ) 
+
+  return (
+    <button className={styles.btnround}></button>
+  ) 
+
 }
+

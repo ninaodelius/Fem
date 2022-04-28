@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import Button from '../components/button.jsx'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import Buttonround from '../components/button-round'
+import Buttonround from '../components/button-round.jsx' 
 
 
 
@@ -24,6 +24,7 @@ const handleClick = () => {
     <br></br>
     <Link href="auth/sign-up">Robins shit</Link>
     <Buttonround> <Link href="forgot-password"></Link></Buttonround>
+
   </>
   )
 }

@@ -18,14 +18,12 @@ const SignIn = () => {
                 <form className={styles.form}>
                 <div className={styles.inputcontainer}>
                     <label>
-                    <input className={styles.input} type="email" name="email" placeholder="E-mail"/>
+                    <input className={styles.input} type="text" name="email" placeholder="E-mail" required/>
                     </label> 
                 </div>
                 <div className={styles.inputcontainer}>
-                    
                     <input className={styles.input} placeholder="Lösenord" type={showPassword ? "text" : "password"}  />
                     <span className="password-toggle-icon" onClick={() => setShowPassword(showPassword => !showPassword)}>{showPassword ? <VisibilityIcon/> : <VisibilityOffIcon/>}</span>
-                
                 </div>
                 <div className={styles.checkboxcontainer}>
                 <input type="checkbox" id="remember" name="remember" value="Kom ihåg mig!"></input>
@@ -33,7 +31,7 @@ const SignIn = () => {
                 <p>Glömt lösenord?</p>
                 </div>
                 <div className={styles.buttoncontainer}>
-                    <Button disabled={disabledButton}>Logga in</Button>
+                    <Button >Logga in</Button>
                 </div>
                 <Link href="/auth/sign-up">Bli medlem</Link>
                 </form>

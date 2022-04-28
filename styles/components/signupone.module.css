@@ -1,0 +1,6 @@
+.link{
+    color: var(--purple)
+  }
+  .link:hover{
+    color: #999999;
+  }

@@ -1,0 +1,8 @@
+.scrollmenu{
+    background-color: var(--white);
+    width: 640px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+    margin-bottom: 30px;
+}

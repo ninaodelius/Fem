@@ -2,7 +2,7 @@ import Post from "../components/post"
 import styles from '/styles/feed.module.css'
 import List from "../components/list"
 import Searchbar from "../components/searchbar"
-
+import Scrollbar from "../components/scrollbar-tags"
 
 export default function Feed(){
     return(
@@ -13,7 +13,7 @@ export default function Feed(){
             <div className={styles.right}></div></div>
         <div className={styles.content}>
             <div className={styles.left}><List/></div>
-            <div className={styles.center}><Post /></div>
+            <div className={styles.center}><Scrollbar/><Post /></div>
             <div className={styles.right}></div>
         </div>
         </>

@@ -101,3 +101,8 @@
       color: #999999;
     }
 
+.box{
+  height: 210px;
+  width: 120px;
+  background-color: var(--happy-orange);
+}

@@ -28,6 +28,16 @@
       padding-left: 32px;
       border-radius: 5px;
     }
+    .formcontrol{
+      font-family: 'Nunito';
+      height: 40px;
+      width: 353px;
+      border: 1px solid #fcbd8a;
+      margin-top: 10px;
+      background-color:aliceblue;
+      padding-left: 32px;
+      border-radius: 5px;
+    }
     .form{
       margin-bottom: 300px;
   }
@@ -75,10 +85,19 @@
       color: #444444;
     }
     
-    .input-container {
+    .inputcontainer {
       display: flex;
       flex-direction: column;
       gap: 8px;
       margin: 10px;
+
+      
+    }
+
+    .link{
+      color: var(--purple)
+    }
+    .link:hover{
+      color: #999999;
     }
 

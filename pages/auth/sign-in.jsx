@@ -2,9 +2,9 @@ import Button from '../../components/button'
 import styles from '/styles/auth/signin.module.css'
 import Link from 'next/link'
 import usePasswordToggle from '../../hooks/usePassWordToggle.js'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
+ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
 import React, { useState, useEffect } from "react"
-import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityIcon from '@mui/icons-material/Visibility'
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'
 
 

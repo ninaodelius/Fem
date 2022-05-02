@@ -70,7 +70,7 @@ const SignIn = () => {
                 </div>
                 <div className={styles.checkboxcontainer}>
                 <input type="checkbox" id="remember" name="remember" value="Kom ihåg mig!"></input>
-                <label for="remember"> Kom ihåg mig?</label>
+                <label htmlFor="remember"> Kom ihåg mig?</label>
                 <Link href="/auth/forgot-password"><a className={styles.link}>Glömt lösenord?</a></Link>
                 </div>
                 <div className={styles.buttoncontainer}>

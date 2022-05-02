@@ -93,18 +93,16 @@
 
       
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/main
     .link{
       color: var(--purple)
     }
     .link:hover{
       color: #999999;
-<<<<<<< HEAD
-    }
-=======
     }
 
->>>>>>> origin/main
+.box{
+  height: 210px;
+  width: 120px;
+  background-color: var(--happy-orange);
+}

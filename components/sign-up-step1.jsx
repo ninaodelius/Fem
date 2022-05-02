@@ -1,5 +1,6 @@
 import Button from '../components/button.jsx'
 import Link from 'next/dist/client/link'
+<<<<<<< HEAD
 import { useState } from "react"
 
 export default function SignUpOne() {
@@ -15,8 +16,22 @@ export default function SignUpOne() {
         <div className='login-form'>
     <div className='title'>Skapa konto!</div>
     <div className='form'>
+=======
+import styles from '/styles/components/signupone.module.css'
+import SignUpTwo from '../components/sign-up-step2'
+import {React, useState} from 'react'
+export default function SignUpOne() {
+    const [nextStep, setNextStep] = useState(false)
+   const toggleView = () =>{
+      setNextStep(nextStep => !nextStep)
+    }
+    const form = (
+    <div className={styles.loginform}>
+        <h1 className='title'>Skapa konto!</h1>
+        <div className={styles.form}>
+>>>>>>> origin/main
          <form>
-         <div className='input-container'>
+         <div className={styles.inputcontainer}>
             <label>
               <input type="text"
                name="name" 
@@ -26,7 +41,7 @@ export default function SignUpOne() {
                 />
             </label> 
           </div>
-        <div className='input-container'>
+        <div className={styles.inputcontainer}>
             <label>
               <input type="text"
                name="lastname" 
@@ -36,7 +51,7 @@ export default function SignUpOne() {
                 />
             </label> 
           </div>
-        <div className='input-container'>
+        <div className={styles.inputcontainer}>
             <label>
               <input type="email"
                name="email"
@@ -46,7 +61,7 @@ export default function SignUpOne() {
                   />
             </label> 
           </div>
-          <div className='input-container'>
+          <div className={styles.inputcontainer}>
            <label>
              <input type="text" 
              name="password"
@@ -56,15 +71,24 @@ export default function SignUpOne() {
               />
            </label>
           </div>
-        <div className="checkbox-container">
-          <input type="checkbox" id="remember" name="remember" value="Kom ihåg mig!"></input>
-          <label for="remember"> lorem ipsum</label>
+        <div className={styles.checkboxcontainer}>
+          <input type="checkbox" id="terms" name="terms"></input>
+          <label htmlFor="terms">Härmed godkänner jag WEMEs<Link href= '/auth/terms' passHref><a className={styles.link}>villkor</a></Link></label>
         </div>
-          <div className='button-container'>
-            <Link href= '/about' passHref><Button /></Link>
+          <div className={styles.buttoncontainer}>
+          <Button><button onClick={toggleView}>Gå vidare</button></Button>
           </div>
          </form>
       </div>
 	  </div>
+    )
+
+   
+
+
+    return(
+        <div>
+             {nextStep ? <SignUpTwo /> : form}
+        </div>
     )
 }

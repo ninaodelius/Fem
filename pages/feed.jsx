@@ -4,7 +4,7 @@ import List from "../components/list"
 import Searchbar from "../components/searchbar"
 
 
-export default function(){
+export default function Feed(){
     return(
         <>
         <div className={styles.header}>

@@ -33,7 +33,7 @@ export default function SignUpTwo() {
           </div>
         <div className={styles.checkboxcontainer}>
           <input type="checkbox" id="terms" name="terms"></input>
-          <label for="terms">Härmed godkänner jag WEMEs<Link href= '/auth/terms' passHref><a className={styles.link}>villkor</a></Link></label>
+          <label htmlFor="terms">Härmed godkänner jag WEMEs<Link href= '/auth/terms' passHref><a className={styles.link}>villkor</a></Link></label>
         </div>
           <div className={styles.buttoncontainer}>
           <button onClick={() => setNextStep(nextStep => !nextStep)}>Gå vidare</button>

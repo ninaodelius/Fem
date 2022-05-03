@@ -13,9 +13,10 @@
       gap: 20px;
       min-height: 100vh;
       font-family: 'Nunito';
-      /*background-image: url("./images/background.png");*/
+      background-image: url("/public/background.png");
       background-repeat: no-repeat;
       background-position: center;
+      flex-direction: column;
     }
     
     .input{
@@ -29,14 +30,13 @@
       border-radius: 5px;
     }
     .formcontrol{
-      font-family: 'Nunito';
-      height: 40px;
       width: 353px;
-      border: 1px solid #fcbd8a;
-      margin-top: 10px;
-      background-color:aliceblue;
-      padding-left: 32px;
-      border-radius: 5px;
+      height: 40px;
+      border:#fcbd8a;
+      border-radius: 10px;
+      font-size:14pt;
+      line-height: 1.4;
+      padding-left: 32px; 
     }
     .form{
       margin-bottom: 300px;
@@ -46,6 +46,7 @@
       display: flex;
       justify-content: center;
       margin-bottom: 40px;
+      margin-top: 40px;
     }
     .checkboxcontainer{
       font-size: 14px;
@@ -57,8 +58,8 @@
     }
   
     .checkboxcontainer p{
-      margin-left: 120px;
       color: #826ac5;
+      align-content: space-between;
     }
     .h2{
       color: #826ac5;
@@ -76,6 +77,7 @@
     .title1 {
       display:flex;
       text-align: center;
+      justify-content: center;
       font-size: 70px;
       height: 80px;
       font-family: "Nunito";
@@ -86,18 +88,12 @@
     }
     
     .inputcontainer {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin: 10px;
 
-      
     }
 
     .link{
-      color: var(--purple)
+      color: var(--purple);
     }
     .link:hover{
       color: #999999;
     }
-

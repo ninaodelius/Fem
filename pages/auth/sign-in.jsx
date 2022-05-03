@@ -10,6 +10,7 @@ import * as Yup from 'yup';
 
 
 const SignIn = () => {
+
     const [showPassword, setShowPassword] = useState(false)
     const [disabledButton, setDisabledButton] = useState(true)
 
@@ -27,18 +28,40 @@ const SignIn = () => {
     const { register, handleSubmit, reset, formState } = useForm(formOptions)
     const { errors } = formState
 
-    function onSubmit(data) {
+    /*const registerUser = async event => {
+        
+        const email = event.target.email.value
+        const password = event.target.password.value
+    
+        const res = await fetch('/api/posts', {
+          body: JSON.stringify({
+            email: email,
+            password: password,
+          }),
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          method: 'POST'
+        })
+    
+        const result = await res.json()
+        
+        alert(`Is this your log in information?: ${result.email} ${result.password}`)
+        return false;
+      }*/
+      function onSubmit(data) {
         alert('SUCCESS!! :-)\n\n' + JSON.stringify(data, null, 4))
         return false;
     }
+
     return(
         <div className={styles.loginform}>
             <div className={styles.title1}>WEME</div>
                 <div className={styles.form}>
-                <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+                <form className={styles.form} onSubmit={handleSubmit(onSubmit)}/*onSubmit={handleSubmit(registerUser)} action='./api/posts' method='POST'*/>
                 <div className={styles.inputcontainer}>
                     <label>
-                    <input className={`form-control ${errors.email ? 'is-invalid' : ''}`} type="text" name="email" placeholder="E-mail" {...register('email')} />
+                    <input className={`form-control ${errors.email ? 'is-invalid' : ''}`} type="text" id="email" name="email" placeholder="E-mail"  {...register('email')} />
                     </label> 
                 </div>
                 <div className={styles.inputcontainer}>
@@ -47,7 +70,7 @@ const SignIn = () => {
                 </div>
                 <div className={styles.checkboxcontainer}>
                 <input type="checkbox" id="remember" name="remember" value="Kom ihåg mig!"></input>
-                <label for="remember"> Kom ihåg mig?</label>
+                <label htmlFor="remember"> Kom ihåg mig?</label>
                 <Link href="/auth/forgot-password"><a className={styles.link}>Glömt lösenord?</a></Link>
                 </div>
                 <div className={styles.buttoncontainer}>

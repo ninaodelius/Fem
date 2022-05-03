@@ -1,3 +1,10 @@
+.password-toggle-icon{
+  display:flex;
+  position: inherit;
+  z-index: 100;
+  cursor: pointer;
+}
+
 .loginform {
     padding-top: 100px;
     display: flex;
@@ -12,6 +19,16 @@
     }
     
     .input{
+      font-family: 'Nunito';
+      height: 40px;
+      width: 353px;
+      border: 1px solid #fcbd8a;
+      margin-top: 10px;
+      background-color:aliceblue;
+      padding-left: 32px;
+      border-radius: 5px;
+    }
+    .formcontrol{
       font-family: 'Nunito';
       height: 40px;
       width: 353px;
@@ -57,6 +74,8 @@
     }
     
     .title1 {
+      display:flex;
+      text-align: center;
       font-size: 70px;
       height: 80px;
       font-family: "Nunito";
@@ -71,10 +90,14 @@
       flex-direction: column;
       gap: 8px;
       margin: 10px;
+
+      
     }
+
     .link{
       color: var(--purple)
     }
     .link:hover{
       color: #999999;
     }
+

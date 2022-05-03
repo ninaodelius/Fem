@@ -1,35 +1,88 @@
 import Button from '../../components/button'
 import styles from '/styles/auth/signin.module.css'
 import Link from 'next/link'
+import React, { useState, useEffect } from "react"
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as Yup from 'yup';
 
-export default function SignIn(){
+
+const SignIn = () => {
+
+    const [showPassword, setShowPassword] = useState(false)
+    const [disabledButton, setDisabledButton] = useState(true)
+
+    const validationSchema = Yup.object().shape({
+        email: Yup.string()
+            .required('Email is required')
+            .email('Email is invalid'),
+        password: Yup.string()
+            .min(6, 'Password must be at least 6 characters')
+            .required('Password is required')
+    })
+    const formOptions = { resolver: yupResolver(validationSchema) }
+
+    
+    const { register, handleSubmit, reset, formState } = useForm(formOptions)
+    const { errors } = formState
+
+    /*const registerUser = async event => {
+        
+        const email = event.target.email.value
+        const password = event.target.password.value
+    
+        const res = await fetch('/api/posts', {
+          body: JSON.stringify({
+            email: email,
+            password: password,
+          }),
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          method: 'POST'
+        })
+    
+        const result = await res.json()
+        
+        alert(`Is this your log in information?: ${result.email} ${result.password}`)
+        return false;
+      }*/
+      function onSubmit(data) {
+        alert('SUCCESS!! :-)\n\n' + JSON.stringify(data, null, 4))
+        return false;
+    }
+
     return(
         <div className={styles.loginform}>
             <div className={styles.title1}>WEME</div>
                 <div className={styles.form}>
-                <form className={styles.form}>
+                <form className={styles.form} onSubmit={handleSubmit(onSubmit)}/*onSubmit={handleSubmit(registerUser)} action='./api/posts' method='POST'*/>
                 <div className={styles.inputcontainer}>
                     <label>
-                    <input className={styles.input} type="email" name="email" placeholder="E-mail"/>
+                    <input className={`form-control ${errors.email ? 'is-invalid' : ''}`} type="text" id="email" name="email" placeholder="E-mail"  {...register('email')} />
                     </label> 
                 </div>
                 <div className={styles.inputcontainer}>
-                <label>
-                    <input className={styles.input} type="text" name="password" placeholder="Lösenord" />
-                </label>
+                    <input id="password" name="password" {...register('password')} className={`form-control ${errors.password ? 'is-invalid' : ''}`} type={showPassword ? "text" : "password"}/>
+                    <span className="password-toggle-icon" onClick={() => setShowPassword(showPassword => !showPassword)}>{showPassword ? <VisibilityIcon/> : <VisibilityOffIcon/>}</span>
                 </div>
                 <div className={styles.checkboxcontainer}>
                 <input type="checkbox" id="remember" name="remember" value="Kom ihåg mig!"></input>
-                <label for="remember"> Kom ihåg mig?</label>
+                <label htmlFor="remember"> Kom ihåg mig?</label>
                 <Link href="/auth/forgot-password"><a className={styles.link}>Glömt lösenord?</a></Link>
                 </div>
                 <div className={styles.buttoncontainer}>
-                    <Button>Logga in</Button>
+                    <Button disabled={false}>Logga in</Button>
                 </div>
                 <Link href="/auth/sign-up"><a className={styles.link}>Bli medlem</a></Link>
                 </form>
         </div>
 </div>
 
-    )
-}
+    );
+    
+};
+
+export default SignIn;

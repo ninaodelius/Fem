@@ -7,6 +7,7 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
+import Footer from '../../components/footer'
 
 
 const SignIn = () => {
@@ -65,20 +66,23 @@ const SignIn = () => {
                     </label> 
                 </div>
                 <div className={styles.inputcontainer}>
-                    <input id="password" name="password" {...register('password')} className={`form-control ${errors.password ? 'is-invalid' : ''}`} type={showPassword ? "text" : "password"}/>
+                    <input id="password" name="password" placeholder='Password' {...register('password')} className={`form-control ${errors.password ? 'is-invalid' : ''}`} type={showPassword ? "text" : "password"}/>
+
                     <span className="password-toggle-icon" onClick={() => setShowPassword(showPassword => !showPassword)}>{showPassword ? <VisibilityIcon/> : <VisibilityOffIcon/>}</span>
+
                 </div>
                 <div className={styles.checkboxcontainer}>
                 <input type="checkbox" id="remember" name="remember" value="Kom ihåg mig!"></input>
-                <label htmlFor="remember"> Kom ihåg mig?</label>
-                <Link href="/auth/forgot-password"><a className={styles.link}>Glömt lösenord?</a></Link>
-                </div>
+                <label htmlFor="remember"><p> Kom ihåg mig!</p></label>
+                <Link href="/auth/forgot-password"><a className={styles.link}><p>Glömt lösenord?</p></a></Link></div>
+                
                 <div className={styles.buttoncontainer}>
                     <Button disabled={false}>Logga in</Button>
                 </div>
                 <Link href="/auth/sign-up"><a className={styles.link}>Bli medlem</a></Link>
                 </form>
         </div>
+        <Footer />
 </div>
 
     );

@@ -1,0 +1,14 @@
+import styles from '../styles/components/footer.module.css'
+import Link from 'next/link'
+
+export default function Footer(){
+    return(
+        <footer className={styles.footerSection}>
+        <div className={styles.socialFooter}>
+            <div className={styles.facebookLogo}><a href={'https://www.facebook.com'}>FÖLJ OSS PÅ FACEBOOK</a></div>
+            <div className={styles.instagramLogo}><a href={'https://www.instagram.com'}>FÖLJ OSS PÅ INSTAGRAM</a></div>
+            <div className={styles.emailLogo}>EMAILA OSS VID FRÅGOR</div>
+            </div>
+        </footer>
+    )
+}

@@ -62,11 +62,11 @@ const SignIn = () => {
                 <form className={styles.form} onSubmit={handleSubmit(onSubmit)}/*onSubmit={handleSubmit(registerUser)} action='./api/posts' method='POST'*/>
                 <div className={styles.inputcontainer}>
                     <label>
-                    <input className={`form-control ${errors.email ? 'is-invalid' : ''}`} type="text" id="email" name="email" placeholder="E-mail"  {...register('email')} />
+                    <input id={styles.input} className={`form-control ${errors.email ? 'is-invalid' : ''}`} type="text" name="email" placeholder="E-mail"  {...register('email')} />
                     </label> 
                 </div>
                 <div className={styles.inputcontainer}>
-                    <input id="password" name="password" placeholder='Password' {...register('password')} className={`form-control ${errors.password ? 'is-invalid' : ''}`} type={showPassword ? "text" : "password"}/>
+                    <input id={styles.input} name="password" placeholder='Password' {...register('password')} className={`form-control ${errors.password ? 'is-invalid' : ''}`} type={showPassword ? "text" : "password"}/>
 
                     <span className="password-toggle-icon" onClick={() => setShowPassword(showPassword => !showPassword)}>{showPassword ? <VisibilityIcon/> : <VisibilityOffIcon/>}</span>
 

@@ -4,12 +4,17 @@
     background-image: url('/images/footerbg.png');
     background-size: 100% 100%;
     width: 100%;
-    min-height: 20vh;
+    min-height: 40vh;
     bottom: 0;
     align-items: flex-end;
-    position: sticky;
-    justify-content: right;
+    position: absolute;
+    justify-content: space-between;
   }
+
+.wemeLogo{
+  display: flex;
+  padding: 1rem;
+}
 
   .socialFooter{
     display: flex;
@@ -19,7 +24,7 @@
     bottom:0;
     font-weight: bold;
     font-size: 1vh;
-
+    padding: 1rem;
   }
 
   .facebookLogo img{

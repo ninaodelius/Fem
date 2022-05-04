@@ -6,20 +6,20 @@
 }
 
 .loginform {
-    padding-top: 100px;
+    padding-top: 20vh;
     display: flex;
       text-align: center;
-      justify-content: center;
       gap: 20px;
       min-height: 100vh;
       font-family: 'Nunito';
       background-image: url("/images/background.png");
       background-repeat: no-repeat;
       background-position: center;
+      background-size: cover;
       flex-direction: column;
     }
     
-    .input{
+    #input{
       font-family: 'Nunito';
       height: 40px;
       width: 353px;
@@ -39,19 +39,19 @@
       padding-left: 32px; 
     }
     .form{
-      margin-bottom: 300px;
+      margin-bottom: 0px;
   }
     
     .buttoncontainer {
       display: flex;
       justify-content: center;
-      margin-bottom: 40px;
-      margin-top: 40px;
+      margin-bottom: 20px;
+      margin-top: 20px;
     }
     .checkboxcontainer{
       font-size: 14px;
       margin-top: 0px;
-      margin-bottom: 109px;
+      margin-bottom: 10px;
       display: flex;
       align-items: baseline;
       justify-content: center;
@@ -82,7 +82,7 @@
       height: 80px;
       font-family: "Nunito";
       font-weight: 900;
-      margin-top: 50px;
+      margin-top: 10px;
       margin-bottom: 40px;
       color: #444444;
     }

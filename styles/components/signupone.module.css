@@ -6,27 +6,22 @@
 }
 
 .loginform {
-    padding-top: 100px;
-    display: flex;
-      text-align: center;
-      justify-content: center;
-      gap: 20px;
-      min-height: 100vh;
-      font-family: 'Nunito';
-      /*background-image: url("./images/background.png");*/
-      background-repeat: no-repeat;
-      background-position: center;
+
     }
     
-    .input{
+.loginform p{
+  font-weight: 700;
+}
+
+    #input{
       font-family: 'Nunito';
       height: 40px;
       width: 353px;
       border: 1px solid #fcbd8a;
-      margin-top: 10px;
       background-color:aliceblue;
       padding-left: 32px;
       border-radius: 5px;
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
     .formcontrol{
       font-family: 'Nunito';

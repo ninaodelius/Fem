@@ -21,6 +21,9 @@
       flex-direction: column;
       align-items: center;
     }
+    .loginform p{
+      font-weight: 300;
+    }
     
     #input{
       font-family: 'Nunito';
@@ -100,4 +103,10 @@
     }
     .link:hover{
       color: #999999;
+    }
+
+    .threeWomen{
+      display:flex;
+      position:relative;
+      grid-template-columns: 1f;
     }

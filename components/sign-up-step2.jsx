@@ -8,35 +8,34 @@ export default function SignUpTwo() {
 
     const form = (
     <div className={styles.loginform}>
-        <h1 className='title'>Mer om dig?</h1>
+        <h1 className={styles.title1}>Mer om dig!</h1>
         <div className={styles.form}>
          <form>
          <div className={styles.inputcontainer}>
             <label>
-              <input type="text" name="name" placeholder="Jobbtitel*" />
+              <input type="text" id={styles.input} placeholder="Jobbtitel*" />
             </label> 
           </div>
         <div className={styles.inputcontainer}>
             <label>
-              <input type="text" name="lastname" placeholder="Hur länge har du jobbat?*" />
+              <input type="text" id={styles.input} placeholder="Hur länge har du jobbat?*" />
             </label> 
-          </div>
+          </div>          
+          <p>Ange minst 2 komptenser</p>
         <div className={styles.inputcontainer}>
             <label>
-              <input type="email" name="email" placeholder="Ange minst två kompetenser*"  />
+              <input type="email" id={styles.input} placeholder="Ange minst två kompetenser*"  />
             </label> 
           </div>
+          <p>Taggar du vill följa</p>
           <div className={styles.inputcontainer}>
            <label>
-             <input type="text" name="password" placeholder="taggar du vill följa #FIGMA" />
+             <input type="text" id={styles.input} placeholder="taggar du vill följa #FIGMA" />
            </label>
           </div>
-        <div className={styles.checkboxcontainer}>
-          <input type="checkbox" id="terms" name="terms"></input>
-          <label htmlFor="terms">Härmed godkänner jag WEMEs<Link href= '/auth/terms' passHref><a className={styles.link}>villkor</a></Link></label>
-        </div>
+
           <div className={styles.buttoncontainer}>
-          <button onClick={() => setNextStep(nextStep => !nextStep)}>Gå vidare</button>
+          <Button><div onClick={() => setNextStep(nextStep => !nextStep)}>Gå vidare</div></Button>
           </div>
          </form>
       </div>

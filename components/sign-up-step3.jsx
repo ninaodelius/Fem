@@ -5,13 +5,15 @@ export default function SignUpThree() {
     return(
         <div className={styles.loginform}>
         <h1 className='title'>Vem är du i mentorskapet?</h1>
+        
         <div className={styles.box}></div>
         <div className={styles.box}></div>
+        
           <div className='buttoncontainer'>
           <Button><Link href='./account-created' passHref>Gå vidare</Link></Button>
-          <Link href='./account-created'><a className={styles.link}>Hoppa över</a></Link>
           </div>
-         
+          <Link href='./account-created'><a className={styles.link}><p>Hoppa över</p></a></Link>
+          
       </div>
 
     )

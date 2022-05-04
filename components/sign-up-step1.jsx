@@ -15,22 +15,22 @@ export default function SignUpOne() {
          <form>
          <div className={styles.inputcontainer}>
             <label>
-              <input type="text" name="name" placeholder="Namn" />
+              <input type="text" id={styles.input} placeholder="Namn" />
             </label> 
           </div>
         <div className={styles.inputcontainer}>
             <label>
-              <input type="text" name="lastname" placeholder="Efternamn" />
+              <input type="text" id={styles.input} placeholder="Efternamn" />
             </label> 
           </div>
         <div className={styles.inputcontainer}>
             <label>
-              <input type="email" name="email" placeholder="E-mail"  />
+              <input type="email" id={styles.input} placeholder="E-mail"  />
             </label> 
           </div>
           <div className={styles.inputcontainer}>
            <label>
-             <input type="text" name="password" placeholder="Lösenord" />
+             <input type="text" id={styles.input} placeholder="Lösenord" />
            </label>
           </div>
         <div className={styles.checkboxcontainer}>
@@ -38,7 +38,7 @@ export default function SignUpOne() {
           <label htmlFor="terms">Härmed godkänner jag WEMEs<Link href= '/auth/terms' passHref><a className={styles.link}>villkor</a></Link></label>
         </div>
           <div className={styles.buttoncontainer}>
-          <Button><button onClick={toggleView}>Gå vidare</button></Button>
+          <Button><div onClick={toggleView}>Gå vidare</div></Button>
           </div>
          </form>
       </div>

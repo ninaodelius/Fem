@@ -77,7 +77,7 @@ const SignIn = () => {
                 <div className={styles.buttoncontainer}>
                     <Button disabled={false}>Logga in</Button>
                 </div>
-                <Link href="/auth/sign-up"><a className={styles.link}>Bli medlem</a></Link>
+                <Link href="/auth/sign-up"><a className={styles.link}><p>Bli medlem</p></a></Link>
                 </form>
         </div>
         <Footer />

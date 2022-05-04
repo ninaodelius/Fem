@@ -21,8 +21,8 @@
       flex-direction: column;
       align-items: center;
     }
-    .loginform p{
-      font-weight: 300;
+    .form p{
+      font-weight: 700;
     }
     
     #input{

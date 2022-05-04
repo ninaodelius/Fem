@@ -35,7 +35,7 @@ export default function SignUpTwo() {
           </div>
 
           <div className={styles.buttoncontainer}>
-          <Button><div onClick={() => setNextStep(nextStep => !nextStep)}>Gå vidare</div></Button>
+          <Button><div onClick={() => setNextStep(nextStep => !nextStep)}>Nästa</div></Button>
           </div>
          </form>
       </div>

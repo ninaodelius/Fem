@@ -97,7 +97,59 @@
     }
 
 .box{
-  height: 210px;
-  width: 120px;
-  background-color: var(--happy-orange);
+  display:flex;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.mentee{
+ width: 239px;
+  height: 307px;
+  left: 736px;
+  top: 302px;
+  background: #FFF9F3;
+  border: 5px solid #F59467;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin: 5rem;
+}
+
+.menteeLogo{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-image: url("/images/mentee.png");
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50px;
+  font-weight: 700;
+  font-size: 1.5em;
+  padding-top: 0.25em;
+}
+
+.mentor{
+  width: 239px;
+  height: 307px;
+  left: 736px;
+  top: 302px;
+  background: #FFF9F3;
+  border: 5px solid #F59467;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin: 5rem;
+}
+
+.mentorLogo{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-image: url("/images/mentor.png");
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50px;
+  font-weight: 700;
+  font-size: 1.5em;
+  padding-top: 0.25em;
 }

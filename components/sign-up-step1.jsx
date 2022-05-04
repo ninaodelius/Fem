@@ -35,10 +35,10 @@ export default function SignUpOne() {
           </div>
         <div className={styles.checkboxcontainer}>
           <input type="checkbox" id="terms" name="terms"></input>
-          <label htmlFor="terms">Härmed godkänner jag WEMEs<Link href= '/auth/terms' passHref><a className={styles.link}>villkor</a></Link></label>
+          <label htmlFor="terms">Härmed godkänner jag WEME's <Link href= '/auth/terms' passHref><a className={styles.link}>villkor.</a></Link></label>
         </div>
           <div className={styles.buttoncontainer}>
-          <Button><div onClick={toggleView}>Gå vidare</div></Button>
+          <Button><div onClick={toggleView}>Skapa konto</div></Button>
           </div>
          </form>
       </div>

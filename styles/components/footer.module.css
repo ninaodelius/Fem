@@ -1,14 +1,14 @@
 
 .footerSection{
     display: flex;
-    background-image: url('/public/footerbg.png');
-    background-color: bisque;
-    background-size: 50px 50px;
+    background-image: url('/images/footerbg.png');
+    background-size: 100% 100%;
     width: 100%;
-    min-height: 10vh;
+    min-height: 20vh;
     bottom: 0;
-    align-content: flex-end;
+    align-items: flex-end;
     position: sticky;
+    justify-content: right;
   }
 
   .socialFooter{
@@ -18,22 +18,24 @@
     width: 200px;
     bottom:0;
     font-weight: bold;
+    font-size: 1vh;
+
   }
 
-  .facebookLogo{
-    background-image: url('/public/facebook.png');
+  .facebookLogo img{
+    display: flex;
     background-repeat: no-repeat;
     width: 50px;
   }
 
-  .instagramLogo{
-    background-image: url('/public/instagram.png');
+  .instagramLogo img{
+    display: flex;
     background-repeat: no-repeat;
     width: 50px;
   }
 
-  .emailLogo{
-    background-image: url('/public/email.png');
+  .emailLogo img{
+    display: flex;
     background-repeat: no-repeat;
     width: 50px;
   }

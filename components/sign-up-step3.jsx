@@ -8,12 +8,12 @@ export default function SignUpThree() {
         
         <div className={styles.box}>
         <div className={styles.mentee}>
-        <div class ={styles.menteeLogo}>M</div>
+        <div className ={styles.menteeLogo}>M</div>
         <h4>Mentee</h4>
         Är någon som söker handledning och feedback av en kunnig inom branschen.
         </div>
         <div className={styles.mentor}>
-        <div class ={styles.mentorLogo}>M</div>
+        <div className ={styles.mentorLogo}>M</div>
         <h4>Mentor</h4>
         Någon som besitter merkunskaper och erfarenheter. En mentor handleder, stöttar och vägleder en mentee.</div>
         </div>

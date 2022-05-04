@@ -57,7 +57,7 @@ const SignIn = () => {
 
     return(
         <div className={styles.loginform}>
-            <div className={styles.title1}>WEME</div>
+            <div className={styles.title1}><img src={'/images/wemelogo.png'}/></div>
                 <div className={styles.form}>
                 <form className={styles.form} onSubmit={handleSubmit(onSubmit)}/*onSubmit={handleSubmit(registerUser)} action='./api/posts' method='POST'*/>
                 <div className={styles.inputcontainer}>

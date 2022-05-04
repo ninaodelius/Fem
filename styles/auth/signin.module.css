@@ -1,8 +1,10 @@
-.password-toggle-icon{
-  display:flex;
-  position: inherit;
+.passwordtoggleicon{
+  position: absolute;
   z-index: 100;
   cursor: pointer;
+  right: 10px;
+  top:60%;
+  transform: translateY(-50%);
 }
 
 .loginform {
@@ -17,6 +19,7 @@
       background-position: center;
       background-size: cover;
       flex-direction: column;
+      align-items: center;
     }
     
     #input{
@@ -24,10 +27,10 @@
       height: 40px;
       width: 353px;
       border: 1px solid #fcbd8a;
-      margin-top: 10px;
       background-color:aliceblue;
       padding-left: 32px;
       border-radius: 5px;
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
     .formcontrol{
       width: 353px;
@@ -88,7 +91,13 @@
     }
     
     .inputcontainer {
-
+      position:relative;
+      width: 353px;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      padding: 0;
+      margin-bottom: 10px;
     }
 
     .link{

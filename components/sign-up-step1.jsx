@@ -1,6 +1,5 @@
 import Button from '../components/button.jsx'
 import Link from 'next/dist/client/link'
-<<<<<<< HEAD
 import { useState } from "react"
 
 export default function SignUpOne() {
@@ -16,7 +15,6 @@ export default function SignUpOne() {
         <div className='login-form'>
     <div className='title'>Skapa konto!</div>
     <div className='form'>
-=======
 import styles from '/styles/components/signupone.module.css'
 import SignUpTwo from '../components/sign-up-step2'
 import {React, useState} from 'react'
@@ -29,7 +27,6 @@ export default function SignUpOne() {
     <div className={styles.loginform}>
         <h1 className='title'>Skapa konto!</h1>
         <div className={styles.form}>
->>>>>>> origin/main
          <form>
          <div className={styles.inputcontainer}>
             <label>

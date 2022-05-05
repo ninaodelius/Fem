@@ -18,7 +18,6 @@ const handleClick = () => {
 
   return (
   <>
-<<<<<<< HEAD
     <Link href="/sign-in.jsx" passHref><Button /></Link>
     <Button disabled={false}>Nina hej</Button>
     <Link href='auth/sign-in' passHref>Sign in</Link>
@@ -26,9 +25,7 @@ const handleClick = () => {
     <Link href="auth/sign-up">Robins shit</Link>
     <Buttonround> <Link href="forgot-password"></Link></Buttonround>
 
-=======
   <div className={styles.container}>
->>>>>>> origin/main
     <Button><Link href='auth/sign-in' passHref>Sign in</Link></Button>
     <Button><Link href="auth/sign-up" passHref>Sign up</Link></Button>
     <Button><Link href="/feed" passHref>Feed</Link></Button>

@@ -12,6 +12,11 @@
     z-index: -1;
   }
 
+  .footerSection p{
+    margin-left: 2px;
+    font-size: 10px;
+  }
+
 .wemeLogo{
   display: flex;
   padding: 1rem;

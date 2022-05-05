@@ -13,7 +13,7 @@ export default function Footer(){
             <img src={'/images/facebook.png'}/>
             </a></div>
             <div className={styles.socialMediaText}>
-            FÖLJ OSS PÅ FACEBOOK
+          <span> FÖLJ OSS PÅ FACEBOOK </span>
             </div>
 
             <div className={styles.instagramLogo}>
@@ -21,14 +21,15 @@ export default function Footer(){
             <img src={'/images/instagram.png'}/>
             </a></div>
             <div className={styles.socialMediaText}>
-            FÖLJ OSS PÅ INSTAGRAM
+          <span> FÖLJ OSS PÅ INSTAGRAM </span>
             </div>
 
             <div className={styles.emailLogo}>
             <img src={'/images/email.png'}></img>
             </div>
+
             <div className={styles.socialMediaText}>
-            EMAILA OSS VID FRÅGOR
+          <span>EMAILA OSS VID FRÅGOR </span>
             </div>
             </div>
         </footer>

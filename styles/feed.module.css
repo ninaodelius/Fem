@@ -18,3 +18,17 @@
 .right{
     width: 25%;
 }
+
+.feedFooter{
+    display: flex;
+    justify-content: right;
+    position: absolute;
+bottom: 0;
+width: 100%;
+
+}
+
+.feedBtnArrowUp{
+    margin-bottom: 25vh;
+    margin-right: 10vh;
+}

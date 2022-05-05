@@ -1,33 +1,39 @@
-.password-toggle-icon{
-  display:flex;
-  position: inherit;
+.passwordtoggleicon{
+  position: absolute;
   z-index: 100;
   cursor: pointer;
+  right: 10px;
+  top:60%;
+  transform: translateY(-50%);
 }
 
 .loginform {
-    padding-top: 100px;
+    padding-top: 20vh;
     display: flex;
       text-align: center;
-      justify-content: center;
       gap: 20px;
       min-height: 100vh;
       font-family: 'Nunito';
-      background-image: url("/public/background.png");
+      background-image: url("/images/background.png");
       background-repeat: no-repeat;
       background-position: center;
+      background-size: cover;
       flex-direction: column;
+      align-items: center;
+    }
+    .form p{
+      font-weight: 700;
     }
     
-    .input{
+    #input{
       font-family: 'Nunito';
       height: 40px;
       width: 353px;
       border: 1px solid #fcbd8a;
-      margin-top: 10px;
       background-color:aliceblue;
       padding-left: 32px;
       border-radius: 5px;
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
     .formcontrol{
       width: 353px;
@@ -39,19 +45,19 @@
       padding-left: 32px; 
     }
     .form{
-      margin-bottom: 300px;
+      margin-bottom: 0px;
   }
     
     .buttoncontainer {
       display: flex;
       justify-content: center;
-      margin-bottom: 40px;
-      margin-top: 40px;
+      margin-bottom: 20px;
+      margin-top: 20px;
     }
     .checkboxcontainer{
       font-size: 14px;
       margin-top: 0px;
-      margin-bottom: 109px;
+      margin-bottom: 10px;
       display: flex;
       align-items: baseline;
       justify-content: center;
@@ -78,17 +84,18 @@
       display:flex;
       text-align: center;
       justify-content: center;
-      font-size: 70px;
-      height: 80px;
-      font-family: "Nunito";
-      font-weight: 900;
-      margin-top: 50px;
+      margin-top: 10px;
       margin-bottom: 40px;
-      color: #444444;
     }
     
     .inputcontainer {
-
+      position:relative;
+      width: 353px;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      padding: 0;
+      margin-bottom: 10px;
     }
 
     .link{
@@ -96,4 +103,10 @@
     }
     .link:hover{
       color: #999999;
+    }
+
+    .threeWomen{
+      display:flex;
+      position:relative;
+      grid-template-columns: 1f;
     }

@@ -57,19 +57,17 @@ const SignIn = () => {
 
     return(
         <div className={styles.loginform}>
-            <div className={styles.title1}>WEME</div>
+            <div className={styles.title1}><img src={'/images/wemelogo.png'}/></div>
                 <div className={styles.form}>
                 <form className={styles.form} onSubmit={handleSubmit(onSubmit)}/*onSubmit={handleSubmit(registerUser)} action='./api/posts' method='POST'*/>
                 <div className={styles.inputcontainer}>
                     <label>
-                    <input className={`form-control ${errors.email ? 'is-invalid' : ''}`} type="text" id="email" name="email" placeholder="E-mail"  {...register('email')} />
+                    <input id={styles.input} className={`form-control ${errors.email ? 'is-invalid' : ''}`} type="text" name="email" placeholder="E-mail"  {...register('email')} />
                     </label> 
                 </div>
                 <div className={styles.inputcontainer}>
-                    <input id="password" name="password" placeholder='Password' {...register('password')} className={`form-control ${errors.password ? 'is-invalid' : ''}`} type={showPassword ? "text" : "password"}/>
-
-                    <span className="password-toggle-icon" onClick={() => setShowPassword(showPassword => !showPassword)}>{showPassword ? <VisibilityIcon/> : <VisibilityOffIcon/>}</span>
-
+                    <input id={styles.input} name="password" placeholder='Password' {...register('password')} className={`form-control ${errors.password ? 'is-invalid' : ''}`} type={showPassword ? "text" : "password"}/>
+                    <div className={styles.passwordtoggleicon} onClick={() => setShowPassword(showPassword => !showPassword)}>{showPassword ? <VisibilityIcon/> : <VisibilityOffIcon/>}</div>
                 </div>
                 <div className={styles.checkboxcontainer}>
                 <input type="checkbox" id="remember" name="remember" value="Kom ihåg mig!"></input>
@@ -79,7 +77,7 @@ const SignIn = () => {
                 <div className={styles.buttoncontainer}>
                     <Button disabled={false}>Logga in</Button>
                 </div>
-                <Link href="/auth/sign-up"><a className={styles.link}>Bli medlem</a></Link>
+                <Link href="/auth/sign-up"><a className={styles.link}><p>Bli medlem</p></a></Link>
                 </form>
         </div>
         <Footer />

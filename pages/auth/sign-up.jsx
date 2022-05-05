@@ -9,14 +9,10 @@ export default function SignUp(){
   
   return (
     <>
-<<<<<<< HEAD
-    <SignUpOne />
-=======
     <div className={styles.container}>
      <SignUpOne /> 
     </div>
     
->>>>>>> daf7b01a37786aaba9ae67d20781c59c9cd2a64a
     </>
   )
 }

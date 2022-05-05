@@ -30,50 +30,66 @@ export default function SignUpOne() {
          <form>
          <div className={styles.inputcontainer}>
             <label>
+<<<<<<< HEAD
               <input type="text"
                name="name" 
                placeholder="Namn"
                 value={formValues.name}
                 onChange={handleChange}
                 />
+=======
+              <input type="text" id={styles.input} placeholder="Namn" />
+>>>>>>> main
             </label> 
           </div>
         <div className={styles.inputcontainer}>
             <label>
+<<<<<<< HEAD
               <input type="text"
                name="lastname" 
                placeholder="Efternamn" 
                value={formValues.lastname}
                onChange={handleChange}
                 />
+=======
+              <input type="text" id={styles.input} placeholder="Efternamn" />
+>>>>>>> main
             </label> 
           </div>
         <div className={styles.inputcontainer}>
             <label>
+<<<<<<< HEAD
               <input type="email"
                name="email"
                 placeholder="E-mail"
                  value={formValues.email}
                  onChange={handleChange}
                   />
+=======
+              <input type="email" id={styles.input} placeholder="E-mail"  />
+>>>>>>> main
             </label> 
           </div>
           <div className={styles.inputcontainer}>
            <label>
+<<<<<<< HEAD
              <input type="text" 
              name="password"
               placeholder="Lösenord" 
               value={formValues.password} 
               onChange={handleChange}
               />
+=======
+             <input type="text" id={styles.input} placeholder="Lösenord" />
+>>>>>>> main
            </label>
           </div>
         <div className={styles.checkboxcontainer}>
           <input type="checkbox" id="terms" name="terms"></input>
-          <label htmlFor="terms">Härmed godkänner jag WEMEs<Link href= '/auth/terms' passHref><a className={styles.link}>villkor</a></Link></label>
+          <label htmlFor="terms">Härmed godkänner jag WEMEs <Link href= '/auth/terms' passHref><a className={styles.link}>villkor.</a></Link></label>
         </div>
           <div className={styles.buttoncontainer}>
-          <Button><button onClick={toggleView}>Gå vidare</button></Button>
+          <Button><div onClick={toggleView}>Skapa konto</div></Button>
           </div>
          </form>
       </div>

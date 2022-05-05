@@ -3,11 +3,25 @@ import Link from 'next/dist/client/link'
 import styles from '/styles/components/signupone.module.css'
 import SignUpTwo from '../components/sign-up-step2'
 import {React, useState} from 'react'
+import { userForm } from './Validations/signUpOneValidation'
+
 export default function SignUpOne() {
     const [nextStep, setNextStep] = useState(false)
    const toggleView = () =>{
       setNextStep(nextStep => !nextStep)
     }
+
+    const createUser = (event) => {
+      event.preventDefault()
+      let formData = {
+        name: event.target[0].value,
+        lastname: event.target[1].value,
+        email: event.target[2].value,
+        password: event.target[3].value,
+      }
+      console.log(formData)
+    }
+
     const form = (
     <div className={styles.loginform}>
         <h1 className='title'>Skapa konto!</h1>
@@ -38,7 +52,7 @@ export default function SignUpOne() {
           <label htmlFor="terms">Härmed godkänner jag WEMEs <Link href= '/auth/terms' passHref><a className={styles.link}>villkor.</a></Link></label>
         </div>
           <div className={styles.buttoncontainer}>
-          <Button><div onClick={toggleView}>Skapa konto</div></Button>
+          <Button><div onClick={toggleView} onSubmit={createUser}>Skapa konto</div></Button>
           </div>
          </form>
       </div>

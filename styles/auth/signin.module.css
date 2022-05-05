@@ -97,26 +97,17 @@
       padding: 0;
       margin-bottom: 10px;
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
     .link{
       color: var(--purple);
     }
     .link:hover{
       color: #999999;
-<<<<<<< HEAD
-    }
-=======
+    
     }
 
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
     .threeWomen{
       display:flex;
       position:relative;
       grid-template-columns: 1f;
     }
->>>>>>> main
+

@@ -11,7 +11,7 @@ export default function SignUpOne() {
       setNextStep(nextStep => !nextStep)
     }
 
-    const createUser = (event) => {
+    const createUser = async(event) => {
       event.preventDefault()
       let formData = {
         name: event.target[0].value,
@@ -26,7 +26,7 @@ export default function SignUpOne() {
     <div className={styles.loginform}>
         <h1 className='title'>Skapa konto!</h1>
         <div className={styles.form}>
-         <form>
+         <form onSubmit={createUser}>
          <div className={styles.inputcontainer}>
             <label>
               <input type="text" id={styles.input} placeholder="Namn" />
@@ -52,7 +52,7 @@ export default function SignUpOne() {
           <label htmlFor="terms">Härmed godkänner jag WEMEs <Link href= '/auth/terms' passHref><a className={styles.link}>villkor.</a></Link></label>
         </div>
           <div className={styles.buttoncontainer}>
-          <Button><div onClick={toggleView} onSubmit={createUser}>Skapa konto</div></Button>
+          <Button><div type="submit">Skapa konto</div></Button>
           </div>
          </form>
       </div>

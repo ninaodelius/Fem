@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .pagewrap{
   background-image: url('/images/Mentee.svg');
 }
@@ -7,63 +8,84 @@
     top: 50%;
     transform: translateY(-50%);
     background: transparent;
+=======
+.passwordtoggleicon{
+  position: absolute;
+  z-index: 100;
+>>>>>>> main
   cursor: pointer;
+  right: 10px;
+  top:60%;
+  transform: translateY(-50%);
 }
 
 .loginform {
-    padding-top: 100px;
+    padding-top: 20vh;
     display: flex;
       text-align: center;
-      justify-content: center;
       gap: 20px;
       min-height: 100vh;
       font-family: 'Nunito';
-      /*background-image: url("./images/background.png");*/
+      background-image: url("/images/background.png");
       background-repeat: no-repeat;
       background-position: center;
+      background-size: cover;
+      flex-direction: column;
+      align-items: center;
+    }
+    .form p{
+      font-weight: 700;
     }
     
+<<<<<<< HEAD
     .input{
       display: flex;
+=======
+    #input{
+>>>>>>> main
       font-family: 'Nunito';
       height: 40px;
       width: 353px;
       border: 1px solid #fcbd8a;
-      margin-top: 10px;
       background-color:aliceblue;
       padding-left: 32px;
+<<<<<<< HEAD
+=======
+      border-radius: 5px;
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+>>>>>>> main
     }
     .formcontrol{
-      font-family: 'Nunito';
-      height: 40px;
       width: 353px;
-      border: 1px solid #fcbd8a;
-      margin-top: 10px;
-      background-color:aliceblue;
-      padding-left: 32px;
-      border-radius: 5px;
+      height: 40px;
+      border:#fcbd8a;
+      border-radius: 10px;
+      font-size:14pt;
+      line-height: 1.4;
+      padding-left: 32px; 
     }
     .form{
-      margin-bottom: 300px;
+      margin-bottom: 0px;
   }
     
     .buttoncontainer {
       display: flex;
       justify-content: center;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
+      margin-top: 20px;
     }
     .checkboxcontainer{
       font-size: 14px;
       margin-top: 0px;
-      margin-bottom: 109px;
+      margin-bottom: 10px;
       display: flex;
       align-items: baseline;
       justify-content: center;
     }
   
     .checkboxcontainer p{
-      margin-left: 120px;
       color: #826ac5;
+      align-content: space-between;
     }
     .h2{
       color: #826ac5;
@@ -81,26 +103,37 @@
     .title1 {
       display:flex;
       text-align: center;
-      font-size: 70px;
-      height: 80px;
-      font-family: "Nunito";
-      font-weight: 900;
-      margin-top: 50px;
+      justify-content: center;
+      margin-top: 10px;
       margin-bottom: 40px;
-      color: #444444;
     }
     
     .inputcontainer {
+<<<<<<< HEAD
       position: relative;
       
 
       
+=======
+      position:relative;
+      width: 353px;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      padding: 0;
+      margin-bottom: 10px;
+>>>>>>> main
     }
 
     .link{
-      color: var(--purple)
+      color: var(--purple);
     }
     .link:hover{
       color: #999999;
     }
 
+    .threeWomen{
+      display:flex;
+      position:relative;
+      grid-template-columns: 1f;
+    }

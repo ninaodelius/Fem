@@ -1,6 +1,6 @@
 import styles from '/styles/components/post.module.css'
 
-export default function Post({children}){
+export default function Post(i, { children}){
     return(
         <div className={styles.postcontainer}>
             <div className={styles.infocontainer}>

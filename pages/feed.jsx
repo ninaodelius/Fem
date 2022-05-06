@@ -41,7 +41,7 @@ export default function Feed(){
                 {posts && posts.docs.map((doc) => (
                 
 
-                <Post key={doc.data()}>{doc.data()}</Post>
+                <Post key={i}>{doc.data()}</Post>
                
             ))}
 

@@ -37,11 +37,11 @@ export default function Feed(){
                 <div className={styles.feed}>
                 <div className={styles.posts}>
                 {postserror && <strong>Error: {JSON.stringify(postserror)}</strong>}
-        {postsloading && <span>Collection: Loading...</span>}      
-      {posts && posts.docs.map((doc) => (
-              <div>
+                {postsloading && <span>Collection: Loading...</span>}      
+                {posts && posts.docs.map((doc) => (
+                <div className={styles.posts}>
                 <Post>{doc.data()}</Post>
-              </div>
+                </div>
             ))}
 
                 </div>

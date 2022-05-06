@@ -1,7 +1,7 @@
  .normalcontainer {
     display: flex;
     margin-top: 30px;
-    width: 100%;
+    width: 640px;
     height: 60px;
     align-items: flex-start;
     align-content: flex-end;
@@ -13,9 +13,9 @@
     width: 100%;
  }
  
- .searchinput input{
+ .input{
     display: flex;
-    width: 590px;
+    width: 100%;
     height: 52px;
     left: 403px;
     top: 44px;

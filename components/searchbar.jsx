@@ -6,7 +6,7 @@ export default function Searchbar() {
   
       <div className={styles.normalcontainer}>
         <div className={styles.searchinput}>
-          <input type={styles.text}/>
+          <input className={styles.input} type={styles.text} autoComplete="name"/>
            <SearchIcon className={styles.searchicon}/> 
            
         </div>

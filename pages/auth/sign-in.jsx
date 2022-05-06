@@ -54,7 +54,8 @@ const SignIn = () => {
         return false;
     }
 
-    return(
+    return( 
+        <div className={styles.pagewrap}>
         <div className={styles.loginform}>
             <div className={styles.title1}>WEME</div>
                 <div className={styles.form}>
@@ -80,7 +81,7 @@ const SignIn = () => {
                 </form>
         </div>
 </div>
-
+</div>
     );
     
 };

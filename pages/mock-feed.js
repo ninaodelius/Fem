@@ -1,5 +1,5 @@
 import useSWR from 'swr'
-import Posts from '../components/Posts'
+import Post from '../components/post'
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
@@ -10,10 +10,10 @@ export default function MockFeed() {
   if (!data) return <div>Loading...</div>
 
   return (
-    <ul>
+    <div>
       {data.map((p, i) => (
-        <Posts key={i} post={p} />
+        <Post key={i} post={p} />
       ))}
-    </ul>
+    </div>
   )
 }

@@ -1,7 +1,12 @@
+.pagewrap{
+  background-image: url('/images/Mentee.svg');
+}
 .password-toggle-icon{
-  display:flex;
-  position: inherit;
-  z-index: 100;
+  position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
   cursor: pointer;
 }
 
@@ -19,6 +24,7 @@
     }
     
     .input{
+      display: flex;
       font-family: 'Nunito';
       height: 40px;
       width: 353px;
@@ -26,7 +32,6 @@
       margin-top: 10px;
       background-color:aliceblue;
       padding-left: 32px;
-      border-radius: 5px;
     }
     .formcontrol{
       font-family: 'Nunito';
@@ -86,10 +91,8 @@
     }
     
     .inputcontainer {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin: 10px;
+      position: relative;
+      
 
       
     }

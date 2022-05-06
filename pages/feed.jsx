@@ -39,9 +39,10 @@ export default function Feed(){
                 {postserror && <strong>Error: {JSON.stringify(postserror)}</strong>}
                 {postsloading && <span>Collection: Loading...</span>}      
                 {posts && posts.docs.map((doc) => (
-                <div className={styles.posts}>
-                <Post>{doc.data()}</Post>
-                </div>
+                
+
+                <Post key={doc.data()}>{doc.data()}</Post>
+               
             ))}
 
                 </div>

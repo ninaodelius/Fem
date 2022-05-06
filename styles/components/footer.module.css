@@ -15,6 +15,7 @@
   .footerSection p{
     margin-left: 2px;
     font-size: 10px;
+    float: right;
   }
 
 .wemeLogo{

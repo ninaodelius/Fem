@@ -1,25 +1,22 @@
-import {useState} from 'react';
 import styles from '/styles/components/post.module.css'
-import PostPop from "../components/post-pop"
 
-export default function Post(){
-    const [inputPopup, setInputPopup] = useState(false);
+export default function Post({children}){
     return(
         <div className={styles.postcontainer}>
-            
             <div className={styles.infocontainer}>
-                <div className={styles.photowrap}><div className="photo"></div></div>
-                <div className={styles.textboxwrap}><input type="text" className={styles.textbox} placeholder="Skriv inlägg" onClick={() => setInputPopup(true)}></input></div>
-                <div className={styles.menuwrap}></div>
-            </div>
-            <div className={styles.postexamplescontainer}>
-                <div className={styles.question}>Ställ en fråga</div>
-                <div className={styles.video}>Video</div>
-                <div className={styles.picture}>Bild</div>
-            </div>
-            <PostPop trigger={inputPopup} setTrigger={setInputPopup}></PostPop>
+                <div className={styles.photowrap}>
+                <div className={styles.photo}><img src={'/images/Woman.svg'}/></div>
+                <div className={styles.namewrap }>Naomi Britton<div className={styles.m}>M</div></div>
+                </div>
+        </div>
+        <div className={styles.textcontainer}> 
+                <div className={styles.textboxwrap}>{children.text}</div>
+                <p className={styles.menuwrap}>#FIGMA #PROTOTYPE #UX</p>
+                <hr className={styles.hr}/>
+        </div>
+        
+
         </div>
 
     )
 }
-  

@@ -1,8 +1,8 @@
 .hr{
     height: 0px;
-    background:transparent;
+    background: transparent;
     border-bottom:1px solid rgb(209, 209, 209);
-    width: 80%;
+    width: 90%;
     border-top: 0px;
     border-left: 0px;
 }
@@ -14,6 +14,8 @@
     left: 0;
     width: 40rem;
     height: 29.813rem;
+    
+    
 }
 .postpopcontainer{
     position: relative;
@@ -27,6 +29,8 @@
     filter: drop-shadow(0px 4px 0px rgba(251, 189, 139, 0.25));
     margin-left: 0px;
     margin-top: 0px;
+    z-index: 10;
+    box-shadow: 0px 0px 5px 10px rgb(254, 249, 242);
 }
 .topheader{
     display: flex;
@@ -91,6 +95,9 @@
     display: flex;
     justify-content: flex-start;
     width: 100%;
+}
+.button{
+    padding-left: 1.563rem;
 }
 .questionmark{
     margin-right: 0.313rem;

@@ -1,60 +1,60 @@
 .postcontainer{
     width: 640px;
-    height: 287px;
+    height: 163px;
     background: #FFF9F3;
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    flex-direction: row;
+    flex-wrap: wrap;
     border-radius: 10px;
     filter: drop-shadow(0px 4px 0px rgba(251, 189, 139, 0.25));
     margin-bottom: 10px;
-    font-family: 'Nunito';
 }
 .infocontainer{
     width: 100%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    height: 30%;
-    margin-top: 30px;
-    padding-left: 30px;
+    flex-wrap: nowrap;
+    height: 50%;
+    margin-top: 24px;
 }
 .photowrap{
+    width: 15%;
     display: flex;
     justify-content: center;
 }
-.photo img{
+.photo{
     width: 53px;
     height: 53px;
     border-radius: 50%;
 }
 .namewrap{
-    display: flex;
-    margin-left: 40px;
     font-size: 20px;
     font-weight: 700;
 }
-.textcontainer{
-    display: flex;
-    flex-direction: column;
-    height: 70%;
-    margin-top: 5px;
-    padding-left: 30px;
-}
 .textboxwrap{
-    margin-bottom: 50px;
-}
-.menuwrap{
-    font-size: small;
+ width: 70%;
+ display: flex;
+ justify-content: center;
 }
 
-.hr{
-    height: 0px;
-    background:transparent;
-    border-bottom:1px solid rgb(209, 209, 209);
-    width: 90%;
-    border-top: 0px;
-    border-left: 0px;
+.textbox{
+    width: 100%;
+    height: 53px;
+    border-radius: 20px;
+    border-style: none;
+    font-family: 'Nunito';
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 10px;
+    outline: none;
+
+}
+.menuwrap{
+    width: 15%;
+    display: flex;
+    justify-content: right;
+    margin-right: 20px;
+    
 }
 
 .postexamplescontainer{
@@ -99,15 +99,4 @@
 }
 .pic{
     margin-right: 10px;
-}
-.m{
-    height: 32px;
-    width: 32px;
-    margin-left: 5px;
-    text-align: center;
-    padding-top: 3px;
-    background-image: url('/images/favicon.ico');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }

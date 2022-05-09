@@ -46,9 +46,10 @@ export default function Post(props){
                 </div>
                 <hr className={styles.hr}/>
                 <div className={styles.postchoicecontainer}>
-                    <div className={styles.question}></div>
-                    <div className={styles.video}></div>
-                    <div className={styles.picture}></div>
+                    <div className={styles.question}><button className={styles.insertButton}><img src={'/images/Qbutton.png'}/></button></div>
+                    <div className={styles.picture}><button className={styles.insertButton}><img src={'/images/insertImagebutton.png'}/></button></div>
+                    <div className={styles.video}><button className={styles.insertButton}><img src={'/images/insertvidbutton.png'}/></button></div>
+                    <div className={styles.insertdoc}><button className={styles.insertButton}><img src={'/images/insertfilebutton.png'}/></button></div>
                     <div className={styles.menuwrap}></div>
                     <div className={styles.button}><Button type={submit}>Dela</Button></div>
 

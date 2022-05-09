@@ -99,15 +99,23 @@
 .button{
     padding-left: 1.563rem;
 }
-.questionmark{
+.question{
     margin-right: 0.313rem;
 }
-.camera{
+.picture{
     margin-right: 0.313rem;
 }
-.pic{
+.video{
+    margin-right: 0.313rem;
+}
+.insertdoc{
     margin-right: 0.313rem;
 }
 .menu{
     margin-right: 0.625rem;
+}
+
+.insertButton{
+    border: none;
+    background: none;
 }

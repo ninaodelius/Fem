@@ -4,6 +4,7 @@ import styles from '/styles/components/signupone.module.css'
 export default function SignUpThree() {
     return(
         <div className={styles.loginform}>
+        <img src={'/images/step3of3.png'}/>
         <h1 className='title'>Vem är du i mentorskapet?</h1>
         
         <div className={styles.box}>

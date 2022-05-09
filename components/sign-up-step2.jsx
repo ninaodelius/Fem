@@ -8,6 +8,7 @@ export default function SignUpTwo() {
 
     const form = (
     <div className={styles.loginform}>
+    <img src={'/images/step2of3.png'}/>
         <h1 className={styles.title1}>Mer om dig!</h1>
         <div className={styles.form}>
          <form>

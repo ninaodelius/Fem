@@ -5,10 +5,11 @@ import Footer from '../../components/footer'
 export default function SignUp(){
   return (
     <>
-    <div className={styles.container}>
+        <div className={styles.container}>
      <SignUpOne /> 
+
      <Footer/>
-    </div>
+     </div>
     </>
 
   )

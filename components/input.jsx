@@ -13,7 +13,7 @@ export default function Input(){
                 <div className={styles.menuwrap}></div>
             </div>
             <div className={styles.postexamplescontainer}>
-                <div className={styles.question}><img src={'/images/Question.svg'}/>Ställ en fråga</div>
+                <div className={styles.question}><img src={'/images/Qbutton.png'}/>Ställ en fråga</div>
                 <div className={styles.video}><img src={'/images/Camera.svg'}/>Video</div>
                 <div className={styles.picture}><img src={'/images/Image.svg'}/>Bild</div>
             </div>

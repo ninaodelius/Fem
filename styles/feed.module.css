@@ -28,5 +28,21 @@
 }
 .posts{
     padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+
+.feedFooter{
+    display: flex;
+    justify-content: right;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+}
+
+.feedBtnArrowUp{
+    margin-bottom: 25vh;
+    margin-right: 10vh;
 }
     

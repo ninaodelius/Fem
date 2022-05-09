@@ -6,25 +6,30 @@ import { db } from '../firebase/firebaseConfig'
 import { useCollection } from "react-firebase-hooks/firestore";
 import { collection, addDoc, getDocs, getDoc } from 'firebase/firestore';
 import Post from '../components/post'
+import BtnArrowUp from '../components/btnArrowUp'
+import Footer from '../components/footer'
 
-/*export async function getServerSideProps() {
-    const docRef = collection(db, 'posts')
-         const docSnap = await getDocs(docRef)
-
-            return{
+export const getServerSideProps = async(context) => {
+    const res = await getDocs(collection(db, "posts"))
+    const post = res.docs
+    .map((post) => post.data())
+    if(post.length){
+       return{  
                 props : {
-                    text : JSON.stringify(docSnap)
+                    post: post
                 }
-            }
-        }*/
+            } 
+    }
+    else{
+        return{
+            props: {},
+        }
+    }
+}
 
 
-export default function Feed(){
-    const [posts, postsloading, postserror] = useCollection(
-        collection(db, "post"),
-        {}
-      );
-
+export default function Feed(props){
+    const {post} = props
     return(
         <>
         <div className={styles.header}>
@@ -36,18 +41,20 @@ export default function Feed(){
             <div className={styles.center}><div className={styles.firstinput}><Input /> </div>
                 <div className={styles.feed}>
                 <div className={styles.posts}>
-                {postserror && <strong>Error: {JSON.stringify(postserror)}</strong>}
-        {postsloading && <span>Collection: Loading...</span>}      
-      {posts && posts.docs.map((doc) => (
-              <div>
-                <Post>{doc.data()}</Post>
-              </div>
-            ))}
-
+                {post.map((post) => {
+                  return(
+                     <Post post={post}></Post> 
+                  )
+                })}
                 </div>
                 </div>
             </div>
             <div className={styles.right}></div>
+            <div className={styles.feedFooter}>
+                <div className={styles.feedBtnArrowUp}>
+                <BtnArrowUp/></div>
+                <Footer/>
+            </div>
         </div>
         </>
 

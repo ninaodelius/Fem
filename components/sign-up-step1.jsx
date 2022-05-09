@@ -10,7 +10,7 @@ export default function SignUpOne() {
     }
     const form = (
     <div className={styles.loginform}>
-        <h1 className='title'>Skapa konto!</h1>
+        <h1 className={styles.title1}>Skapa konto!</h1>
         <div className={styles.form}>
          <form>
          <div className={styles.inputcontainer}>

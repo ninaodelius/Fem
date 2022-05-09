@@ -69,9 +69,10 @@ const SignIn = () => {
                     <input id={styles.input} name="password" placeholder='Password' {...register('password')} className={`form-control ${errors.password ? 'is-invalid' : ''}`} type={showPassword ? "text" : "password"}/>
                     <div className={styles.passwordtoggleicon} onClick={() => setShowPassword(showPassword => !showPassword)}>{showPassword ? <VisibilityIcon/> : <VisibilityOffIcon/>}</div>
                 </div>
-                <div className={styles.checkboxcontainer}>
+                <div className={styles.rememberforgotcontainer}>
+                <div className={styles.remembercontainer}>
                 <input type="checkbox" id="remember" name="remember" value="Kom ihåg mig!"></input>
-                <label htmlFor="remember"><p> Kom ihåg mig!</p></label>
+                <label htmlFor="remember"><p> Kom ihåg mig!</p></label></div>
                 <Link href="/auth/forgot-password"><a className={styles.link}><p>Glömt lösenord?</p></a></Link></div>
                 
                 <div className={styles.buttoncontainer}>

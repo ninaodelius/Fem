@@ -43,7 +43,9 @@ export default function Feed(props){
                 <div className={styles.posts}>
                 {post.map((post) => {
                   return(
+                      <div key={post.id}>
                      <Post post={post}></Post> 
+                     </div>
                   )
                 })}
                 </div>

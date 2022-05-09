@@ -1,10 +1,16 @@
 import styles from '/styles/components/post.module.css'
 import React, { useState } from 'react';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 
 export default function Post({post}){
-    
-    const [likes, setLikes] = React.useState(0);
+
+    const [showHeart, setShowHeart] = useState(false)
+
+    const [likes, setLikes] = useState(0);
     
     function handleLike(){
         setLikes(likes+1)
@@ -25,7 +31,8 @@ export default function Post({post}){
                 </div>
                 <div className={styles.interactContainer}>
                 <div className={styles.comment}><button className={styles.interactbutton}><img src={'/images/cmtbubble.png'}/><p>0</p></button></div>
-                    <div className={styles.like}><button className={styles.interactbutton} onClick={handleLike}><img src={'/images/heartlike.png'}/>{likes}</button></div>
+                    <div className={styles.like}><button className={styles.interactbutton} onClick={handleLike}><img src={'/images/emptyHeart.png'}/>{likes}</button></div>
+                    <div className={styles.like}><button className={styles.interactbutton} onClick={() => setShowHeart(showHeart => !showHeart)}>{showHeart ? <img src={'/images/emptyHeart.png'}/> : <img src={'/images/filledHeart.png'}/>}{likes}</button></div>
                     <div className={styles.share}><button className={styles.interactbutton}><img src={'/images/shareicon.png'}/></button></div>
                     <div className={styles.save}><button className={styles.interactbutton}><img src={'/images/saveicon.png'}/></button></div>
                     </div>

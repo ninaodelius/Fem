@@ -13,7 +13,14 @@ export default function Post({post}){
                 <div className={styles.textboxwrap}>{post.text}</div>
                 <p className={styles.menuwrap}>{post.tags}</p>
                 <hr className={styles.hr}/>
-        </div>
+                </div>
+                <div className={styles.interactContainer}>
+                <div className={styles.comment}><button className={styles.interactbutton}><img src={'/images/cmtbubble.png'}/><p>0</p></button></div>
+                    <div className={styles.like}><button className={styles.interactbutton}><img src={'/images/heartlike.png'}/><p>0</p></button></div>
+                    <div className={styles.share}><button className={styles.interactbutton}><img src={'/images/shareicon.png'}/></button></div>
+                    <div className={styles.save}><button className={styles.interactbutton}><img src={'/images/saveicon.png'}/></button></div>
+                    </div>
+        
         
 
         </div>

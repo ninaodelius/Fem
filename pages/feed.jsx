@@ -43,7 +43,7 @@ export default function Feed(props){
                 <div className={styles.posts}>
                 {post.map((post) => {
                   return(
-                      <div key={post.id}>
+                      <div key={post._id}>
                      <Post post={post}></Post> 
                      </div>
                   )

@@ -1,9 +1,9 @@
 import styles from '../styles/components/button.module.css'
 import React, { useState } from 'react';
 
-export default function Button({children, disabled}){
+export default function Button({children, disabled, type}){
     return (
-            <button className={styles.btn} name="button" disabled={disabled} type="submit" >{children}</button>
+            <button className={styles.btn} name="button" disabled={disabled} type={type} >{children}</button>
         
     )
     

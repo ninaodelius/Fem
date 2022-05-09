@@ -8,6 +8,7 @@ import { collection, addDoc } from 'firebase/firestore';
 export default function Post(props){
   const submit = "submit";
   const [post, setPost] = useState('');
+  const [tags, setTags] = useState(''); 
   const [name, setName] = useState('')
   const onSubmit =  (event) => {
     console.log(post)

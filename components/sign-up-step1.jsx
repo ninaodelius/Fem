@@ -3,13 +3,22 @@ import Link from 'next/dist/client/link'
 import styles from '/styles/components/signupone.module.css'
 import SignUpTwo from '../components/sign-up-step2'
 import {React, useState} from 'react'
-import { userForm } from './Validations/signUpOneValidation'
+import * as yup from 'yup';
+// import { userForm } from './Validations/signUpOneValidation'
 
 export default function SignUpOne() {
     const [nextStep, setNextStep] = useState(false)
    const toggleView = () =>{
       setNextStep(nextStep => !nextStep)
     }
+
+    const userForm = yup.object().shape({
+      name: yup.string().min(2).required(),
+      lastname: yup.string().min(2).required(),
+      email: yup.string().email().required(),
+      password: yup.string().min(4).max(10).required()
+    
+    })
 
     const createUser = async(event) => {
       event.preventDefault()
@@ -19,7 +28,7 @@ export default function SignUpOne() {
         email: event.target[2].value,
         password: event.target[3].value,
       }
-      console.log(formData)
+      const isValid = await userForm.isValid(formData)
     }
 
     const form = (

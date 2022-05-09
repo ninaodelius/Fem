@@ -93,8 +93,9 @@
 }
 .postchoicecontainer{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     width: 100%;
+    flex-direction: row;
 }
 .button{
     padding-left: 1.563rem;
@@ -111,11 +112,10 @@
 .insertdoc{
     margin-right: 0.313rem;
 }
-.menu{
-    margin-right: 0.625rem;
-}
+
 
 .insertButton{
     border: none;
     background: none;
 }
+

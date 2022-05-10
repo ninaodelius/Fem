@@ -3,6 +3,7 @@ import Link from 'next/dist/client/link'
 import styles from '/styles/components/signupone.module.css'
 import SignUpThree from '../components/sign-up-step3'
 import {React, useState} from 'react'
+
 export default function SignUpTwo() {
     const [nextStep, setNextStep] = useState(false)
 

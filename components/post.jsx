@@ -17,6 +17,14 @@ export default function Post({post}){
         handleShowHeart();
     }
 
+    const [showSave, setShowSave] = useState(false);
+
+    function handleShowSave() {
+        setShowSave(showSave => !showSave)
+    }
+
+  
+
     const [sharePopup, setSharePopup] = useState(false);
 
     return(
@@ -34,9 +42,9 @@ export default function Post({post}){
                 </div>
                 <div className={styles.interactContainer}>
                 <div className={styles.comment}><button className={styles.interactbutton}><img src={'/images/cmtbubble.png'}/>0</button></div>
-                    <div className={styles.like}><button className={styles.interactbutton} onClick={handleLike}>{showHeart ? <img src={'/images/emptyHeart.png'}/> : <img src={'/images/filledHeart.png'}/>}{likes}</button></div>
+                    <div className={styles.like}><button className={styles.interactbutton} onClick={handleLike}>{showHeart ? <img src={'/images/filledHeart.png'}/> : <img src={'/images/emptyHeart.png'}/>}{likes}</button></div>
                     <div className={styles.share}><button className={styles.interactbutton} onClick={() => setSharePopup(true)}><img src={'/images/shareicon.png'}/></button></div>
-                    <div className={styles.save}><button className={styles.interactbutton}><img src={'/images/saveicon.png'}/></button></div>
+                    <div className={styles.save}><button className={styles.interactbutton} onClick={handleShowSave}>{showSave ? <img src={'/images/savedicon.png'}/> : <img src={'/images/saveicon.png'}/>}</button></div>
                     </div>
                     <SharePop trigger={sharePopup} setTrigger={setSharePopup}></SharePop>
         

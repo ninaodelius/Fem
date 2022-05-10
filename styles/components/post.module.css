@@ -73,6 +73,10 @@
 .save{
     margin-right: 10px;
 }
+.save img{
+    width: 40%;
+    height: 40%;
+}
 
 .interactContainer{
     display: flex;

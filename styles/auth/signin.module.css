@@ -46,6 +46,7 @@
     }
     .form{
       margin-bottom: 0px;
+      z-index: 10;
   }
     
     .buttoncontainer {

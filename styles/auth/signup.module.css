@@ -1,5 +1,13 @@
 .container{
   font-family: 'Nunito';
-  position: relative;
-  min-height: 100vh;
+
+}
+
+.feedFooter{
+  display: flex;
+  justify-content: right;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
 }

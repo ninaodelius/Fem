@@ -1,0 +1,117 @@
+.passwordtoggleicon{
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+    right: 10px;
+    top:60%;
+    transform: translateY(-50%);
+  }
+  
+  .loginform {
+      padding-top: 10vh;
+      display: flex;
+        text-align: center;
+        gap: 20px;
+        min-height: 100vh;
+        font-family: 'Nunito';
+        background-image: url("/images/background.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        flex-direction: column;
+        align-items: center;
+      }
+      .form p{
+        font-weight: 700;
+      }
+      
+      #input{
+        font-family: 'Nunito';
+        height: 40px;
+        width: 353px;
+        border: 1px solid #fcbd8a;
+        background-color:aliceblue;
+        padding-left: 32px;
+        border-radius: 5px;
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+      .formcontrol{
+        width: 353px;
+        height: 40px;
+        border:#fcbd8a;
+        border-radius: 10px;
+        font-size:14pt;
+        line-height: 1.4;
+        padding-left: 32px; 
+      }
+      .form{
+        margin-bottom: 0px;
+    }
+      
+      .buttoncontainer {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+      .rememberforgotcontainer{
+        font-size: 14px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-evenly;
+      }
+    
+      .remembercontainer{
+        display:flex;
+        align-items: baseline;
+        justify-content: baseline;
+      }
+      .rememberforgotcontainer p{
+        color: #826ac5;
+        align-content: space-between;
+      }
+      .h2{
+        color: #826ac5;
+      }
+     
+      .list-container {
+        display: flex;
+      }
+      
+      .error {
+        color: red;
+        font-size: 12px;
+      }
+      
+      .title1 {
+        display:flex;
+        text-align: center;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 40px;
+      }
+      
+      .inputcontainer {
+        position:relative;
+        width: 353px;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        padding: 0;
+        margin-bottom: 10px;
+      }
+  
+      .link{
+        color: var(--purple);
+      }
+      .link:hover{
+        color: #999999;
+      }
+  
+      .threeWomen{
+        display:flex;
+        position:relative;
+        grid-template-columns: 1f;
+      }

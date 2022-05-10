@@ -1,5 +1,6 @@
 import styles from '/styles/components/post.module.css'
 import React, { useState } from 'react';
+import SharePop from "./share-pop"
 
 export default function Post({post}){
 
@@ -15,6 +16,8 @@ export default function Post({post}){
         setLikes(likes+1)
         handleShowHeart();
     }
+
+    const [sharePopup, setSharePopup] = useState(false);
 
     return(
         <div className={styles.postcontainer}>
@@ -32,10 +35,10 @@ export default function Post({post}){
                 <div className={styles.interactContainer}>
                 <div className={styles.comment}><button className={styles.interactbutton}><img src={'/images/cmtbubble.png'}/>0</button></div>
                     <div className={styles.like}><button className={styles.interactbutton} onClick={handleLike}>{showHeart ? <img src={'/images/emptyHeart.png'}/> : <img src={'/images/filledHeart.png'}/>}{likes}</button></div>
-                    <div className={styles.share}><button className={styles.interactbutton}><img src={'/images/shareicon.png'}/></button></div>
+                    <div className={styles.share}><button className={styles.interactbutton} onClick={() => setSharePopup(true)}><img src={'/images/shareicon.png'}/></button></div>
                     <div className={styles.save}><button className={styles.interactbutton}><img src={'/images/saveicon.png'}/></button></div>
                     </div>
-        
+                    <SharePop trigger={sharePopup} setTrigger={setSharePopup}></SharePop>
         
 
         </div>

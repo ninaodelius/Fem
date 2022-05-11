@@ -7,7 +7,9 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-import Footer from '../../components/footer'
+import Footer from '../../components/footer';
+import { useRouter } from 'next/router'
+
 
 
 const SignIn = () => {
@@ -50,12 +52,18 @@ const SignIn = () => {
         alert(`Is this your log in information?: ${result.email} ${result.password}`)
         return false;
       }*/
+      const router = useRouter()
       function onSubmit(data) {
+        
+        router.push('/feed')
         alert('SUCCESS!! :-)\n\n' + JSON.stringify(data, null, 4))
+        
         return false;
+
     }
 
-    return(
+    return( 
+        <div className={styles.pagewrap}>
         <div className={styles.loginform}>
             <div className={styles.title1}><img src={'/images/wemelogo.png'}/></div>
                 <div className={styles.form}>
@@ -69,20 +77,21 @@ const SignIn = () => {
                     <input id={styles.input} name="password" placeholder='Password' {...register('password')} className={`form-control ${errors.password ? 'is-invalid' : ''}`} type={showPassword ? "text" : "password"}/>
                     <div className={styles.passwordtoggleicon} onClick={() => setShowPassword(showPassword => !showPassword)}>{showPassword ? <VisibilityIcon/> : <VisibilityOffIcon/>}</div>
                 </div>
-                <div className={styles.checkboxcontainer}>
+                <div className={styles.rememberforgotcontainer}>
+                <div className={styles.remembercontainer}>
                 <input type="checkbox" id="remember" name="remember" value="Kom ihåg mig!"></input>
-                <label htmlFor="remember"><p> Kom ihåg mig!</p></label>
+                <label htmlFor="remember"><p> Kom ihåg mig!</p></label></div>
                 <Link href="/auth/forgot-password"><a className={styles.link}><p>Glömt lösenord?</p></a></Link></div>
                 
                 <div className={styles.buttoncontainer}>
-                    <Button disabled={false}>Logga in</Button>
+                <Button disabled={false}>Logga in</Button>
                 </div>
                 <Link href="/auth/sign-up"><a className={styles.link}><p>Bli medlem</p></a></Link>
                 </form>
         </div>
         <Footer />
 </div>
-
+</div>
     );
     
 };

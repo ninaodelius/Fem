@@ -1,5 +1,5 @@
 import styles from '../styles/components/footer.module.css'
-import Link from 'next/link'
+
 
 export default function Footer(){
     return(
@@ -8,21 +8,22 @@ export default function Footer(){
         <img src={'/images/wemelogo.png'}/></div>
 
         <div className={styles.socialFooter}>
-            <div className={styles.facebookLogo}>
             <a href={'https://www.facebook.com'}>
+            <div className={styles.facebookLogo}>
             <img src={'/images/facebook.png'}/>
-            </a></div>
             <div className={styles.socialMediaText}>
             FÖLJ OSS PÅ FACEBOOK
             </div>
+            </div>
+</a>
 
-            <div className={styles.instagramLogo}>
             <a href={'https://www.instagram.com'}>
+            <div className={styles.instagramLogo}>
             <img src={'/images/instagram.png'}/>
-            </a></div>
+            </div>
             <div className={styles.socialMediaText}>
             FÖLJ OSS PÅ INSTAGRAM
-            </div>
+            </div></a>
 
             <div className={styles.emailLogo}>
             <img src={'/images/email.png'}></img>

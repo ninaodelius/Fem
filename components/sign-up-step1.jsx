@@ -15,10 +15,10 @@ export default function SignUpOne() {
     
 
     const schema = yup.object().shape({
-      firstName: yup.string().required('First name is required').min(2, "Minimun 2 letters"),
-      lastName: yup.string().required('First name is required').min(2, "Minimun 2 letters"),
+      firstName: yup.string().min(2, "Minimun 2 letters").required('First name is required'),
+      lastName: yup.string().min(2, "Minimun 2 letters").required('First name is required'),
       email: yup.string().email().required('email name is required'),
-      password: yup.string().required('First name is required').min(4).max(15, "Maximum 15 letters")
+      password: yup.string().min(4).max(15, "Maximum 15 letters").required('First name is required')
 
     })
 

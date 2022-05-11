@@ -1,0 +1,13 @@
+.btnround{
+        background-Color: #F59467;
+        background-position: center;
+        background-Image: url(/src/Arrow.png);
+        background-Repeat: no-repeat;
+        height: 80px;
+        width: 80px;
+        border: none;
+        border-radius: 40px;
+        transition: 0.3s;
+        cursor: pointer;
+        filter: drop-shadow(0px 4px 2px #999);
+}

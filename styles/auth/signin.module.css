@@ -46,6 +46,7 @@
     }
     .form{
       margin-bottom: 0px;
+      z-index: 10;
   }
     
     .buttoncontainer {
@@ -54,16 +55,21 @@
       margin-bottom: 20px;
       margin-top: 20px;
     }
-    .checkboxcontainer{
+    .rememberforgotcontainer{
       font-size: 14px;
       margin-top: 0px;
       margin-bottom: 10px;
       display: flex;
       align-items: baseline;
-      justify-content: center;
+      justify-content: space-evenly;
     }
   
-    .checkboxcontainer p{
+    .remembercontainer{
+      display:flex;
+      align-items: baseline;
+      justify-content: baseline;
+    }
+    .rememberforgotcontainer p{
       color: #826ac5;
       align-content: space-between;
     }

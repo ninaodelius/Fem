@@ -11,10 +11,11 @@ export default function SignUp(){
   
   return (
     <>
-    <div className={styles.container}>
+        <div className={styles.container}>
      <SignUpOne /> 
-     <Footer/>
-    </div>
+<div className={styles.feedFooter}>
+     <Footer/></div>
+     </div>
     </>
   )
 }

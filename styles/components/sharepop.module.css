@@ -1,0 +1,161 @@
+.hr{
+    height: 0px;
+    background: transparent;
+    border-bottom:1px solid rgb(209, 209, 209);
+    width: 95%;
+    border-top: 0px;
+    border-left: 0px;
+}
+.popup{
+    display: flex;
+    position: fixed;
+    flex-wrap: wrap;
+    z-index: 10;
+}
+
+.sharepopcontainer{
+    width: 40rem;
+    height: 29.813rem;
+    background: #FFF9F3;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.625rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+}
+
+.topheader{
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Nunito';
+    font-weight: 700;
+    font-size: 1.25rem;
+
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    padding-bottom: 1rem;
+}
+.usercontainer{
+    display: flex;
+    align-items: center;
+    margin-top: 1.25rem;
+}
+.photowrap{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+}
+.photo img{
+    width: 3.313rem;
+    height: 3.313rem;
+    border-radius: 50%;
+}
+.namewrap{
+    font-family: 'Nunito';
+    font-weight: 700;
+    font-size: 1.25rem;
+    
+}
+.inputcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+.textbox1wrap{
+    display: flex;
+    width: 100%;
+}
+.textbox2wrap{
+    display: flex;
+    width: 100%;
+}
+.textbox1{
+    font-family: 'Nunito';
+font-style: normal;
+font-weight: 300;
+font-size: 20px;
+line-height: 28px;
+    width: 21.125rem;
+    height: 2.625rem;
+    border-style: none;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    outline: none;
+    border: 1px solid #DDDDDD;
+border-radius: 20px;
+}
+
+.sharedcontent{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    width:36.625rem;
+    height: 2.625rem;
+    border-style: none;
+    background-color: #FFFFFF;
+    padding-left: 1rem;
+    margin-bottom: 1rem;    
+    outline: none;
+border: 1px solid #DDDDDD;
+border-radius: 15px;
+}
+
+.textbox2{
+    font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 16px;
+text-transform: uppercase;
+    width:36.625rem;
+    height: 2.625rem;
+    border-style: none;
+    background-color: #FFFFFF;
+    padding-left: 1rem;
+    margin-bottom: 1.438rem;
+    outline: none;
+    border: 1px solid #DDDDDD;
+border-radius: 10px;
+}
+.sharechoicecontainer{
+    margin-top: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row;
+}
+.button{
+    padding-left: 1.563rem;
+}
+.question{
+    margin-right: 0.313rem;
+}
+.picture{
+    margin-right: 0.313rem;
+}
+.video{
+    margin-right: 0.313rem;
+}
+.insertdoc{
+    margin-right: 0.313rem;
+}
+.options{
+    margin-right: 0.313rem;
+}
+.insertButton{
+    border: none;
+    background: none;
+}
+

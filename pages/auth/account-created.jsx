@@ -1,9 +1,10 @@
-import styles from '/styles/auth/signin.module.css'
+import styles from '/styles/auth/accountcreated.module.css'
 import Button from '../../components/button'
 import Link from 'next/dist/client/link'
 import Footer from '../../components/footer'
 export default function AccountCreated(){
     return(
+        <div className={styles.pagewrap}>
         <div className={styles.loginform}>
         <img src={'/images/confetti.png'}/>
             <h1 className={styles.h1}>Konto skapat!</h1>
@@ -16,6 +17,7 @@ export default function AccountCreated(){
             </div>
             <Button><Link href='/auth/sign-in' passHref>Logga in</Link></Button>
             <Footer/>
+        </div>
         </div>
     )
 }

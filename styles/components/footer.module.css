@@ -1,5 +1,6 @@
 
 .footerSection{
+    z-index: -1;
     display: flex;
     background-image: url('/images/footerbg.png');
     background-size: 100% 100%;
@@ -9,7 +10,6 @@
     align-items: flex-end;
     position: absolute;
     justify-content: space-between;
-    z-index: -1;
   }
 
   .footerSection p{
@@ -29,6 +29,8 @@
     justify-content: space-evenly;
     font-size: 1vh;
     padding: 1rem;
+    flex-wrap: nowrap;
+    align-content: space-around;
   }
 
   .facebookLogo img{

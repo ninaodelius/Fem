@@ -32,7 +32,7 @@ export default function Post({post}){
             <div className={styles.infocontainer}>
                 <div className={styles.photowrap}>
                 <div className={styles.photo}><img src={'/images/Woman.svg'}/></div>
-                <div className={styles.namewrap }>{post.author}<div className={styles.m}>M</div></div>
+                <div className={styles.namewrap }>{post.author}{post.timestamp}<div className={styles.m}>M</div></div>
                 </div>
         </div>
         <div className={styles.textcontainer}> 

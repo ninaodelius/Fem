@@ -5,7 +5,7 @@ export default function SignUpThree() {
     return(
         <div className={styles.loginform}>
         <img src={'/images/step3of3.png'}/>
-        <h1 className='title'>Vem är du i mentorskapet?</h1>
+        <h1 className={styles.title1}>Vem är du i mentorskapet?</h1>
         
         <div className={styles.box}>
         <div className={styles.mentee}>
@@ -20,7 +20,7 @@ export default function SignUpThree() {
         </div>
 
         <p>Osäker i nuläget? Ingen fara! Du måste inte välja någon roll, men om du blir sugen i framtiden så går det bra att ange det i din profil. Så för nu kan du bara kicka på “Hoppa över”</p>
-          <div className='buttoncontainer'>
+          <div className={styles.buttoncontainer}>
           <Button><Link href='./account-created' passHref>Nästa</Link></Button>
           </div>
           <Link href='./account-created'><a className={styles.link}>

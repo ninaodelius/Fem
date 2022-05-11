@@ -7,8 +7,8 @@ export default function SignUp(){
     <>
         <div className={styles.container}>
      <SignUpOne /> 
-
-     <Footer/>
+<div className={styles.feedFooter}>
+     <Footer/></div>
      </div>
     </>
 

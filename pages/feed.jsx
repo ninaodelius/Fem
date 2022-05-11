@@ -8,6 +8,7 @@ import { collection, addDoc, getDocs, getDoc } from 'firebase/firestore';
 import Post from '../components/post'
 import BtnArrowUp from '../components/btnArrowUp'
 import Footer from '../components/footer'
+import Profilefeed from "../components/profileFeed"
 
 export const getServerSideProps = async(context) => {
     const res = await getDocs(collection(db, "posts"))
@@ -35,7 +36,7 @@ export default function Feed(props){
         <div className={styles.header}>
             <div className={styles.left}><img src={'/images/Logo.svg'}/></div>
             <div className={styles.center}><Searchbar /></div>
-            <div className={styles.right}></div></div>
+            <div className={styles.right}><Profilefeed/></div></div>
         <div className={styles.content}>
             <div className={styles.left}><List/></div>
             <div className={styles.center}><div className={styles.firstinput}><Input /> </div>

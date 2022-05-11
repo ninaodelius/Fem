@@ -4,12 +4,9 @@ import styles from '../styles/Home.module.css'
 import Button from '../components/button.jsx'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-<<<<<<< HEAD
 import Buttonround from '../components/button-round.jsx' 
+import Footer from '../components/footer.jsx'
 
-=======
-import Footer from '../components/footer'
->>>>>>> origin
 
 
 export default function Home() {
@@ -33,7 +30,8 @@ const handleClick = () => {
     <Button><Link href='auth/sign-in' passHref>Sign in</Link></Button>
     <Button><Link href="auth/sign-up" passHref>Sign up</Link></Button>
     <Button><Link href="/feed" passHref>Feed</Link></Button>
-  </div>  <Footer/>
+  </div> 
+   <Footer/>
   </>
   )
 }

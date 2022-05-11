@@ -72,7 +72,7 @@ export default function SignUpOne() {
           <p className='error-message'>{errors.email?.message}</p>
           <div className={styles.inputcontainer}>
            <label>
-             <input type="text" id={styles.input} name="password" placeholder="Lösenord" {...register('password')} />
+             <input type="password" id={styles.input} name="password" placeholder="Lösenord" {...register('password')} />
            </label>
           </div>
           <p className='error-message'>{errors.password?.message}</p>

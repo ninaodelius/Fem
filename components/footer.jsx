@@ -22,13 +22,9 @@ export default function Footer(){
             <img src={'/images/instagram.png'}/>
             </div>
             <div className={styles.socialMediaText}>
-<<<<<<< HEAD
           <span> FÖLJ OSS PÅ INSTAGRAM </span>
             </div>
-=======
-            FÖLJ OSS PÅ INSTAGRAM
-            </div></a>
->>>>>>> origin
+            </a>
 
             <div className={styles.emailLogo}>
             <img src={'/images/email.png'}></img>

@@ -3,9 +3,16 @@ import Link from 'next/dist/client/link'
 import styles from '/styles/components/signupone.module.css'
 import SignUpThree from '../components/sign-up-step3'
 import {React, useState} from 'react'
+import * as yup from 'yup'
+import { useForm } from 'react-hook-form'
+import {yupResolver} from '@hookform/resolvers/yup'
 
 export default function SignUpTwo() {
     const [nextStep, setNextStep] = useState(false)
+
+    const schema = yup.object().shape({
+      
+    })
 
     const form = (
     <div className={styles.loginform}>

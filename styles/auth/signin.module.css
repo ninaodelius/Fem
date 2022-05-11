@@ -103,12 +103,12 @@
       padding: 0;
       margin-bottom: 10px;
     }
-
     .link{
       color: var(--purple);
     }
     .link:hover{
       color: #999999;
+    
     }
 
     .threeWomen{
@@ -116,3 +116,4 @@
       position:relative;
       grid-template-columns: 1f;
     }
+

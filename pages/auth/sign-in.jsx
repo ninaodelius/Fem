@@ -2,7 +2,7 @@ import Button from '../../components/button'
 import styles from '/styles/auth/signin.module.css'
 import Link from 'next/link'
 import React, { useState, useEffect } from "react"
-import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityIcon from '@mui/icons-material/Visibility'
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';

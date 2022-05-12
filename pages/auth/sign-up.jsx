@@ -6,6 +6,8 @@ import styles from '/styles/auth/signup.module.css'
 import Footer from '../../components/footer'
 
 export default function SignUp(){
+
+
   
   return (
     <>

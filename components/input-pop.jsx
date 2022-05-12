@@ -2,13 +2,7 @@ import styles from '/styles/components/postpop.module.css'
 import Button from '/components/button.jsx'
 import { useEffect, useState, React } from 'react'
 import { db, auth, provider } from '../firebase/firebaseConfig'
-<<<<<<< HEAD
 import { collection, addDoc } from 'firebase/firestore';
-=======
-import { useCollection } from "react-firebase-hooks/firestore";
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import { collection, addDoc } from 'firebase/firestore'
->>>>>>> main
 
 export default function Post(props){
   const submit = "submit";

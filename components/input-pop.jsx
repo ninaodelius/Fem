@@ -2,17 +2,23 @@ import styles from '/styles/components/postpop.module.css'
 import Button from '/components/button.jsx'
 import { useEffect, useState, React } from 'react'
 import { db, auth, provider } from '../firebase/firebaseConfig'
+<<<<<<< HEAD
 import { collection, addDoc } from 'firebase/firestore'
+=======
+import { useCollection } from "react-firebase-hooks/firestore";
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+>>>>>>> main
 
 export default function Post(props){
   const submit = "submit";
   const [post, setPost] = useState('');
   const [tags, setTags] = useState(''); 
-  const [name, setName] = useState('')
+  const [name, setName] = useState('Naomi Britton')
   const onSubmit =  (event) => {
     console.log(post)
    try {
-     addDoc(collection(db, "post"), {
+     addDoc(collection(db, "posts"), {
+      author : name,
       text : post,
     }).then((docRef) => {
       console.log("Document written with ID: ", docRef.id);
@@ -30,17 +36,18 @@ export default function Post(props){
         <div className={styles.popup}>
             <div className={styles.postpopcontainer}>
                 <div className={styles.topheader}>
-                <div className={styles.header}>Skapa inlägg<img src={'/images/Close.svg'} onClick={() => props.setTrigger(false)} /></div>
+                <img src={'/images/Close.svg'} onClick={() => props.setTrigger(false)} /></div>
+                <div className={styles.header}>Skapa inlägg</div>
                 
-                </div>
+                
                 <hr className={styles.hr}/>
                 <div className={styles.usercontainer}>
-                    <div className={styles.photowrap}><div className="photo"><img src={'/images/Woman.svg'}/></div></div>
+                    <div className={styles.photowrap}><div className={styles.photo}><img src={'/images/Woman.svg'}/></div></div>
                     <div className={styles.namewrap }>Naomi Britton</div>   
                 </div>
                 <form onSubmit={onSubmit}>
                 <div className={styles.inputcontainer}>
-                    <div className={styles.textbox1wrap}><input type="text" value={post} onChange={(event) => setPost(event.target.value)} className={styles.textbox1} placeholder="Något du vill dela med dig av, Naomi?"></input></div>
+                    <div className={styles.textbox1wrap}><input type="text" className={styles.textbox1} value={post} onChange={(event) => setPost(event.target.value)} placeholder="Något du vill dela med dig av, Naomi?"></input></div>
                     <div className={styles.textbox2wrap}><input type="text" className={styles.textbox2} placeholder="Ange taggar för ditt inlägg"></input></div>
                 </div>
                 <hr className={styles.hr}/>

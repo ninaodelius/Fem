@@ -22,7 +22,7 @@
     display: flex;
     justify-content: center;
 }
-.photo{
+.photo img{
     width: 53px;
     height: 53px;
     border-radius: 50%;

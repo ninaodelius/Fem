@@ -36,7 +36,6 @@ const SignIn = () => {
 
       async function onSubmit(data) {
         const email = data.email
-        const password = data.password
 
         try{
           const userCredentials = await signInWithEmailAndPassword(auth, email, password)

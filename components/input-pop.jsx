@@ -13,7 +13,7 @@ export default function Post(props){
   const onSubmit =  (event) => {
     console.log(post)
    try {
-     addDoc(collection(db, "post"), {
+     addDoc(collection(db, "posts"), {
       text : post,
     }).then((docRef) => {
       console.log("Document written with ID: ", docRef.id);

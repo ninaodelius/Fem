@@ -7,39 +7,41 @@
     border-left: 0px;
 }
 .popup{
+    display: flex;
     position: fixed;
-    bottom: 0;
-    right: 0;
-    top: 0;
-    left: 0;
-    width: 40rem;
-    height: 29.813rem;
+    flex-wrap: wrap;
+    z-index: 10;
     
     
 }
 .postpopcontainer{
-    position: relative;
     width: 40rem;
-    height: 29.813rem;
+    height: 35rem;
     background: #FFF9F3;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     border-radius: 0.625rem;
-    filter: drop-shadow(0px 4px 0px rgba(251, 189, 139, 0.25));
-    margin-left: 0px;
-    margin-top: 0px;
-    z-index: 11;
-    box-shadow: 0px 0px 5px 10px rgb(254, 249, 242);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 1rem;
 }
 .topheader{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     font-family: 'Nunito';
     font-weight: 700;
     font-size: 1.25rem;
-    margin-top: 2.188rem;
-    margin-bottom: 1.063rem;
+
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    padding-bottom: 1rem;
 }
 
 .usercontainer{
@@ -52,7 +54,7 @@
     display: flex;
     justify-content: center;
 }
-.photo{
+.photo img{
     width: 3.313rem;
     height: 3.313rem;
     border-radius: 50%;
@@ -76,12 +78,17 @@
     margin-top: 1.875rem;
 }
 .textbox1{
-    width: 21.125rem;
+    width: 100%;
     border-style: none;
     background-color: #FFF9F3;
     padding-left: 1.563rem;
     margin-bottom: 5rem;
     outline: none;
+    font-family: 'Nunito';
+    font-style: normal;
+font-weight: 300;
+font-size: 24px;
+line-height: 32px;
 }
 .textbox2{
     width:36.625rem;
@@ -90,8 +97,23 @@
     border-radius: 0.625rem;
     border-style: none;
     outline: none;
+    background-color: #FFF9F3;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color:#826AC5;
+
 }
+
+.textbox2 ::placeholder{
+color:#826AC5;
+
+}
+
 .postchoicecontainer{
+    margin-top: 1.5em;
     display: flex;
     justify-content: space-between;
     width: 100%;

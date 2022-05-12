@@ -8,7 +8,7 @@ export default function Input(){
         <div className={styles.postcontainer}>
             
             <div className={styles.infocontainer}>
-                <div className={styles.photowrap}><div className="photo"><img src={'/images/Woman.svg'}/></div></div>
+                <div className={styles.photowrap}><div className={styles.photo}><img src={'/images/Woman.svg'}/></div></div>
                 <div className={styles.textboxwrap}><input type="text" className={styles.textbox} placeholder="Skriv inlägg" onClick={() => setInputPopup(true)}></input></div>
                 <div className={styles.menuwrap}></div>
             </div>

@@ -1,6 +1,6 @@
 import styles from '/styles/components/postpop.module.css'
 import Button from '/components/button.jsx'
-import { useEffect, useState, React } from 'react';
+import { useEffect, useState, React } from 'react'
 import { db, auth, provider } from '../firebase/firebaseConfig'
 import { useCollection } from "react-firebase-hooks/firestore";
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';

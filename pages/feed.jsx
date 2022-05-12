@@ -28,7 +28,6 @@ export const getServerSideProps = async(context) => {
     }
 }
 
-
 export default function Feed(props){
     const {post} = props
     return(
@@ -60,6 +59,5 @@ export default function Feed(props){
             </div>
         </div>
         </>
-
     )
 }

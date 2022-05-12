@@ -31,8 +31,11 @@ export default function Post({post}){
         <div className={styles.postcontainer}>
             <div className={styles.infocontainer}>
                 <div className={styles.photowrap}>
-                <div className={styles.photo}><img src={'/images/Woman.svg'}/></div>
-                <div className={styles.namewrap }>{post.author}{post.timestamp}<div className={styles.m}>M</div></div>
+                    <div className={styles.photo}><img src={'/images/Woman.svg'}/></div>
+                    <div className={styles.nameAndTitle}>
+                        <div className={styles.namewrap }>{post.author}</div>
+                        <div className={styles.jobtitle}>{post.jobTitle}</div>  
+                    </div>
                 </div>
         </div>
         <div className={styles.textcontainer}> 

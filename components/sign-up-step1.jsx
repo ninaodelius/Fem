@@ -4,8 +4,9 @@ import styles from '/styles/components/signupone.module.css'
 import SignUpTwo from '../components/sign-up-step2'
 import {React, useState} from 'react';
 import * as yup from 'yup';
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
+import { useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
+// import { userService, alertService } from 'services';
 
 export default function SignUpOne() {
     const [nextStep, setNextStep] = useState(false)
@@ -16,10 +17,10 @@ export default function SignUpOne() {
 
     const schema = yup.object().shape({
 
-      firstName: yup.string().min(2, "Minimun 2 letters").required('Förnamn är nödvändig'),
-      lastName: yup.string().min(2, "Minimun 2 letters").required('Efternamn är nödvändig'),
-      email: yup.string().email().required('giltig email är nödvändig'),
-      password: yup.string().min(4).max(15, "Maximum 15 letters").required('Lösenord är nödvändig')
+      firstName: yup.string().min(2, "Minst 2 tecken").required('Skriv in förnamn!'),
+      lastName: yup.string().min(2, "Minst 2 tecken").required('Skriv in efternamn!'),
+      email: yup.string().email().required('Skriv in en giltig email adress'),
+      password: yup.string().min(7, "Lösenordet måste minst vara 7 tecken").max(25, "Lösenordet får max vara 25 tecken").required('Lösenord är nödvändigt')
     })
 
     const { register, handleSubmit, formState} = useForm({
@@ -43,8 +44,18 @@ export default function SignUpOne() {
       console.log(errors)
     }
 
+  //   function onSubmit(user) {
+  //     return userService.register(user)
+  //         .then(() => {
+  //             alertService.success('Registration successful', { keepAfterRouteChange: true });
+  //             router.push('login');
+  //         })
+  //         .catch(alertService.error);
+  // }
+
 
     const form = (
+      
     <div className={styles.loginform}>
       <img src={'/images/step1of3.png'}/>
         <h1 className={styles.title1}>Skapa konto!</h1>
@@ -56,8 +67,8 @@ export default function SignUpOne() {
               <input type="text" id={styles.input} name="firstName" placeholder="Namn" {...register('firstName')} />
             </label> 
           </div>
+         <p className='error-message'>{errors.firstName?.message}</p>
 
-            <p className='error-message'>{errors.firstName?.message}</p>
         <div className={styles.inputcontainer}>
             <label>
               <input type="text" id={styles.input} name="lastName" placeholder="Efternamn" {...register('lastName')}/>
@@ -93,4 +104,4 @@ export default function SignUpOne() {
              {nextStep ? <SignUpTwo /> : form}
         </div>
     )
-}
+    }

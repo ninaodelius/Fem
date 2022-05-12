@@ -3,7 +3,7 @@ import styles from '../styles/components/footer.module.css'
 
 export default function Footer(){
     return(
-        <footer className={styles.footerSection}>
+        <div className={styles.footerSection}>
         <div className={styles.wemeLogo}>
         <img src={'/images/wemelogo.png'}/></div>
 
@@ -32,6 +32,6 @@ export default function Footer(){
             EMAILA OSS VID FRÅGOR
             </div>
             </div>
-        </footer>
+        </div>
     )
 }

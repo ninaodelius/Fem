@@ -13,8 +13,12 @@ export default function Post({post}){
     const [likes, setLikes] = useState(0);
     
     function handleLike(){
-        setLikes(likes+1)
         handleShowHeart();
+        if(!showHeart){
+            setLikes(1)
+        }else{
+            setLikes(0)
+        }
     }
 
     const [showSave, setShowSave] = useState(false);

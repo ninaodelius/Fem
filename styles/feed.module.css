@@ -26,9 +26,13 @@
     z-index: 10;
     
 }
+.feed{
+    z-index: 8;
+}
 .posts{
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 12rem;
+    padding-bottom: 16rem;
+    z-index:7;
 }
 
 
@@ -42,7 +46,7 @@
 }
 
 .feedBtnArrowUp{
-    margin-bottom: 25vh;
+    margin-bottom: 20vh;
     margin-right: 10vh;
 }
     

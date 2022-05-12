@@ -2,7 +2,7 @@
     height: 0px;
     background: transparent;
     border-bottom:1px solid rgb(209, 209, 209);
-    width: 90%;
+    width: 95%;
     border-top: 0px;
     border-left: 0px;
 }
@@ -11,12 +11,11 @@
     position: fixed;
     flex-wrap: wrap;
     z-index: 10;
-    
-    
 }
-.postpopcontainer{
+
+.sharepopcontainer{
     width: 40rem;
-    height: 35rem;
+    height: 29.813rem;
     background: #FFF9F3;
     display: flex;
     flex-direction: column;
@@ -24,6 +23,7 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 1rem;
 }
+
 .topheader{
     display: flex;
     justify-content: flex-end;
@@ -43,7 +43,6 @@
     line-height: 28px;
     padding-bottom: 1rem;
 }
-
 .usercontainer{
     display: flex;
     align-items: center;
@@ -63,6 +62,7 @@
     font-family: 'Nunito';
     font-weight: 700;
     font-size: 1.25rem;
+    
 }
 .inputcontainer{
     display: flex;
@@ -75,44 +75,61 @@
     width: 100%;
 }
 .textbox2wrap{
-    margin-top: 1.875rem;
+    display: flex;
+    width: 100%;
 }
 .textbox1{
-    width: 100%;
+    font-family: 'Nunito';
+font-style: normal;
+font-weight: 300;
+font-size: 20px;
+line-height: 28px;
+    width: 21.125rem;
+    height: 2.625rem;
     border-style: none;
-    background-color: #FFF9F3;
-    padding-left: 1.563rem;
-    margin-bottom: 5rem;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    margin-bottom: 1rem;
     outline: none;
+    border: 1px solid #DDDDDD;
+border-radius: 20px;
+}
+
+.sharedcontent{
     font-family: 'Nunito';
     font-style: normal;
-font-weight: 300;
-font-size: 24px;
-line-height: 32px;
-}
-.textbox2{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
     width:36.625rem;
     height: 2.625rem;
-    margin-bottom: 1.438rem;
-    border-radius: 0.625rem;
     border-style: none;
+    background-color: #FFFFFF;
+    padding-left: 1rem;
+    margin-bottom: 1rem;    
     outline: none;
-    background-color: #FFF9F3;
+border: 1px solid #DDDDDD;
+border-radius: 15px;
+}
+
+.textbox2{
     font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    color:#826AC5;
-
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 16px;
+text-transform: uppercase;
+    width:36.625rem;
+    height: 2.625rem;
+    border-style: none;
+    background-color: #FFFFFF;
+    padding-left: 1rem;
+    margin-bottom: 1.438rem;
+    outline: none;
+    border: 1px solid #DDDDDD;
+border-radius: 10px;
 }
-
-.textbox2 ::placeholder{
-color:#826AC5;
-
-}
-
-.postchoicecontainer{
+.sharechoicecontainer{
     margin-top: 1.5em;
     display: flex;
     justify-content: space-between;
@@ -134,8 +151,9 @@ color:#826AC5;
 .insertdoc{
     margin-right: 0.313rem;
 }
-
-
+.options{
+    margin-right: 0.313rem;
+}
 .insertButton{
     border: none;
     background: none;

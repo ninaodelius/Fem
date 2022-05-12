@@ -1,27 +1,38 @@
 import styles from '/styles/components/post.module.css'
 import React, { useState } from 'react';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-
+import SharePop from "./share-pop"
 
 export default function Post({post}){
 
-    const [showHeart, setShowHeart] = useState(false)
+    const [showHeart, setShowHeart] = useState(false);
+
+    function handleShowHeart()  {
+        setShowHeart(showHeart => !showHeart)
+    }
 
     const [likes, setLikes] = useState(0);
     
     function handleLike(){
         setLikes(likes+1)
+        handleShowHeart();
     }
+
+    const [showSave, setShowSave] = useState(false);
+
+    function handleShowSave() {
+        setShowSave(showSave => !showSave)
+    }
+
+  
+
+    const [sharePopup, setSharePopup] = useState(false);
 
     return(
         <div className={styles.postcontainer}>
             <div className={styles.infocontainer}>
                 <div className={styles.photowrap}>
                 <div className={styles.photo}><img src={'/images/Woman.svg'}/></div>
-                <div className={styles.namewrap }>{post.author}<div className={styles.m}>M</div></div>
+                <div className={styles.namewrap }>{post.author}{post.timestamp}<div className={styles.m}>M</div></div>
                 </div>
         </div>
         <div className={styles.textcontainer}> 
@@ -30,13 +41,12 @@ export default function Post({post}){
                 <hr className={styles.hr}/>
                 </div>
                 <div className={styles.interactContainer}>
-                <div className={styles.comment}><button className={styles.interactbutton}><img src={'/images/cmtbubble.png'}/><p>0</p></button></div>
-                    <div className={styles.like}><button className={styles.interactbutton} onClick={handleLike}><img src={'/images/emptyHeart.png'}/>{likes}</button></div>
-                    <div className={styles.like}><button className={styles.interactbutton} onClick={() => setShowHeart(showHeart => !showHeart)}>{showHeart ? <img src={'/images/emptyHeart.png'}/> : <img src={'/images/filledHeart.png'}/>}{likes}</button></div>
-                    <div className={styles.share}><button className={styles.interactbutton}><img src={'/images/shareicon.png'}/></button></div>
-                    <div className={styles.save}><button className={styles.interactbutton}><img src={'/images/saveicon.png'}/></button></div>
+                <div className={styles.comment}><button className={styles.interactbutton}><img src={'/images/cmtbubble.png'}/>0</button></div>
+                    <div className={styles.like}><button className={styles.interactbutton} onClick={handleLike}>{showHeart ? <img src={'/images/filledHeart.png'}/> : <img src={'/images/emptyHeart.png'}/>}{likes}</button></div>
+                    <div className={styles.share}><button className={styles.interactbutton} onClick={() => setSharePopup(true)}><img src={'/images/shareicon.png'}/></button></div>
+                    <div className={styles.save}><button className={styles.interactbutton} onClick={handleShowSave}>{showSave ? <img src={'/images/savedicon.png'}/> : <img src={'/images/saveicon.png'}/>}</button></div>
                     </div>
-        
+                    <SharePop trigger={sharePopup} setTrigger={setSharePopup}></SharePop>
         
 
         </div>

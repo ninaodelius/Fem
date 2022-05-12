@@ -3,6 +3,7 @@
 }
 
 .btn{
+    z-index: 20;
     background-color: #826AC5;
     height: 2.5rem;
     width: 10rem;

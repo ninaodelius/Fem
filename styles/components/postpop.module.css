@@ -29,7 +29,7 @@
     filter: drop-shadow(0px 4px 0px rgba(251, 189, 139, 0.25));
     margin-left: 0px;
     margin-top: 0px;
-    z-index: 10;
+    z-index: 11;
     box-shadow: 0px 0px 5px 10px rgb(254, 249, 242);
 }
 .topheader{

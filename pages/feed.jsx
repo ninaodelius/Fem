@@ -31,7 +31,7 @@ export const getServerSideProps = async(context) => {
 export default function Feed(props){
     const {post} = props
     return(
-        <>
+        <div className={styles.feedPage}>
         <div className={styles.header}>
             <div className={styles.left}><img src={'/images/Logo.svg'}/></div>
             <div className={styles.center}><Searchbar /></div>
@@ -51,13 +51,17 @@ export default function Feed(props){
                 </div>
                 </div>
             </div>
-            <div className={styles.right}></div>
             <div className={styles.feedFooter}>
                 <div className={styles.feedBtnArrowUp}>
                 <BtnArrowUp/></div>
                 <Footer/>
             </div>
         </div>
+<<<<<<< HEAD
         </>
+=======
+        </div>
+
+>>>>>>> 60fdd12267af6b03aa02806dd428415f7eeebd5f
     )
 }

@@ -2,23 +2,22 @@ import styles from '/styles/components/postpop.module.css'
 import Button from '/components/button.jsx'
 import { useEffect, useState, React } from 'react'
 import { db, auth, provider } from '../firebase/firebaseConfig'
-<<<<<<< HEAD
 import { collection, addDoc } from 'firebase/firestore'
-=======
 import { useCollection } from "react-firebase-hooks/firestore";
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
->>>>>>> main
 
 export default function Post(props){
   const submit = "submit";
   const [post, setPost] = useState('');
   const [tags, setTags] = useState(''); 
   const [name, setName] = useState('Naomi Britton')
+  const [jobTitle, setJobtitle] = useState('First Software Developer')
   const onSubmit =  (event) => {
     console.log(post)
    try {
      addDoc(collection(db, "posts"), {
       author : name,
+      title : jobTitle,
       text : post,
     }).then((docRef) => {
       console.log("Document written with ID: ", docRef.id);

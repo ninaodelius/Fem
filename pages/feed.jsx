@@ -3,8 +3,8 @@ import styles from '/styles/feed.module.css'
 import List from "../components/list"
 import Searchbar from "../components/searchbar"
 import { db } from '../firebase/firebaseConfig'
-import { useCollection } from "react-firebase-hooks/firestore";
-import { collection, addDoc, getDocs, getDoc } from 'firebase/firestore';
+import { useCollection } from "react-firebase-hooks/firestore"
+import { collection, addDoc, getDocs, getDoc } from 'firebase/firestore'
 import Post from '../components/post'
 import BtnArrowUp from '../components/btnArrowUp'
 import Footer from '../components/footer'

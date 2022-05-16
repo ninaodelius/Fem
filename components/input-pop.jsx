@@ -11,13 +11,17 @@ export default function Post(props){
   const [name, setName] = useState('Naomi Britton')
   const [jobTitle, setJobtitle] = useState('First Software Developer')
   const onSubmit =  (event) => {
+    var tagsList = tags.split(" ");
+    console.log(tagsList)
     console.log(post)
    try {
      addDoc(collection(db, "posts"), {
       author : name,
       title : jobTitle,
       text : post,
-      tags : tags,
+      tags : [tagsList[0] ,
+      tagsList[1]],
+
     }).then((docRef) => {
       console.log("Document written with ID: ", docRef.id);
   })
@@ -27,6 +31,7 @@ export default function Post(props){
     event.preventDefault()
     props.setTrigger(false)
     setPost('')
+    setTags('')
   };
   
 

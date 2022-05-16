@@ -11,6 +11,7 @@ export default function Post(props){
   const [name, setName] = useState('Naomi Britton')
   const [jobTitle, setJobtitle] = useState('First Software Developer')
   const onSubmit =  (event) => {
+    event.preventDefault()
     console.log(post)
    try {
      addDoc(collection(db, "posts"), {
@@ -23,7 +24,6 @@ export default function Post(props){
 } catch(error)  {
       console.error("Error adding document: ", error);
   };
-    event.preventDefault()
     props.setTrigger(false)
     setPost('')
   };

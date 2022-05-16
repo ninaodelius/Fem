@@ -2,7 +2,7 @@ import Button from '../components/button.jsx'
 import Link from 'next/dist/client/link'
 import styles from '/styles/components/signupone.module.css'
 import SignUpTwo from '../components/sign-up-step2'
-import {React, useState} from 'react';
+import {useState} from 'react';
 import * as yup from 'yup';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -81,7 +81,7 @@ export default function SignUpOne() {
           <label htmlFor="terms">Härmed godkänner jag WEMEs <Link href= '/auth/terms' passHref><a className={styles.link}>villkor.</a></Link></label>
         </div>
           <div className={styles.buttoncontainer}>
-          <Button><div type="submit">Skapa konto</div></Button>
+          <Button onClick={toggleView}><div type='sumbit'>Skapa konto</div></Button>
           </div>
          </form>
       </div>

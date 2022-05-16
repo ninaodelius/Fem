@@ -11,7 +11,7 @@ import Footer from '../components/footer'
 import Profilefeed from "../components/profileFeed"
 
 export const getServerSideProps = async(context) => {
-    const res = await getDocs(collection(db, "pos"))
+    const res = await getDocs(collection(db, "posts"))
     const post = res.docs
     .map((post) => post.data())
     if(post.length){

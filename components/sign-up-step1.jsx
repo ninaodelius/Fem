@@ -2,11 +2,10 @@ import Button from '../components/button.jsx'
 import Link from 'next/dist/client/link'
 import styles from '/styles/components/signupone.module.css'
 import SignUpTwo from '../components/sign-up-step2'
-import {React, useState} from 'react';
+import {useState} from 'react';
 import * as yup from 'yup';
-import { useForm } from 'react-hook-form'
-import { yupResolver } from '@hookform/resolvers/yup'
-// import { userService, alertService } from 'services';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
 
 export default function SignUpOne() {
     const [nextStep, setNextStep] = useState(false)
@@ -16,11 +15,11 @@ export default function SignUpOne() {
     
 
     const schema = yup.object().shape({
+      firstName: yup.string().required('Förnamn är nödvändigt').min(2, "Minimun 2 letters"),
+      lastName: yup.string().required('Efternamn är nödvändigt').min(2, "Minimun 2 letters"),
+      email: yup.string().email().required('email är nödvändig'),
+      password: yup.string().required('Lösenord är nödvändig').min(12).max(15, "Maximum 15 letters")
 
-      firstName: yup.string().min(2, "Minst 2 tecken").required('Skriv in förnamn!'),
-      lastName: yup.string().min(2, "Minst 2 tecken").required('Skriv in efternamn!'),
-      email: yup.string().email().required('Skriv in en giltig email adress'),
-      password: yup.string().min(7, "Lösenordet måste minst vara 7 tecken").max(25, "Lösenordet får max vara 25 tecken").required('Lösenord är nödvändigt')
     })
 
     const { register, handleSubmit, formState} = useForm({
@@ -44,18 +43,8 @@ export default function SignUpOne() {
       console.log(errors)
     }
 
-  //   function onSubmit(user) {
-  //     return userService.register(user)
-  //         .then(() => {
-  //             alertService.success('Registration successful', { keepAfterRouteChange: true });
-  //             router.push('login');
-  //         })
-  //         .catch(alertService.error);
-  // }
-
 
     const form = (
-      
     <div className={styles.loginform}>
       <img src={'/images/step1of3.png'}/>
         <h1 className={styles.title1}>Skapa konto!</h1>
@@ -67,8 +56,8 @@ export default function SignUpOne() {
               <input type="text" id={styles.input} name="firstName" placeholder="Namn" {...register('firstName')} />
             </label> 
           </div>
-         <p className='error-message'>{errors.firstName?.message}</p>
 
+            <p className='error-message'>{errors.firstName?.message}</p>
         <div className={styles.inputcontainer}>
             <label>
               <input type="text" id={styles.input} name="lastName" placeholder="Efternamn" {...register('lastName')}/>
@@ -92,7 +81,7 @@ export default function SignUpOne() {
           <label htmlFor="terms">Härmed godkänner jag WEMEs <Link href= '/auth/terms' passHref><a className={styles.link}>villkor.</a></Link></label>
         </div>
           <div className={styles.buttoncontainer}>
-          <Button><div onClick={submitForm} type="submit">Skapa konto</div></Button>
+          <Button onClick={toggleView}><div type='sumbit'>Skapa konto</div></Button>
           </div>
          </form>
       </div>
@@ -104,4 +93,4 @@ export default function SignUpOne() {
              {nextStep ? <SignUpTwo /> : form}
         </div>
     )
-    }
+}

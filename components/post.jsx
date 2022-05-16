@@ -1,6 +1,7 @@
 import styles from '/styles/components/post.module.css'
 import React, { useState } from 'react';
 import SharePop from "./share-pop"
+import Link from 'next/link';
 
 export default function Post({post}){
 
@@ -38,13 +39,13 @@ export default function Post({post}){
                     <div className={styles.photo}><img src={'/images/Woman.svg'}/></div>
                     <div className={styles.nameAndTitle}>
                         <div className={styles.namewrap }>{post.author}</div>
-                        <div className={styles.jobtitle}>{post.jobTitle}</div>  
+                        <div className={styles.jobtitle}>{post.title}</div>  
                     </div>
                 </div>
         </div>
         <div className={styles.textcontainer}> 
                 <div className={styles.textboxwrap}>{post.text}</div>
-                <p className={styles.menuwrap}>{post.tags}</p>
+                <Link href='./feed'><a className={styles.menuwrap}>{post.tags}</a></Link>
                 <hr className={styles.hr}/>
                 </div>
                 <div className={styles.interactContainer}>

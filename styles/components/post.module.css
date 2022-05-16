@@ -28,6 +28,14 @@
     height: 53px;
     border-radius: 50%;
 }
+.nameAndTitle{
+    display: flex;
+    flex-direction: column;
+}
+.jobtitle{
+    margin-left:40px;
+    font-size: small;
+}
 .namewrap{
     display: flex;
     margin-left: 40px;
@@ -38,7 +46,7 @@
     display: flex;
     flex-direction: column;
     height: 70%;
-    margin-top: 5px;
+    margin-top: 15px;
     padding-left: 30px;
 }
 .textboxwrap{

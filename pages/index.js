@@ -20,8 +20,8 @@ const handleClick = () => {
   <>
 
   <div className={styles.container}>
-    <Button><Link href='auth/sign-in' passHref>Sign in</Link></Button>
-    <Button><Link href="auth/sign-up" passHref>Sign up</Link></Button>
+    <Button><Link href='/auth/sign-in' passHref>Sign in</Link></Button>
+    <Button><Link href="/auth/sign-up" passHref>Sign up</Link></Button>
     <Button><Link href="/feed" passHref>Feed</Link></Button>
   </div> 
    <Footer/>

@@ -13,8 +13,12 @@ export default function Post({post}){
     const [likes, setLikes] = useState(0);
     
     function handleLike(){
-        setLikes(likes+1)
         handleShowHeart();
+        if(!showHeart){
+            setLikes(1)
+        }else{
+            setLikes(0)
+        }
     }
 
     const [showSave, setShowSave] = useState(false);
@@ -31,8 +35,11 @@ export default function Post({post}){
         <div className={styles.postcontainer}>
             <div className={styles.infocontainer}>
                 <div className={styles.photowrap}>
-                <div className={styles.photo}><img src={'/images/Woman.svg'}/></div>
-                <div className={styles.namewrap }>{post.author}{post.timestamp}<div className={styles.m}>M</div></div>
+                    <div className={styles.photo}><img src={'/images/Woman.svg'}/></div>
+                    <div className={styles.nameAndTitle}>
+                        <div className={styles.namewrap }>{post.author}</div>
+                        <div className={styles.jobtitle}>{post.jobTitle}</div>  
+                    </div>
                 </div>
         </div>
         <div className={styles.textcontainer}> 

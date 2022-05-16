@@ -1,3 +1,8 @@
+.feedPage{
+    display: flex;
+    flex-direction: column;
+}
+
 .header{
     display: flex;
     flex-direction: row;
@@ -8,6 +13,7 @@
 .content{
     display: flex;
     flex-direction: row;
+    position:relative;
 }
 .left{
     width: 25%;
@@ -16,7 +22,7 @@
     display: flex;
     flex-direction:column;
     width: 50%;
-}
+    }
 .right{
     width: 25%;
 }
@@ -26,8 +32,12 @@
     z-index: 11;
     
 }
+<<<<<<< HEAD
 .feed{
 }
+=======
+
+>>>>>>> 1b672064c50a851c6c3d78f3ab5fed143abeb2eb
 .posts{
     padding-top: 12rem;
     padding-bottom: 16rem;
@@ -42,10 +52,9 @@
 .feedFooter{
     display: flex;
     justify-content: right;
-    position: fixed;
+    position: absolute;
     bottom: 0;
-    width: 100%;
-
+    width: 100%;    
 }
 
 .feedBtnArrowUp{

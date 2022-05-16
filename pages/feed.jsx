@@ -57,11 +57,7 @@ export default function Feed(props){
                 <Footer/>
             </div>
         </div>
-<<<<<<< HEAD
-        </>
-=======
         </div>
 
->>>>>>> 60fdd12267af6b03aa02806dd428415f7eeebd5f
     )
 }

@@ -1,6 +1,7 @@
 import styles from '/styles/components/post.module.css'
 import React, { useState } from 'react';
 import SharePop from "./share-pop"
+import Link from 'next/link';
 
 export default function Post({post}){
 
@@ -13,8 +14,12 @@ export default function Post({post}){
     const [likes, setLikes] = useState(0);
     
     function handleLike(){
-        setLikes(likes+1)
         handleShowHeart();
+        if(!showHeart){
+            setLikes(1)
+        }else{
+            setLikes(0)
+        }
     }
 
     const [showSave, setShowSave] = useState(false);
@@ -31,13 +36,16 @@ export default function Post({post}){
         <div className={styles.postcontainer}>
             <div className={styles.infocontainer}>
                 <div className={styles.photowrap}>
-                <div className={styles.photo}><img src={'/images/Woman.svg'}/></div>
-                <div className={styles.namewrap }>{post.author}{post.timestamp}<div className={styles.m}>M</div></div>
+                    <div className={styles.photo}><img src={'/images/Woman.svg'}/></div>
+                    <div className={styles.nameAndTitle}>
+                        <div className={styles.namewrap }>{post.author}</div>
+                        <div className={styles.jobtitle}>{post.title}</div>  
+                    </div>
                 </div>
         </div>
         <div className={styles.textcontainer}> 
                 <div className={styles.textboxwrap}>{post.text}</div>
-                <p className={styles.menuwrap}>{post.tags}</p>
+                <Link href='./feed'><a className={styles.menuwrap}>{post.tags}</a></Link>
                 <hr className={styles.hr}/>
                 </div>
                 <div className={styles.interactContainer}>

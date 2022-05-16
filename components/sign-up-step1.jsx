@@ -2,7 +2,11 @@ import Button from '../components/button.jsx'
 import Link from 'next/dist/client/link'
 import styles from '/styles/components/signupone.module.css'
 import SignUpTwo from '../components/sign-up-step2'
+<<<<<<< HEAD
 import {useState} from 'react';
+=======
+import {React, useState} from 'react';
+>>>>>>> 1b672064c50a851c6c3d78f3ab5fed143abeb2eb
 import * as yup from 'yup';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -15,10 +19,10 @@ export default function SignUpOne() {
     
 
     const schema = yup.object().shape({
-      firstName: yup.string().required('Förnamn är nödvändig').min(2, "Minimun 2 letters"),
-      lastName: yup.string().required('Efternamn är nödvändig').min(2, "Minimun 2 letters"),
+      firstName: yup.string().required('Förnamn är nödvändigt').min(2, "Minimun 2 letters"),
+      lastName: yup.string().required('Efternamn är nödvändigt').min(2, "Minimun 2 letters"),
       email: yup.string().email().required('email är nödvändig'),
-      password: yup.string().required('Lösenord är nödvändig').min(4).max(15, "Maximum 15 letters")
+      password: yup.string().required('Lösenord är nödvändig').min(12).max(15, "Maximum 15 letters")
 
     })
 
@@ -81,7 +85,7 @@ export default function SignUpOne() {
           <label htmlFor="terms">Härmed godkänner jag WEMEs <Link href= '/auth/terms' passHref><a className={styles.link}>villkor.</a></Link></label>
         </div>
           <div className={styles.buttoncontainer}>
-          <Button onClick={toggleView}><div type='sumbit'>Skapa konto</div></Button>
+          <Button><div type="submit">Skapa konto</div></Button>
           </div>
          </form>
       </div>

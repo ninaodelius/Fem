@@ -12,6 +12,12 @@
     justify-content: space-between;
   }
 
+  .footerSection p{
+    margin-left: 2px;
+    font-size: 10px;
+    float: right;
+  }
+
 .wemeLogo{
   display: flex;
   padding: 1rem;

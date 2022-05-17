@@ -12,12 +12,17 @@ export default function Post(props){
   const [jobTitle, setJobtitle] = useState('First Software Developer')
   const onSubmit =  (event) => {
     event.preventDefault()
+    var tagsList = tags.split(" ");
+    console.log(tagsList)
     console.log(post)
    try {
      addDoc(collection(db, "posts"), {
       author : name,
       title : jobTitle,
       text : post,
+      tags : [tagsList[0] ,
+      tagsList[1]],
+
     }).then((docRef) => {
       console.log("Document written with ID: ", docRef.id);
   })
@@ -26,6 +31,7 @@ export default function Post(props){
   };
     props.setTrigger(false)
     setPost('')
+    setTags('')
   };
   
 
@@ -45,7 +51,7 @@ export default function Post(props){
                 <form onSubmit={onSubmit}>
                 <div className={styles.inputcontainer}>
                     <div className={styles.textbox1wrap}><input type="text" className={styles.textbox1} value={post} onChange={(event) => setPost(event.target.value)} placeholder="Något du vill dela med dig av, Naomi?"></input></div>
-                    <div className={styles.textbox2wrap}><input type="text" className={styles.textbox2} placeholder="Ange taggar för ditt inlägg"></input></div>
+                    <div className={styles.textbox2wrap}><input type="text" className={styles.textbox2} value={tags} onChange={(event) => setTags(event.target.value)} placeholder="Ange taggar för ditt inlägg"></input></div>
                 </div>
                 <hr className={styles.hr}/>
                 <div className={styles.postchoicecontainer}>

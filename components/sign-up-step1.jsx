@@ -15,10 +15,10 @@ export default function SignUpOne() {
     
 
     const schema = yup.object().shape({
-      firstName: yup.string().required('Förnamn är nödvändig').min(2, "Minimun 2 letters"),
-      lastName: yup.string().required('Efternamn är nödvändig').min(2, "Minimun 2 letters"),
-      email: yup.string().email().required('email är nödvändig'),
-      password: yup.string().required('Lösenord är nödvändig').min(4).max(15, "Maximum 15 letters")
+      firstName: yup.string().required('Förnamn är nödvändigt').min(2, "Minimun 2 letters"),
+      lastName: yup.string().required('Efternamn är nödvändigt').min(2, "Minimun 2 letters"),
+      email: yup.string().email().required('email är nödvändigt'),
+      password: yup.string().required('Lösenord är nödvändigt').min(4).max(15, "Maximum 15 letters")
 
     })
 
@@ -27,17 +27,6 @@ export default function SignUpOne() {
     });
 
     const {errors} = formState;
-
-    // const createUser = async(event) => {
-    //   event.preventDefault()
-    //   let formData = {
-    //     name: event.target[0].value,
-    //     lastname: event.target[1].value,
-    //     email: event.target[2].value,
-    //     password: event.target[3].value,
-    //   }
-    //   const isValid = await schema.isValid(formData)
-    // }
 
     const submitForm = (data) =>{
       console.log(errors)

@@ -2,11 +2,7 @@ import Button from '../components/button.jsx'
 import Link from 'next/dist/client/link'
 import styles from '/styles/components/signupone.module.css'
 import SignUpTwo from '../components/sign-up-step2'
-
-import {React, useState} from 'react';
-=======
 import {useState} from 'react';
->>>>>>> main
 import * as yup from 'yup';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';

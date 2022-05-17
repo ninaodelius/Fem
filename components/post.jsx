@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import SharePop from "./share-pop"
 import Link from 'next/link';
 
+
 export default function Post({post}){
 
     const [showHeart, setShowHeart] = useState(false);
@@ -34,7 +35,7 @@ export default function Post({post}){
 
     return(
         <div>
-            <SharePop trigger={sharePopup} setTrigger={setSharePopup}></SharePop>
+            <SharePop trigger={sharePopup} setTrigger={setSharePopup} post={post}></SharePop>
             <div className={styles.postcontainer}>
                 <div className={styles.infocontainer}>
                     <div className={styles.photowrap}>

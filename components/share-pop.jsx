@@ -1,7 +1,8 @@
 import styles from '/styles/components/sharepop.module.css'
 import Button from '/components/button.jsx'
+import Post from '../components/post'
 
-export default function Post(props){
+export default function SharePop(props){
 
 
     return(props.trigger) ? (
@@ -21,7 +22,7 @@ export default function Post(props){
                 <form>
                 <div className={styles.inputcontainer}>
                     <div className={styles.textbox1wrap}><input type="text" className={styles.textbox1} placeholder="Lägg till egen text"></input></div>
-                    <div className={styles.textbox2wrap}><input type="text" className={styles.sharedcontent} placeholder="här ska delade inlägget visas"></input></div>
+                    <div className={styles.textbox2wrap}><Post post={props.post}/></div>
                     <div className={styles.textbox2wrap}><input type="text" className={styles.textbox2} placeholder="här ska delade taggar finnas"></input></div>
                 </div>
                 <hr className={styles.hr}/>

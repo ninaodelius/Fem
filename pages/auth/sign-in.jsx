@@ -29,14 +29,6 @@ const SignIn = () => {
       resolver: yupResolver(schema)
     });
 
-<<<<<<< HEAD
-    const { errors } = formState;
-=======
-    const { register, handleSubmit, reset, formState } = useForm(formOptions)
-    const { errors } = formState
-      
-    const router = useRouter()
->>>>>>> linn
 
       async function onSubmit(data) {
         const email = data.email
@@ -58,23 +50,12 @@ const SignIn = () => {
     }
     const submit = 'submit'
 
-    const submitForm = (data) =>{
-      console.log(errors)
-    }
-
-    const submit = 'submit'
-
     return( 
         <div className={styles.pagewrap}>
         <div className={styles.loginform}>
             <div className={styles.title1}><img src={'/images/wemelogo.png'}/></div>
                 <div className={styles.form}>
-<<<<<<< HEAD
-
-                <form className={styles.form} onSubmit={handleSubmit(submitForm)}/*onSubmit={handleSubmit(registerUser)} action='./api/posts' method='POST'*/>
-=======
                 <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
->>>>>>> linn
                 <div className={styles.inputcontainer}>
                   
                     <input id={styles.input}type="text" name="email" placeholder="E-mail" {...register('email')} />
@@ -94,11 +75,7 @@ const SignIn = () => {
                 <Link href="/auth/forgot-password"><a className={styles.link}><p>Glömt lösenord?</p></a></Link></div>
                 
                 <div className={styles.buttoncontainer}>
-<<<<<<< HEAD
-                <Button type={submit} disabled={false}>Logga in</Button>
-=======
                 <Button disabled={false} type={submit}>Logga in</Button>
->>>>>>> linn
                 </div>
                 <Link href="/auth/sign-up"><a className={styles.link}><p>Bli medlem</p></a></Link>
                 </form>

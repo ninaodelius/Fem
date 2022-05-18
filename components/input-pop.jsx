@@ -2,9 +2,13 @@ import styles from '/styles/components/postpop.module.css'
 import Button from '/components/button.jsx'
 import { useEffect, useState, React } from 'react'
 import { db, auth, provider } from '../firebase/firebaseConfig'
+<<<<<<< .merge_file_a23796
 import { useCollection } from "react-firebase-hooks/firestore";
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
+=======
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore'
+>>>>>>> .merge_file_a00792
 export default function Post(props){
   const submit = "submit";
   const [post, setPost] = useState('');
@@ -12,12 +16,15 @@ export default function Post(props){
   const [name, setName] = useState('Naomi Britton')
   const [jobTitle, setJobtitle] = useState('First Software Developer')
   const onSubmit =  (event) => {
+    var tagsList = tags.split(" ");
+    console.log(tagsList)
     console.log(post)
    try {
      addDoc(collection(db, "posts"), {
       author : name,
       title : jobTitle,
       text : post,
+
     }).then((docRef) => {
       console.log("Document written with ID: ", docRef.id);
   })
@@ -27,6 +34,7 @@ export default function Post(props){
     event.preventDefault()
     props.setTrigger(false)
     setPost('')
+    setTags('')
   };
   
 
@@ -46,7 +54,7 @@ export default function Post(props){
                 <form onSubmit={onSubmit}>
                 <div className={styles.inputcontainer}>
                     <div className={styles.textbox1wrap}><input type="text" className={styles.textbox1} value={post} onChange={(event) => setPost(event.target.value)} placeholder="Något du vill dela med dig av, Naomi?"></input></div>
-                    <div className={styles.textbox2wrap}><input type="text" className={styles.textbox2} placeholder="Ange taggar för ditt inlägg"></input></div>
+                    <div className={styles.textbox2wrap}><input type="text" className={styles.textbox2} value={tags} onChange={(event) => setTags(event.target.value)} placeholder="Ange taggar för ditt inlägg"></input></div>
                 </div>
                 <hr className={styles.hr}/>
                 <div className={styles.postchoicecontainer}>

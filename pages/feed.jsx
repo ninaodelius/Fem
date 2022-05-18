@@ -4,7 +4,7 @@ import List from "../components/list"
 import Searchbar from "../components/searchbar"
 import { db } from '../firebase/firebaseConfig'
 import { useCollection } from "react-firebase-hooks/firestore"
-import { collection, addDoc, getDocs, getDoc } from "firebase/firestore"
+import { collection, addDoc, getDocs, getDoc } from 'firebase/firestore'
 import Post from '../components/post'
 import BtnArrowUp from '../components/btnArrowUp'
 import Footer from '../components/footer'
@@ -44,7 +44,7 @@ export default function Feed(props){
                 <div className={styles.posts}>
                 {post.map((post) => {
                   return(
-                      <div key={post._id}>
+                      <div key={post._id} className={styles.post}>
                      <Post post={post}></Post> 
                      </div>
                   )

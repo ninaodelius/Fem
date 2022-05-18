@@ -17,8 +17,8 @@ export default function SignUpOne() {
     const schema = yup.object().shape({
       firstName: yup.string().required('Förnamn är nödvändigt').min(2, "Minimun 2 letters"),
       lastName: yup.string().required('Efternamn är nödvändigt').min(2, "Minimun 2 letters"),
-      email: yup.string().email().required('email är nödvändig'),
-      password: yup.string().required('Lösenord är nödvändig').min(12).max(15, "Maximum 15 letters")
+      email: yup.string().email().required('email är nödvändigt'),
+      password: yup.string().required('Lösenord är nödvändigt').min(12).max(15, "Maximum 15 letters")
 
     })
 

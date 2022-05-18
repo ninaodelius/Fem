@@ -14,10 +14,14 @@ export const getServerSideProps = async(context) => {
     const res = await getDocs(collection(db, "posts"))
     const post = res.docs
     .map((post) => post.data())
-    if(post.length){
+    const res1 = await getDocs(collection(db, "tags"))
+    const tag = res1.docs
+    .map((tag) => tag.data())
+    if(post.length && tag.length){
        return{  
                 props : {
-                    post: post
+                    post: post,
+                    tag: tag,
                 }
             } 
     }
@@ -28,10 +32,18 @@ export const getServerSideProps = async(context) => {
     }
 }
 
-export default function Feed(props){
-    const {post} = props
+export default function Feed({post, tag}){
+    
     return(
-        <div className={styles.feedPage}>
+        <div className={styles.feedPage}><div>
+            {tag.map((tag) => {
+                console.log({tag})
+            return(
+                <div key={tag._id} >
+               <button>{tag.value}</button>
+               </div>
+            )
+          })} </div>
         <div className={styles.header}>
             <div className={styles.left}><img src={'/images/Logo.svg'}/></div>
             <div className={styles.center}><Searchbar /></div>
@@ -44,7 +56,7 @@ export default function Feed(props){
                 {post.map((post) => {
                   return(
                       <div key={post._id} className={styles.post}>
-                     <Post post={post}></Post> 
+                     <Post post={post}></Post>
                      </div>
                   )
                 })}

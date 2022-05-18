@@ -11,7 +11,7 @@ export default function Post(props){
   const [jobTitle, setJobtitle] = useState('First Software Developer')
   const onSubmit =  (event) => {
     event.preventDefault()
-    var tagsList = tags.split(" ");
+    const tagsList = tags.split(" ");
     console.log(tagsList)
     console.log(post)
    try {
@@ -19,6 +19,7 @@ export default function Post(props){
       author : name,
       title : jobTitle,
       text : post,
+      tags : tagsList,
 
     }).then((docRef) => {
       console.log("Document written with ID: ", docRef.id);

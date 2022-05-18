@@ -3,8 +3,8 @@ import styles from '/styles/feed.module.css'
 import List from "../components/list"
 import Searchbar from "../components/searchbar"
 import { db } from '../firebase/firebaseConfig'
-import { useCollection } from "react-firebase-hooks/firestore";
-import { collection, addDoc, getDocs, getDoc } from 'firebase/firestore';
+import { useCollection } from "react-firebase-hooks/firestore"
+import { collection, addDoc, getDocs, getDoc } from 'firebase/firestore'
 import Post from '../components/post'
 import BtnArrowUp from '../components/btnArrowUp'
 import Footer from '../components/footer'
@@ -32,7 +32,7 @@ export const getServerSideProps = async(context) => {
 export default function Feed(props){
     const {post} = props
     return(
-        <>
+        <div className={styles.feedPage}>
         <div className={styles.header}>
             <div className={styles.left}><img src={'/images/Logo.svg'}/></div>
             <div className={styles.center}><Searchbar /></div>
@@ -44,7 +44,7 @@ export default function Feed(props){
                 <div className={styles.posts}>
                 {post.map((post) => {
                   return(
-                      <div key={post._id}>
+                      <div key={post._id} className={styles.post}>
                      <Post post={post}></Post> 
                      </div>
                   )
@@ -52,14 +52,13 @@ export default function Feed(props){
                 </div>
                 </div>
             </div>
-            <div className={styles.right}></div>
             <div className={styles.feedFooter}>
                 <div className={styles.feedBtnArrowUp}>
                 <BtnArrowUp/></div>
                 <Footer/>
             </div>
         </div>
-        </>
+        </div>
 
     )
 }

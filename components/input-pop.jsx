@@ -2,7 +2,7 @@ import styles from '/styles/components/postpop.module.css'
 import Button from '/components/button.jsx'
 import { useEffect, useState, React } from 'react'
 import { db, auth, provider } from '../firebase/firebaseConfig'
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore'
 export default function Post(props){
   const submit = "submit";
   const [post, setPost] = useState('');

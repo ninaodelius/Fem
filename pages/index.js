@@ -6,19 +6,16 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Footer from '../components/footer.jsx'
 
-
-
 export default function Home() {
+
 const router = useRouter()
 
 const handleClick = () => {
   router.push('/sign-in')
 }
 
-
   return (
   <>
-
   <div className={styles.container}>
     <Button><Link href='/auth/sign-in' passHref>Sign in</Link></Button>
     <Button><Link href="/auth/sign-up" passHref>Sign up</Link></Button>

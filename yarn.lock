@@ -1241,14 +1241,6 @@
     selenium-webdriver " 4.1.1"
     tslib "^2.1.0"
 
-"@firebase/component@0.5.13":
-  version "0.5.13"
-  resolved "https://registry.yarnpkg.com/@firebase/component/-/component-0.5.13.tgz#65a382e83bddd109380c9aa1f280791b1b4567c4"
-  integrity sha512-hxhJtpD8Ppf/VU2Rlos6KFCEV77TGIGD5bJlkPK1+B/WUe0mC6dTjW7KhZtXTc+qRBp9nFHWcsIORnT8liHP9w==
-  dependencies:
-    "@firebase/util" "1.5.2"
-    tslib "^2.1.0"
-
 "@firebase/component@0.5.14":
   version "0.5.14"
   resolved "https://registry.yarnpkg.com/@firebase/component/-/component-0.5.14.tgz#23d2cc9f4aff5a516c91553a433326d366166bc3"
@@ -1286,18 +1278,6 @@
     "@firebase/component" "0.5.14"
     "@firebase/logger" "0.3.2"
     "@firebase/util" "1.6.0"
-    faye-websocket "0.11.4"
-    tslib "^2.1.0"
-
-"@firebase/database@^0.12.8":
-  version "0.12.8"
-  resolved "https://registry.yarnpkg.com/@firebase/database/-/database-0.12.8.tgz#11a1b6752ba0614892af15c71958e00ce16f5824"
-  integrity sha512-JBQVfFLzfhxlQbl4OU6ov9fdsddkytBQdtSSR49cz48homj38ccltAhK6seum+BI7f28cV2LFHF9672lcN+qxA==
-  dependencies:
-    "@firebase/auth-interop-types" "0.1.6"
-    "@firebase/component" "0.5.13"
-    "@firebase/logger" "0.3.2"
-    "@firebase/util" "1.5.2"
     faye-websocket "0.11.4"
     tslib "^2.1.0"
 
@@ -1493,13 +1473,6 @@
     "@firebase/component" "0.5.14"
     "@firebase/util" "1.6.0"
     node-fetch "2.6.7"
-    tslib "^2.1.0"
-
-"@firebase/util@1.5.2":
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/@firebase/util/-/util-1.5.2.tgz#bdd2bc11c956a8a6a0fa25fbd752a13e033558bc"
-  integrity sha512-YvBH2UxFcdWG2HdFnhxZptPl2eVFlpOyTH66iDo13JPEYraWzWToZ5AMTtkyRHVmu7sssUpQlU9igy1KET7TOw==
-  dependencies:
     tslib "^2.1.0"
 
 "@firebase/util@1.6.0":

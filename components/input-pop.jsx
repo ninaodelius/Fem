@@ -19,7 +19,7 @@ export default function Post(props){
       author : name,
       title : jobTitle,
       text : post,
-
+      tags : tagsList,
     }).then((docRef) => {
       console.log("Document written with ID: ", docRef.id);
   })

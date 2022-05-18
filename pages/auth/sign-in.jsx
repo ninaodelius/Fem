@@ -1,16 +1,14 @@
 import Button from '../../components/button'
 import styles from '/styles/auth/signin.module.css'
 import Link from 'next/link'
-import {React, useState,} from "react"
+import React, { useState, useEffect } from "react"
 import VisibilityIcon from '@mui/icons-material/Visibility'
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
+import * as Yup from 'yup';
 import Footer from '../../components/footer';
 import { useRouter } from 'next/router'
-import { signInWithEmailAndPassword } from '@firebase/auth';
-import { auth } from '../../firebase/firebaseConfig'
 
 
 
@@ -19,28 +17,43 @@ const SignIn = () => {
     const [showPassword, setShowPassword] = useState(false)
     const [disabledButton, setDisabledButton] = useState(true)
 
-    const schema =yup.object().shape({
-        email: yup.string().email().required(''),
-        password :yup.string().min(7, 'Password must be at least 7 characters').required('Password is required')
+    const validationSchema = Yup.object().shape({
+        email: Yup.string()
+            .required('Email is required')
+            .email('Email is invalid'),
+        password: Yup.string()
+            .min(6, 'Password must be at least 6 characters')
+            .required('Password is required')
     })
-  
-  
-    const { register, handleSubmit, formState } = useForm({
-      resolver: yupResolver(schema)
-    });
+    const formOptions = { resolver: yupResolver(validationSchema) }
 
+    
+    const { register, handleSubmit, reset, formState } = useForm(formOptions)
+    const { errors } = formState
 
-      async function onSubmit(data) {
-        const email = data.email
-
-        try{
-          const userCredentials = await signInWithEmailAndPassword(auth, email, password)
-          console.log(userCredentials)
-        }
-        catch(error){
-          console.log(error)
-          
-        }
+    /*const registerUser = async event => {
+        
+        const email = event.target.email.value
+        const password = event.target.password.value
+    
+        const res = await fetch('/api/posts', {
+          body: JSON.stringify({
+            email: email,
+            password: password,
+          }),
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          method: 'POST'
+        })
+    
+        const result = await res.json()
+        
+        alert(`Is this your log in information?: ${result.email} ${result.password}`)
+        return false;
+      }*/
+      const router = useRouter()
+      function onSubmit(data) {
         
         router.push('/feed')
         alert('SUCCESS!! :-)\n\n' + JSON.stringify(data, null, 4))
@@ -48,26 +61,22 @@ const SignIn = () => {
         return false;
 
     }
-    const submit = 'submit'
 
     return( 
         <div className={styles.pagewrap}>
         <div className={styles.loginform}>
             <div className={styles.title1}><img src={'/images/wemelogo.png'}/></div>
                 <div className={styles.form}>
-                <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+                <form className={styles.form} onSubmit={handleSubmit(onSubmit)}/*onSubmit={handleSubmit(registerUser)} action='./api/posts' method='POST'*/>
                 <div className={styles.inputcontainer}>
-                  
-                    <input id={styles.input}type="text" name="email" placeholder="E-mail" {...register('email')} />
-                    
-                   
-                </div> <p className='error-message'>{errors.email?.message}</p>
-                <div className={styles.inputcontainer}>
-                    <input id={styles.input} name="password" placeholder='Password' {...register('password')} type={showPassword ? "text" : "password"}/>
-                    <div className={styles.passwordtoggleicon}  onClick={() => setShowPassword(showPassword => !showPassword)} > {showPassword ? <VisibilityIcon/> : <VisibilityOffIcon/>} </div>
+                    <label>
+                    <input id={styles.input} className={`form-control ${errors.email ? 'is-invalid' : ''}`} type="text" name="email" placeholder="E-mail"  {...register('email')} />
+                    </label> 
                 </div>
-                <p className='error-message'>{errors.password?.message}</p>
-                
+                <div className={styles.inputcontainer}>
+                    <input id={styles.input} name="password" placeholder='Password' {...register('password')} className={`form-control ${errors.password ? 'is-invalid' : ''}`} type={showPassword ? "text" : "password"}/>
+                    <div className={styles.passwordtoggleicon} onClick={() => setShowPassword(showPassword => !showPassword)}>{showPassword ? <VisibilityIcon/> : <VisibilityOffIcon/>}</div>
+                </div>
                 <div className={styles.rememberforgotcontainer}>
                 <div className={styles.remembercontainer}>
                 <input type="checkbox" id="remember" name="remember" value="Kom ihåg mig!"></input>
@@ -75,7 +84,7 @@ const SignIn = () => {
                 <Link href="/auth/forgot-password"><a className={styles.link}><p>Glömt lösenord?</p></a></Link></div>
                 
                 <div className={styles.buttoncontainer}>
-                <Button disabled={false} type={submit}>Logga in</Button>
+                <Button disabled={false}>Logga in</Button>
                 </div>
                 <Link href="/auth/sign-up"><a className={styles.link}><p>Bli medlem</p></a></Link>
                 </form>

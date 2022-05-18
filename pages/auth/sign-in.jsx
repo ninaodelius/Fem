@@ -9,6 +9,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import Footer from '../../components/footer';
 import { useRouter } from 'next/router'
+import { signInWithEmailAndPassword } from '@firebase/auth';
+import { auth } from '../../firebase/firebaseConfig'
 
 
 
@@ -27,31 +29,26 @@ const SignIn = () => {
       resolver: yupResolver(schema)
     });
 
+<<<<<<< HEAD
     const { errors } = formState;
+=======
+    const { register, handleSubmit, reset, formState } = useForm(formOptions)
+    const { errors } = formState
+      
+    const router = useRouter()
+>>>>>>> linn
 
-    /*const registerUser = async event => {
-        
-        const email = event.target.email.value
-        const password = event.target.password.value
-    
-        const res = await fetch('/api/posts', {
-          body: JSON.stringify({
-            email: email,
-            password: password,
-          }),
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          method: 'POST'
-        })
-    
-        const result = await res.json()
-        
-        alert(`Is this your log in information?: ${result.email} ${result.password}`)
-        return false;
-      }*/
-      const router = useRouter()
-      function onSubmit(data) {
+      async function onSubmit(data) {
+        const email = data.email
+
+        try{
+          const userCredentials = await signInWithEmailAndPassword(auth, email, password)
+          console.log(userCredentials)
+        }
+        catch(error){
+          console.log(error)
+          
+        }
         
         router.push('/feed')
         alert('SUCCESS!! :-)\n\n' + JSON.stringify(data, null, 4))
@@ -59,6 +56,7 @@ const SignIn = () => {
         return false;
 
     }
+    const submit = 'submit'
 
     const submitForm = (data) =>{
       console.log(errors)
@@ -71,8 +69,12 @@ const SignIn = () => {
         <div className={styles.loginform}>
             <div className={styles.title1}><img src={'/images/wemelogo.png'}/></div>
                 <div className={styles.form}>
+<<<<<<< HEAD
 
                 <form className={styles.form} onSubmit={handleSubmit(submitForm)}/*onSubmit={handleSubmit(registerUser)} action='./api/posts' method='POST'*/>
+=======
+                <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+>>>>>>> linn
                 <div className={styles.inputcontainer}>
                   
                     <input id={styles.input}type="text" name="email" placeholder="E-mail" {...register('email')} />
@@ -92,7 +94,11 @@ const SignIn = () => {
                 <Link href="/auth/forgot-password"><a className={styles.link}><p>Glömt lösenord?</p></a></Link></div>
                 
                 <div className={styles.buttoncontainer}>
+<<<<<<< HEAD
                 <Button type={submit} disabled={false}>Logga in</Button>
+=======
+                <Button disabled={false} type={submit}>Logga in</Button>
+>>>>>>> linn
                 </div>
                 <Link href="/auth/sign-up"><a className={styles.link}><p>Bli medlem</p></a></Link>
                 </form>

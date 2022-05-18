@@ -10,6 +10,7 @@ export default function Post(props){
   const [name, setName] = useState('Naomi Britton')
   const [jobTitle, setJobtitle] = useState('First Software Developer')
   const onSubmit =  (event) => {
+    event.preventDefault()
     var tagsList = tags.split(" ");
     console.log(tagsList)
     console.log(post)
@@ -25,7 +26,6 @@ export default function Post(props){
 } catch(error)  {
       console.error("Error adding document: ", error);
   };
-    event.preventDefault()
     props.setTrigger(false)
     setPost('')
     setTags('')

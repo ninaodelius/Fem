@@ -18,7 +18,11 @@ export default function SignUpOne() {
       firstName: yup.string().required('Förnamn är nödvändigt').min(2, "Minimun 2 letters"),
       lastName: yup.string().required('Efternamn är nödvändigt').min(2, "Minimun 2 letters"),
       email: yup.string().email().required('email är nödvändigt'),
+<<<<<<< HEAD
       password: yup.string().required('Lösenord är nödvändigt').min(12).max(15, "Maximum 15 letters")
+=======
+      password: yup.string().required('Lösenord är nödvändigt').min(4).max(15, "Maximum 15 letters")
+>>>>>>> linn
 
     })
 
@@ -27,17 +31,6 @@ export default function SignUpOne() {
     });
 
     const {errors} = formState;
-
-    // const createUser = async(event) => {
-    //   event.preventDefault()
-    //   let formData = {
-    //     name: event.target[0].value,
-    //     lastname: event.target[1].value,
-    //     email: event.target[2].value,
-    //     password: event.target[3].value,
-    //   }
-    //   const isValid = await schema.isValid(formData)
-    // }
 
     const submitForm = (data) =>{
       console.log(errors)

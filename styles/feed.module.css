@@ -26,20 +26,18 @@
 .right{
     width: 25%;
 }
+.tagbar{
+    display: flex;
+}
 .firstinput{
-    margin-bottom: 300px;
-    position: absolute;
-    z-index: 11;
-    
+    z-index: 11;   
 }
 
 .posts{
-    padding-top: 12rem;
     padding-bottom: 16rem;
 }
 .post{
     z-index: 10;
-    position: relative;
     height: auto;
 }
 

@@ -34,7 +34,7 @@ export default function Post({post}){
     const [sharePopup, setSharePopup] = useState(false);
 
     return(
-        <div>
+        <div className={styles.popup}>
             <SharePop trigger={sharePopup} setTrigger={setSharePopup} post={post}></SharePop>
             <div className={styles.postcontainer}>
                 <div className={styles.infocontainer}>

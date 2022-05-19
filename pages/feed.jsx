@@ -3,7 +3,6 @@ import styles from '/styles/feed.module.css'
 import List from "../components/list"
 import Searchbar from "../components/searchbar"
 import { db } from '../firebase/firebaseConfig'
-import { useCollection } from "react-firebase-hooks/firestore"
 import { collection, addDoc, getDocs, getDoc } from 'firebase/firestore'
 import Post from '../components/post'
 import BtnArrowUp from '../components/btnArrowUp'
@@ -33,31 +32,28 @@ export const getServerSideProps = async(context) => {
     }
 }
 
-
-
-
-
 export default function Feed({post, tag}){
-    
+
+
+
     return(
         <div className={styles.feedPage}>
         <div className={styles.header}>
             <div className={styles.left}><img src={'/images/Logo.svg'}/></div>
-            <div className={styles.center}><Searchbar /></div>
+            <div className={styles.center}><Searchbar />
+            <div className={styles.tagFeedButtons}>
+            <button className={styles.tagFeedButtonAll}>alla</button>
+            {tag.map((tag) => {
+            return(
+                <div key={tag._id}>
+               <button className={styles.tagFeedButton}>{tag.value}</button>
+               </div>
+            )
+          })} </div></div>
             <div className={styles.right}><Profilefeed/></div></div>
         <div className={styles.content}>
             <div className={styles.left}><List/></div>
             <div className={styles.center}>
-            <div className={styles.tagbar}>
-            {tag.map((tag) => {
-                console.log({tag})
-            return(
-                <div key={tag._id} >
-               <button onClick={() => (handleTags())}>{tag.value}</button>
-               </div>
-            )
-          })}
-            </div>
                 <div className={styles.firstinput}><Input /> </div>
                 <div className={styles.feed}>
                 <div className={styles.posts}>

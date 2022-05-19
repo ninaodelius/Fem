@@ -3,7 +3,6 @@
     display: inline-block;
     position: relative;
     display: flex;
-  
 }
 .container:hover .dropdowncontent{
     display: block;

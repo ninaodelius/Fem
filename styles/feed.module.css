@@ -1,6 +1,7 @@
 .feedPage{
     display: flex;
     flex-direction: column;
+    background-color: #F9F3FF;
 }
 
 .header{
@@ -19,6 +20,7 @@
     width: 25%;
 }
 .center{
+    margin-top: 2rem;
     display: flex;
     flex-direction:column;
     width: 50%;
@@ -41,6 +43,47 @@
     height: auto;
 }
 
+.tagFeedButtons{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 89px;
+    height: 34px;
+}
+.tagFeedButton{
+    z-index: 10;
+    position: relative;
+    height: auto;
+    background: #F2E5FF;
+    border: 1px solid #EDECEC;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #374146;
+}
+.tagFeedButtonAll{
+    z-index: 10;
+    position: relative;
+    height: auto;
+    background: #826AC5;
+    border: 1px solid #EDECEC;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
 
 .feedFooter{
     display: flex;

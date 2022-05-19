@@ -1,13 +1,13 @@
 .postcontainer{
     width: 640px;
     height: 163px;
-    background: #FFF9F3;
+    background: #FFFFFF;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     border-radius: 10px;
-    filter: drop-shadow(0px 4px 0px rgba(251, 189, 139, 0.25));
     margin-bottom: 10px;
+    border: 1px solid #DDDDDD;
 }
 .infocontainer{
     width: 100%;
@@ -47,6 +47,7 @@
     font-weight: 300;
     padding-left: 10px;
     outline: none;
+    border: 1px solid #999999;
 
 }
 .menuwrap{

@@ -20,7 +20,10 @@ export default function Post(props){
       title : jobTitle,
       text : post,
       tags : tagsList,
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0fe424790122f3c1e94c743db369fa62dd7885f2
     }).then((docRef) => {
       console.log("Document written with ID: ", docRef.id);
   })

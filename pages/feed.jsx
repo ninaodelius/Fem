@@ -39,7 +39,7 @@ export default function Feed({post, tag}){
     return(
         <div className={styles.feedPage}>
         <div className={styles.header}>
-            <div className={styles.left}><img src={'/images/Logo.svg'}/></div>
+            <div className={styles.leftlogo}><img src={'/images/Logo.svg'}/></div>
             <div className={styles.center}><Searchbar />
             <div className={styles.tagFeedButtons}>
             <button className={styles.tagFeedButtonAll}>alla</button>
@@ -50,7 +50,10 @@ export default function Feed({post, tag}){
                </div>
             )
           })} </div></div>
-            <div className={styles.right}><Profilefeed/></div></div>
+            <div className={styles.right}>
+                <div className={styles.profilefeed}><Profilefeed/></div>
+            </div>
+        </div>
         <div className={styles.content}>
             <div className={styles.left}><List/></div>
             <div className={styles.center}>

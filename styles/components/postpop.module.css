@@ -8,7 +8,7 @@
 }
 .popup{
     display: flex;
-    position: fixed;
+    position: absolute;
     flex-wrap: wrap;
     z-index: 10;
     
@@ -42,6 +42,7 @@
     font-size: 20px;
     line-height: 28px;
     padding-bottom: 1rem;
+    
 }
 
 .usercontainer{

@@ -14,7 +14,7 @@
 
 .sharepopcontainer{
     width: 40rem;
-    height: 29.813rem;
+    height: auto;
     background: #FFF9F3;
     display: flex;
     flex-direction: column;

@@ -32,6 +32,10 @@ export const getServerSideProps = async(context) => {
     }
 }
 
+const [isFiltered, setIsFiltered] = useState(false)
+
+
+
 export default function Feed({post, tag}){
     
     return(
@@ -40,7 +44,7 @@ export default function Feed({post, tag}){
                 console.log({tag})
             return(
                 <div key={tag._id} >
-               <button>{tag.value}</button>
+               <button onClick={() => (handleTags())}>{tag.value}</button>
                </div>
             )
           })} </div>
@@ -53,6 +57,7 @@ export default function Feed({post, tag}){
             <div className={styles.center}><div className={styles.firstinput}><Input /> </div>
                 <div className={styles.feed}>
                 <div className={styles.posts}>
+                   isFiltered ? 'something' :
                 {post.map((post) => {
                   return(
                       <div key={post._id} className={styles.post}>

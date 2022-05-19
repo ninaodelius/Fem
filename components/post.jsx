@@ -48,7 +48,7 @@ export default function Post({post}){
             </div>
             <div className={styles.textcontainer}> 
                     <div className={styles.textboxwrap}>{post.text}</div>
-                    <Link href='./feed'><a className={styles.menuwrap}>{post.tags}</a></Link>
+                    <Link href='./feed'><a className={styles.tags}>{post.tags}</a></Link>
                     <hr className={styles.hr}/>
                     </div>
                     <div className={styles.interactContainer}>

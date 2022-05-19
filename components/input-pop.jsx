@@ -11,7 +11,7 @@ export default function Post(props){
   const [jobTitle, setJobtitle] = useState('First Software Developer')
   const onSubmit =  (event) => {
     event.preventDefault()
-    var tagsList = tags.split(" ");
+    const tagsList = tags.split(" ");
     console.log(tagsList)
     console.log(post)
    try {

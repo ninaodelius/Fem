@@ -1,14 +1,17 @@
 .postcontainer{
     width: 640px;
     height: 287px;
-    background: #FFF9F3;
+    background: #FFFFFF;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     border-radius: 10px;
-    filter: drop-shadow(0px 4px 0px rgba(251, 189, 139, 0.25));
     margin-bottom: 10px; 
     font-family: 'Nunito';
+    z-index: 9;
+}
+.popup{
+    z-index: 11;
 }
 .infocontainer{
     width: 100%;
@@ -18,6 +21,7 @@
     height: 30%;
     margin-top: 30px;
     padding-left: 30px;
+    z-index: 9;
 }
 .photowrap{
     display: flex;
@@ -50,10 +54,23 @@
     padding-left: 30px;
 }
 .textboxwrap{
-    margin-bottom: 50px;
+    margin-bottom: 1.5rem;
 }
-.menuwrap{
-    font-size: small;
+
+.tags{
+        width:36.625rem;
+        height: 2.625rem;
+        margin-bottom: 1.438rem;
+        border-radius: 0.625rem;
+        border-style: none;
+        outline: none;
+        background: #FFFFFF;
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color:#826AC5;
 }
 
 .hr{

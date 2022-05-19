@@ -9,6 +9,8 @@ import Post from '../components/post'
 import BtnArrowUp from '../components/btnArrowUp'
 import Footer from '../components/footer'
 import Profilefeed from "../components/profileFeed"
+import React, { useState } from 'react';
+
 
 export const getServerSideProps = async(context) => {
     const res = await getDocs(collection(db, "posts"))
@@ -34,7 +36,17 @@ export const getServerSideProps = async(context) => {
 
 export default function Feed({post, tag}){
 
+    const [showFilteredTag, setShowFilteredTag] = useState(false)
 
+    const [pressedTags, setPressedTags] = useState([])
+
+    function onClick(tag){
+        if(showFilteredTag == false){
+        setShowFilteredTag(showFilteredTag => !showFilteredTag) }
+        setPressedTags(pressedTags => [...pressedTags, tag.value])
+    }
+
+    
 
     return(
         <div className={styles.feedPage}>
@@ -43,19 +55,34 @@ export default function Feed({post, tag}){
             <div className={styles.center}><Searchbar />
             <div className={styles.tagFeedButtons}>
             <button className={styles.tagFeedButtonAll}>alla</button>
+
             {tag.map((tag) => {
             return(
                 <div key={tag._id}>
-               <button className={styles.tagFeedButton}>{tag.value}</button>
+               <button className={styles.tagFeedButton} onClick={() => onClick(tag)}>{tag.value}</button>
                </div>
             )
-          })} </div></div>
+          })} 
+          
+          
+          </div></div>
             <div className={styles.right}><Profilefeed/></div></div>
         <div className={styles.content}>
             <div className={styles.left}><List/></div>
             <div className={styles.center}><div className={styles.firstinput}><Input /> </div>
                 <div className={styles.feed}>
                 <div className={styles.posts}>
+
+                {showFilteredTag ? 
+                <div>
+                {pressedTags.map((pressedTags) => {
+                    return(
+                    <div>{pressedTags}</div>)
+                })}
+                </div>
+                
+                : 
+                <div>
                 {post.map((post) => {
                   return(
                       <div key={post._id} className={styles.post}>
@@ -63,6 +90,10 @@ export default function Feed({post, tag}){
                      </div>
                   )
                 })}
+                </div>
+                 }
+
+                
                 </div>
                 </div>
             </div>

@@ -46,8 +46,6 @@ export default function Feed({post, tag}){
         setPressedTags(pressedTags => [...pressedTags, tag.value])
     }
 
-    
-
     return(
         <div className={styles.feedPage}>
         <div className={styles.header}>
@@ -75,12 +73,18 @@ export default function Feed({post, tag}){
 
                 {showFilteredTag ? 
                 <div>
-                {pressedTags.map((pressedTags) => {
+                {post
+                .map((post) => {
+                    if(post.tags == pressedTags[0]){
                     return(
-                    <div>{pressedTags}</div>)
+                        <div key={post._id} className={styles.post}>
+                     <Post post={post}></Post> 
+                     </div>
+                     )
+                    }
+                   
                 })}
                 </div>
-                
                 : 
                 <div>
                 {post.map((post) => {

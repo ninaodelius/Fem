@@ -9,6 +9,7 @@ import Post from '../components/post'
 import BtnArrowUp from '../components/btnArrowUp'
 import Footer from '../components/footer'
 import Profilefeed from "../components/profileFeed"
+import { useState } from "react"
 
 export const getServerSideProps = async(context) => {
     const res = await getDocs(collection(db, "posts"))
@@ -32,14 +33,22 @@ export const getServerSideProps = async(context) => {
     }
 }
 
-const [isFiltered, setIsFiltered] = useState(false)
+
 
 
 
 export default function Feed({post, tag}){
     
     return(
-        <div className={styles.feedPage}><div>
+        <div className={styles.feedPage}>
+        <div className={styles.header}>
+            <div className={styles.left}><img src={'/images/Logo.svg'}/></div>
+            <div className={styles.center}><Searchbar /></div>
+            <div className={styles.right}><Profilefeed/></div></div>
+        <div className={styles.content}>
+            <div className={styles.left}><List/></div>
+            <div className={styles.center}>
+            <div className={styles.tagbar}>
             {tag.map((tag) => {
                 console.log({tag})
             return(
@@ -47,17 +56,11 @@ export default function Feed({post, tag}){
                <button onClick={() => (handleTags())}>{tag.value}</button>
                </div>
             )
-          })} </div>
-        <div className={styles.header}>
-            <div className={styles.left}><img src={'/images/Logo.svg'}/></div>
-            <div className={styles.center}><Searchbar /></div>
-            <div className={styles.right}><Profilefeed/></div></div>
-        <div className={styles.content}>
-            <div className={styles.left}><List/></div>
-            <div className={styles.center}><div className={styles.firstinput}><Input /> </div>
+          })}
+            </div>
+                <div className={styles.firstinput}><Input /> </div>
                 <div className={styles.feed}>
                 <div className={styles.posts}>
-                   isFiltered ? 'something' :
                 {post.map((post) => {
                   return(
                       <div key={post._id} className={styles.post}>

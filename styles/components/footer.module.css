@@ -1,6 +1,6 @@
 
 .footerSection{
-    z-index: -1;
+    z-index: 0;
     display: flex;
     background-image: url('/images/footerbg.png');
     background-size: 100% 100%;

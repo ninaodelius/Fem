@@ -10,6 +10,7 @@ import BtnArrowUp from '../components/btnArrowUp'
 import Footer from '../components/footer'
 import Profilefeed from "../components/profileFeed"
 import React, { useState } from 'react';
+import FollowingTags from "../components/following-tags"
 
 
 export const getServerSideProps = async(context) => {
@@ -64,7 +65,7 @@ export default function Feed({post, tag}){
           
           
           </div></div>
-            <div className={styles.right}><Profilefeed/></div></div>
+            <div className={styles.right}><Profilefeed/><FollowingTags/></div></div>
         <div className={styles.content}>
             <div className={styles.left}><List/></div>
             <div className={styles.center}><div className={styles.firstinput}><Input /> </div>

@@ -48,7 +48,7 @@ export default function Post(props){
                 <form onSubmit={onSubmit}>
                 <div className={styles.inputcontainer}>
                     <div className={styles.textbox1wrap}><input type="text" className={styles.textbox1} value={post} onChange={(event) => setPost(event.target.value)} placeholder="Något du vill dela med dig av, Naomi?"></input></div>
-                    <div className={styles.textbox2wrap}><input type="text" className={styles.textbox2} value={tags} onChange={(event) => setTags(event.target.value)} placeholder="Ange taggar för ditt inlägg"></input></div>
+                    <div className={styles.textbox2wrap}><input type="text" className={styles.textbox2} value={tags} onChange={(event) => setTags(event.target.value)} placeholder="+ Ange taggar för ditt inlägg"></input></div>
                 </div>
                 <hr className={styles.hr}/>
                 <div className={styles.postchoicecontainer}>

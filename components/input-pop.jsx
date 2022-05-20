@@ -3,6 +3,7 @@ import Button from '/components/button.jsx'
 import { useEffect, useState, React } from 'react'
 import { db, auth, provider } from '../firebase/firebaseConfig'
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore'
+
 export default function Post(props){
   const submit = "submit";
   const [post, setPost] = useState('');
@@ -11,6 +12,8 @@ export default function Post(props){
   const [jobTitle, setJobtitle] = useState('First Software Developer')
   const onSubmit =  (event) => {
     event.preventDefault()
+    const current = new Date();
+    const date = `${current.getHours()}:${current.getMinutes()}:${current.getSeconds()} ${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
     const tagsList = tags.split(" ");
     console.log(tagsList)
     console.log(post)
@@ -20,6 +23,7 @@ export default function Post(props){
       title : jobTitle,
       text : post,
       tags : tagsList,
+      createdAt: date,
     }).then((docRef) => {
       console.log("Document written with ID: ", docRef.id);
   })

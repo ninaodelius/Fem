@@ -108,5 +108,6 @@
 .feedBtnArrowUp{
     margin-bottom: 20vh;
     margin-right: 10vh;
+    z-index: 1;
 }
     

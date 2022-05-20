@@ -17,7 +17,7 @@
 .postpopcontainer{
     width: 40rem;
     height: 35rem;
-    background: #FFF9F3;
+    background: #FFFFFF;
     display: flex;
     flex-direction: column;
     border-radius: 0.625rem;
@@ -81,7 +81,7 @@
 .textbox1{
     width: 100%;
     border-style: none;
-    background-color: #FFF9F3;
+    background-color: #FFFFFF;
     padding-left: 1.563rem;
     margin-bottom: 5rem;
     outline: none;
@@ -98,7 +98,7 @@ line-height: 32px;
     border-radius: 0.625rem;
     border-style: none;
     outline: none;
-    background-color: #FFF9F3;
+    background-color: #FFFFFF;
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 700;
@@ -108,7 +108,7 @@ line-height: 32px;
 
 }
 
-.textbox2 ::placeholder{
+input.textbox2::placeholder{
 color:#826AC5;
 
 }

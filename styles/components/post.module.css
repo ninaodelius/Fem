@@ -114,16 +114,19 @@
     
 }
 
-.interactContainer p{
+
+.interactbutton{
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
-}
-
-.interactbutton{
     border: none;
     background: none;
+    color: #374146;
+
 }
 .m{
     height: 32px;

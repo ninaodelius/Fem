@@ -29,9 +29,19 @@ export default function Post({post}){
         setShowSave(showSave => !showSave)
     }
 
-  
-
     const [sharePopup, setSharePopup] = useState(false);
+
+    const [popUpOptionsMenu, setPopUpOptionsMenu] = useState(false);
+
+    function PopUpOptionsMenu() {
+        return (    
+          <ul className={styles.dropdown}>
+          <img src={'/images/xoptionsmenu.png'} onClick={() => setPopUpOptionsMenu(false)} />
+            <button className={styles.liButton}><img src={'/images/editpost.png'}/>Redigera inlägg</button>
+            <button className={styles.liButton}><img src={'/images/deletepost.png'}/>Ta bort</button>
+          </ul>
+        );
+      }
 
     return(
         <div className={styles.popup}>
@@ -45,6 +55,13 @@ export default function Post({post}){
                             <div className={styles.jobtitle}>{post.title}</div>  
                         </div>
                     </div>
+                    <div className={styles.rightwrap}>
+                    <button className={styles.optionsbutton} onClick={() => setPopUpOptionsMenu(!popUpOptionsMenu)}>
+                    {popUpOptionsMenu? <img src={''}/> : <img src={'/images/optionsbutton.png'}/>}
+                    </button>
+                    {popUpOptionsMenu && PopUpOptionsMenu()}
+
+                </div>
             </div>
             <div className={styles.textcontainer}> 
                     <div className={styles.textboxwrap}>{post.text}</div>

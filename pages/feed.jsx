@@ -42,12 +42,13 @@ export default function Feed({post, tag}){
 
     const [showFilteredTag, setShowFilteredTag] = useState(false)
 
-    const [pressedTags, setPressedTags] = useState([])
+    const [pressedTags, setPressedTags] = useState('')
 
     function onClick(tag){
         if(showFilteredTag == false){
         setShowFilteredTag(showFilteredTag => !showFilteredTag) }
-        setPressedTags(pressedTags => [...pressedTags, tag.value])
+        setPressedTags('')
+        setPressedTags(tag.value)
     }
 
     return(
@@ -78,7 +79,7 @@ export default function Feed({post, tag}){
 
                 {showFilteredTag ? 
                 <div>
-                {post.filter(post => post.tags.includes(pressedTags[0])).map((post) => (
+                {post.filter(post => post.tags.includes(pressedTags)).map((post) => (
                     <div key={post._id} className={styles.post}>
                      <Post post={post}></Post> 
                      </div>

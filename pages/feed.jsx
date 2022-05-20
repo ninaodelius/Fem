@@ -8,8 +8,7 @@ import Post from '../components/post'
 import BtnArrowUp from '../components/btnArrowUp'
 import Footer from '../components/footer'
 import Profilefeed from "../components/profileFeed"
-import { useState } from "react"
-import moment from 'moment'
+
 
 export const getServerSideProps = async() => {
     const res = await getDocs(collection(db, "posts"))
@@ -62,7 +61,7 @@ export default function Feed({post, tag}){
                 <div className={styles.firstinput}><Input /> </div>
                 <div className={styles.feed}>
                 <div className={styles.posts}>
-                {post.sort((a, b) => moment(b.createdAt) - moment(a.createdAt)).map((post) => {
+                {post.sort((a, b) => b.createdAt - a.createdAt).map((post) => {
                   return(
                       <div key={post._id} className={styles.post}>
                      <Post post={post}></Post>

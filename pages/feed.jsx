@@ -36,6 +36,7 @@ export const getServerSideProps = async() => {
 }
 
 export default function Feed({post, tag}){
+
     const current = new Date();
     const date = `${current.getHours()}:${current.getMinutes()}:${current.getSeconds()} ${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
 
@@ -77,17 +78,11 @@ export default function Feed({post, tag}){
 
                 {showFilteredTag ? 
                 <div>
-                {post
-                .map((post) => {
-                    if(post.tags == pressedTags[0]){
-                    return(
-                        <div key={post._id} className={styles.post}>
+                {post.filter(post => post.tags.includes(pressedTags[0])).map((post) => (
+                    <div key={post._id} className={styles.post}>
                      <Post post={post}></Post> 
                      </div>
-                     )
-                    }
-                   
-                })}
+                ))}
                 </div>
                 : 
                 <div>

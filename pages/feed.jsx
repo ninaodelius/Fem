@@ -9,8 +9,9 @@ import BtnArrowUp from '../components/btnArrowUp'
 import Footer from '../components/footer'
 import Profilefeed from "../components/profileFeed"
 import { useState } from "react"
+import moment from 'moment'
 
-export const getServerSideProps = async(context) => {
+export const getServerSideProps = async() => {
     const res = await getDocs(collection(db, "posts"))
     const post = res.docs
     .map((post) => post.data())
@@ -33,7 +34,8 @@ export const getServerSideProps = async(context) => {
 }
 
 export default function Feed({post, tag}){
-
+    const current = new Date();
+    const date = `${current.getHours()}:${current.getMinutes()}:${current.getSeconds()} ${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
 
 
     return(
@@ -60,7 +62,7 @@ export default function Feed({post, tag}){
                 <div className={styles.firstinput}><Input /> </div>
                 <div className={styles.feed}>
                 <div className={styles.posts}>
-                {post.map((post) => {
+                {post.sort((a, b) => moment(b.createdAt) - moment(a.createdAt)).map((post) => {
                   return(
                       <div key={post._id} className={styles.post}>
                      <Post post={post}></Post>

@@ -73,7 +73,9 @@
     align-items: center;
     font-family: 'Nunito';
     font-size: 16px;
-    font-weight: 700;    
+    font-weight: 700;
+    cursor: pointer;
+    
 }
 .video{
     display: flex;
@@ -82,13 +84,16 @@
     font-family: 'Nunito';
     font-size: 16px;
     font-weight: 700;  
+    cursor: pointer;
 }
 .picture{
     display: flex;
     align-items: center;
     font-family: 'Nunito';
     font-size: 16px;
-    font-weight: 700;  
+    font-weight: 700;
+    cursor: pointer;
+
 }
 .woman{
     border-radius: 50%;

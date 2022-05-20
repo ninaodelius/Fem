@@ -57,7 +57,7 @@ export default function Feed({post, tag}){
             <div className={styles.leftlogo}><img src={'/images/Logo.svg'}/></div>
             <div className={styles.center}><Searchbar />
             <div className={styles.tagFeedButtons}>
-            <button className={styles.tagFeedButtonAll} onClick={() => setShowFilteredTag(false)}>alla</button>
+            <button className={styles.tagFeedButton} onClick={() => setShowFilteredTag(false)}>alla</button>
 
             {tag.map((tag) => {
             return(
@@ -67,7 +67,7 @@ export default function Feed({post, tag}){
             )
           })} 
           
-          
+          <button className={styles.tagFeedButtonExpand}>visa mer</button>
           </div></div>
             <div className={styles.right}><Profilefeed/><FollowingTags/></div></div>
         <div className={styles.content}>

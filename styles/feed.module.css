@@ -61,8 +61,7 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
-    width: 89px;
-    height: 34px;
+
 }
 .tagFeedButton{
     z-index: 10;
@@ -79,8 +78,10 @@
     line-height: 22px;
     text-transform: uppercase;
     color: #374146;
+    cursor: pointer;
 }
-.tagFeedButtonAll{
+
+.tagFeedButton:hover{
     z-index: 10;
     position: relative;
     height: auto;
@@ -95,7 +96,69 @@
     line-height: 22px;
     text-transform: uppercase;
     color: #FFFFFF;
+    cursor: pointer;
+
 }
+
+.tagFeedButton:active{
+    z-index: 10;
+    position: relative;
+    height: auto;
+    background: #826AC5;
+    border: 1px solid #EDECEC;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+    opacity: 50%;
+}
+
+.tagFeedButtonExpand{
+    z-index: 10;
+    position: relative;
+    height: auto;
+    background: #F9F3FF;    
+    border: 1px solid #374146;    
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #374146;
+    cursor: pointer;
+}
+
+.tagFeedButtonExpand:hover{
+    z-index: 10;
+    position: relative;
+    height: auto;
+    background: #374146;
+    border: 1px solid #F9F3FF;   
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #F9F3FF;   
+    cursor: pointer;
+}
+
+.tagFeedButtonExpand:active{
+    opacity: 50%;
+}
+
 
 .feedFooter{
     display: flex;

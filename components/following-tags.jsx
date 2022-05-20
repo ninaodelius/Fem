@@ -9,7 +9,12 @@ export default function FollowingTags(){
         <div className={styles.rightcontent}>
 
             <div className={styles.followcontainer}>
-            <div className={styles.headercontainer}><div className={styles.lefttext}>Taggar du följer </div><div className={styles.righttext}>Redigera</div></div>
+            <div className={styles.headercontainer}><div className={styles.lefttext}>Taggar du följer </div>
+            <div className={styles.righttext}>
+            <Link href="/moretags"><a>
+            Redigera
+            </a></Link>
+            </div></div>
             <div className={styles.hr}></div>
 
             <div className={styles.followfeed}>
@@ -39,7 +44,7 @@ export default function FollowingTags(){
             </div>
 
             <div className={styles.hr}></div>
-            <div className={styles.bottomcontainer}>Visa fler taggar</div>
+            <div className={styles.bottomcontainer}><Link href="/moretags"><a>Visa fler taggar</a></Link></div>
             </div>
       
             </div>

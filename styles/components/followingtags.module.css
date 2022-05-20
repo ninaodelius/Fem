@@ -44,7 +44,47 @@ color: #826AC5;
 
 .followfeed{
 padding: 1rem;
+display: flex;
+flex-wrap: wrap;
 }
+
+.rowcontent{
+    display: flex;
+    flex-direction: row;
+    }
+
+    .rowtext{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+    
+    .tagpic img{    
+    
+        border-radius: 3px;
+        display: flex;
+        padding: 1rem;        
+    }
+
+    
+    .tagname{
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+    }
+    
+    .tagtext{
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+
+    }
 
 .bottomcontainer{
 font-family: 'Nunito';
@@ -61,36 +101,4 @@ padding: 1rem;
 .hr{
     border-top: 1px solid #FFFFFF; 
     width: 100%;
-}
-
-.leftcolumnpics{
-display: flex;
-}
-
-.tagpic{
-    width: 99px;
-    height: 58px;
-    border-radius: 3px;
-}
-
-.rightcolumntext{
-display: flex;
-}
-
-.tagname{
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    color: #000000;
-}
-
-.tagtext{
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 20px;
-    color: #000000;
 }

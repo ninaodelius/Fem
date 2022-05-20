@@ -1,6 +1,7 @@
 import styles from '/styles/components/sharepop.module.css'
 import Button from '/components/button.jsx'
 import Post from '../components/post'
+import Sharedpost from './sharedpost';
 
 export default function SharePop(props){
 
@@ -22,7 +23,7 @@ export default function SharePop(props){
                 <form>
                 <div className={styles.inputcontainer}>
                     <div className={styles.textbox1wrap}><input type="text" className={styles.textbox1} placeholder="Lägg till egen text"></input></div>
-                    <div className={styles.textbox2wrap}><Post post={props.post}/></div>
+                    <div className={styles.textbox2wrap}><div className={styles.textbox3}><Sharedpost post={props.post}/></div></div>
                     <div className={styles.textbox2wrap}><input type="text" className={styles.textbox2} placeholder="här ska delade taggar finnas"></input></div>
                 </div>
                 <hr className={styles.hr}/>

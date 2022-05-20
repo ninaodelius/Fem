@@ -1,0 +1,71 @@
+.postcontainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    font-family: 'Nunito';
+}
+
+.infocontainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 30%;
+    margin-top: 30px;
+    padding-left: 30px;
+    z-index: 9;
+    justify-content: space-between;
+
+}
+.photowrap{
+    display: flex;
+    justify-content: flex-start;
+}
+.photo img{
+    width: 44.94px;
+    height: 44.94px;
+    border-radius: 50%;
+}
+.nameAndTitle{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5rem;
+}
+.jobtitle{
+    font-size: 12px;
+}
+.namewrap{
+    display: flex;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+}
+.textcontainer{
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    margin-top: 15px;
+    padding-left: 30px;
+}
+.textboxwrap{
+    margin-bottom: 1rem;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    font-style: normal;
+}
+
+.tags{
+        width:36.625rem;
+        height: 2.625rem;
+        margin-bottom: 1.438rem;
+        border-radius: 0.625rem;
+        border-style: none;
+        outline: none;
+        background: #FFFFFF;
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color:#826AC5;
+}

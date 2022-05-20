@@ -56,7 +56,7 @@ export default function Feed({post, tag}){
             <div className={styles.leftlogo}><img src={'/images/Logo.svg'}/></div>
             <div className={styles.center}><Searchbar />
             <div className={styles.tagFeedButtons}>
-            <button className={styles.tagFeedButtonAll}>alla</button>
+            <button className={styles.tagFeedButtonAll} onClick={() => setShowFilteredTag(false)}>alla</button>
 
             {tag.map((tag) => {
             return(

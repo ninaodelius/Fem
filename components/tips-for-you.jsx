@@ -28,7 +28,7 @@ export default function TipsForYou(){
             <div className={styles.tagname}>
             Mobile App: UX/UI Design
             </div>
-            <div className={styles.tagtext}>122 gillar det här</div>
+            <div className={styles.tagtext}><img src={'/images/filledheart.png'}/>122 gillar det här</div>
             </div>
             </div>
 
@@ -37,8 +37,8 @@ export default function TipsForYou(){
             <img src={'/images/cv.png'}/>
             </div>
             <div className={styles.rowtext}>
-            <div className={styles.tagname}>UI Elements/components</div>
-            <div className={styles.tagtext}>84 gillar det här</div>
+            <div className={styles.tagname}>UI Elements / components</div>
+            <div className={styles.tagtext}><img src={'/images/filledheart.png'}/>84 gillar det här</div>
             </div>
             </div>
             

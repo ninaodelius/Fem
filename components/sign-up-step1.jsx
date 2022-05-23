@@ -18,7 +18,8 @@ export default function SignUpOne() {
       firstName: yup.string().required('Förnamn är nödvändigt').min(2, "Minimun 2 letters"),
       lastName: yup.string().required('Efternamn är nödvändigt').min(2, "Minimun 2 letters"),
       email: yup.string().email().required('email är nödvändigt'),
-      password: yup.string().required('Lösenord är nödvändigt').min(1).max(25, "Maximum 15 letters")
+      password: yup.string().required('Lösenord är nödvändigt').min(10).max(25, "Maximum 15 letters"),
+      terms: yup.bool().oneOf([true], 'Acceptera villkoren för att komma vidare')
 
     })
 
@@ -67,8 +68,10 @@ export default function SignUpOne() {
           </div>
           <p className='error-message'>{errors.password?.message}</p>
         <div className={styles.checkboxcontainer}>
-          <input type="checkbox" id="terms" name="terms"></input>
+          <input type="checkbox" id="terms" name="terms" {...register('terms')}></input>
           <label htmlFor="terms">Härmed godkänner jag WEMEs <Link href= '/auth/terms' passHref><a className={styles.link}>villkor.</a></Link></label>
+          <p className='error-message'>{errors.terms?.message}</p>
+
         </div>
           <div className={styles.buttoncontainer}>
           <Button onClick={toggleView}><div type='sumbit'>Skapa konto</div></Button>

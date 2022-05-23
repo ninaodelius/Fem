@@ -1,20 +1,16 @@
 .rightcontent{
 display: flex;
 flex-direction: column;
-flex-wrap: wrap;
-position:absolute;
 }
 
 .followcontainer{
     display: flex;
-    margin-top: 1rem;
-    position: absolute;
     flex-direction: column;
     background: #F5EAFF;
     border-radius: 10px;
-    margin-top: 7rem;
     width: 316px;
     height: auto;
+    margin-top: 1rem;
 }
 
 

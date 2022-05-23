@@ -1,3 +1,17 @@
-*{
-    background-color: aqua;
+
+.btnfollow{
+    height: auto;
+    border-radius: 30px;
+    /* align-items: center;
+    text-align: center; */
+    cursor: pointer;
+    background: none;
+    color: #374146;
+    border: 2px solid #374146;
+    font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 18px;
+padding: 4px 16px;
 }

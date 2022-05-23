@@ -9,6 +9,7 @@
     margin-bottom: 10px; 
     font-family: 'Nunito';
     z-index: 9;
+    position: relative;
 }
 .popup{
     z-index: 11;
@@ -205,4 +206,13 @@
     align-self: flex-end;   
     margin-bottom: 1rem;
     cursor: pointer;
+  }
+
+  .buttonfollow{
+      display: flex;
+      position: absolute;
+      right: 20px;
+      top: 100px;
+      cursor: pointer;
+
   }

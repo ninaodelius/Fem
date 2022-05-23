@@ -4,8 +4,9 @@ import styles from '/styles/components/buttonfollow.module.css'
 
 export default function buttonFollow() {
   return (
-    <div className='btnFollow'>
-      <button>följ</button>
-    </div>
+    
+     
+      <button className={styles.btnfollow}>+ Följ</button>
+
   )
 }

@@ -10,11 +10,14 @@ import { yupResolver } from '@hookform/resolvers/yup';
 
 export default function SignUpTwo() {
     const [nextStep, setNextStep] = useState(false)
+    const toggleView = () =>{
+      setNextStep(nextStep => !nextStep)
+    }
 
     const schema = yup.object().shape({
-      jobtitle:yup.string().required('Vad jobbar du med för tillfället?').min(2,'Minst två tecken'),
-      experience:yup.string().min(1,'minst två tecken',).required('Fyll i din arbetserfarenhet'),
-      qualification:yup.string().required()
+      jobtitle:yup.string().min(2,'Minst två tecken').required('Vad jobbar du med för tillfället?'),
+      experience:yup.string().min(3,'Minst 3 tecken',).required('Fyll i din arbetserfarenhet'),
+      qualification:yup.string().min(2,'Minst två tecken').required('Nämn två kompetenser')
     })
 
     const {register, handleSubmit, formState} = useForm({
@@ -24,7 +27,7 @@ export default function SignUpTwo() {
     const {errors} = formState;
 
     const submitForm = (data) =>{
-      console.log(errors)
+      setNextStep(nextStep => !nextStep)
     }
 
     const form = (
@@ -39,18 +42,19 @@ export default function SignUpTwo() {
               <input type="text" name='jobtitle' id={styles.input} placeholder="Jobbtitel*" {...register('jobtitle')}/>
             </label> 
           </div>
+          <p className='error-message'>{errors.jobtitle?.message}</p>
         <div className={styles.inputcontainer}>
             <label>
               <input type="text" name='experience'id={styles.input} placeholder="Hur länge har du jobbat?*" {...register('experience')} />
             </label> 
           </div>          
-          <p>Ange minst 2 komptenser</p>
+          <p className='error-message'>{errors.experience?.message}</p>
         <div className={styles.inputcontainer}>
             <label>
-              <input type="email" name='qualification' id={styles.input} placeholder="Ange minst två kompetenser*" {...register('qualification')} />
+              <input type="text" name='qualification' id={styles.input} placeholder="Ange minst två kompetenser*" {...register('qualification')} />
             </label> 
           </div>
-          <p>Taggar du vill följa</p>
+          <p className='error-message'>{errors.qualification?.message}</p>
           <div className={styles.inputcontainer}>
            <label>
              <input type="text" id={styles.input} placeholder="taggar du vill följa #FIGMA" />
@@ -58,7 +62,7 @@ export default function SignUpTwo() {
           </div>
 
           <div className={styles.buttoncontainer}>
-          <Button><div onClick={submitForm}>Nästa</div></Button>
+          <Button onClick={toggleView}><div type='sumbit'>Nästa</div></Button>
           </div>
          </form>
       </div>

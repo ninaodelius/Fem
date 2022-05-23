@@ -9,7 +9,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 
 export default function SignUpOne() {
     const [nextStep, setNextStep] = useState(false)
-   const toggleView = () =>{
+    const toggleView = () =>{
       setNextStep(nextStep => !nextStep)
     }
     
@@ -18,7 +18,7 @@ export default function SignUpOne() {
       firstName: yup.string().required('Förnamn är nödvändigt').min(2, "Minimun 2 letters"),
       lastName: yup.string().required('Efternamn är nödvändigt').min(2, "Minimun 2 letters"),
       email: yup.string().email().required('email är nödvändigt'),
-      password: yup.string().required('Lösenord är nödvändigt').min(4).max(15, "Maximum 15 letters")
+      password: yup.string().required('Lösenord är nödvändigt').min(1).max(25, "Maximum 15 letters")
 
     })
 
@@ -29,8 +29,9 @@ export default function SignUpOne() {
     const {errors} = formState;
 
     const submitForm = (data) =>{
-      console.log(errors)
+      setNextStep(nextStep => !nextStep)
     }
+    
 
 
     const form = (

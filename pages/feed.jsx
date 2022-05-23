@@ -38,9 +38,9 @@ export const getServerSideProps = async() => {
 }
 
 export default function Feed({post, tag}){
-
-    const current = new Date();
-    const date = `${current.getHours()}:${current.getMinutes()}:${current.getSeconds()} ${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
+    post.sort(function(a,b){
+        return new Date(b.createdAt) - new Date(a.createdAt);
+      });
 
     const [showFilteredTag, setShowFilteredTag] = useState(false)
 

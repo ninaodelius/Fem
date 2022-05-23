@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import SignUpOne from "../../components/sign-up-step1"
 import styles from '/styles/auth/signup.module.css'
-import Footer from '../../components/footer'
+import Layout from '../../components/layout'
 
 export default function SignUp(){
 
@@ -11,11 +11,11 @@ export default function SignUp(){
   
   return (
     <>
+    <Layout>
      <div className={styles.container}>
      <SignUpOne /> 
-     <div className={styles.feedFooter}>
-     <Footer/></div>
      </div>
+     </Layout>
     </>
   )
 }

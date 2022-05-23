@@ -31,7 +31,7 @@
    line-height: 22px;
    box-shadow: inset 0 1px 3px 0 var(--grey50);
  }
- .searchicon{
+ .searchinput img{
     position: absolute;
     left: 10px;
     top: 50%;

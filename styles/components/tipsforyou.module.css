@@ -50,6 +50,7 @@
     }
 
     .firstTipsInfo{
+        display: flex;
         background-image: url("/images/tipspic.png");
         background-position: center;
         font-family: 'Nunito';

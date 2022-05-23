@@ -84,7 +84,8 @@
     flex-wrap: wrap;
     width: 85%;
     gap: 10px;
-
+    flex-wrap: wrap;
+    width: 85%;
 }
 .tagFeedButton{
     z-index: 10;
@@ -140,6 +141,24 @@
     color: #FFFFFF;
     cursor: pointer;
     opacity: 50%;
+}
+
+.tagFeedButton:focus{
+    z-index: 10;
+    position: relative;
+    height: auto;
+    background: #826AC5;
+    border: 1px solid #EDECEC;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
 }
 
 .tagFeedButtonExpand{

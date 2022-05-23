@@ -14,3 +14,10 @@
     height: 1.25rem;
     margin-right: 0.5rem;
 }
+
+.active{
+    color: #000000;
+    font-weight: 900;
+    text-decoration-color: #826AC5;
+    text-decoration-line: underline;
+}

@@ -104,13 +104,9 @@ export default function Feed({post, tag}){
                 </div>
             </div>
             <div className={styles.right}>
-            
-            <div className={styles.purpleBoxes}>
-            <FollowingTags/></div>
-            <div className={styles.purpleBoxes}>
-            <RecommendedTags/></div>
-            <div className={styles.purpleBoxes}>
-            <TipsForYou/></div>
+            <FollowingTags/>
+            <RecommendedTags/>
+            <TipsForYou/>
             </div>
             <div className={styles.feedFooter}>
                 <div className={styles.feedBtnArrowUp}>

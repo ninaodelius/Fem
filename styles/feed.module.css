@@ -31,12 +31,13 @@
     width: 50%;
     }
 .right{
-    width: 25%;
+    width: auto;
     display: flex;
     flex-direction: column;
-    align-items: right;
-    padding-right: 40px;
+    width: 25%;
+
 }
+
 .profilefeed{
     z-index: 12;
 }

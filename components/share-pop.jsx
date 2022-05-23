@@ -24,7 +24,7 @@ export default function SharePop(props){
                 <div className={styles.inputcontainer}>
                     <div className={styles.textbox1wrap}><input type="text" className={styles.textbox1} placeholder="Lägg till egen text"></input></div>
                     <div className={styles.textbox2wrap}><div className={styles.textbox3}><Sharedpost post={props.post}/></div></div>
-                    <div className={styles.textbox2wrap}><input type="text" className={styles.textbox2} placeholder="här ska delade taggar finnas"></input></div>
+                    <div className={styles.textbox2wrap}><input type="text" className={styles.textbox2} placeholder="Lägg till egna taggar"></input></div>
                 </div>
                 <hr className={styles.hr}/>
                 <div className={styles.sharechoicecontainer}>

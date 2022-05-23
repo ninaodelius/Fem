@@ -10,12 +10,13 @@
     display: flex;
     position: absolute;
     flex-wrap: wrap;
+    width: auto;
 }
 
 .sharepopcontainer{
     width: 40rem;
     height: auto;
-    background: #FFF9F3;
+    background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
     border-radius: 0.625rem;
@@ -68,7 +69,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 .textbox1wrap{
     display: flex;
@@ -84,32 +85,14 @@ font-style: normal;
 font-weight: 300;
 font-size: 20px;
 line-height: 28px;
-    width: 21.125rem;
-    height: 2.625rem;
-    border-style: none;
+width: 100%;
+    height: auto;
     background-color: #FFFFFF;
     padding: 1rem;
     margin-bottom: 1rem;
     outline: none;
     border: 1px solid #DDDDDD;
 border-radius: 20px;
-}
-
-.sharedcontent{
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    width:36.625rem;
-    height: 2.625rem;
-    border-style: none;
-    background-color: #FFFFFF;
-    padding-left: 1rem;
-    margin-bottom: 1rem;    
-    outline: none;
-border: 1px solid #DDDDDD;
-border-radius: 15px;
 }
 
 .textbox2{
@@ -119,15 +102,20 @@ font-weight: 700;
 font-size: 12px;
 line-height: 16px;
 text-transform: uppercase;
-    width:36.625rem;
-    height: 2.625rem;
-    border-style: none;
+width: 100%;
+height: auto;
+padding: 1rem;
     background-color: #FFFFFF;
-    padding-left: 1rem;
     margin-bottom: 1.438rem;
+    margin-top: 1.438rem;
     outline: none;
     border: 1px solid #DDDDDD;
-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.textbox3{
+    border: 1px solid #DDDDDD;
+    border-radius: 10px; 
 }
 .sharechoicecontainer{
     margin-top: 1.5em;

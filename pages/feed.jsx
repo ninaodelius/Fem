@@ -42,12 +42,13 @@ export default function Feed({post, tag}){
 
     const [showFilteredTag, setShowFilteredTag] = useState(false)
 
-    const [pressedTags, setPressedTags] = useState([])
+    const [pressedTags, setPressedTags] = useState('')
 
     function onClick(tag){
         if(showFilteredTag == false){
         setShowFilteredTag(showFilteredTag => !showFilteredTag) }
-        setPressedTags(pressedTags => [...pressedTags, tag.value])
+        setPressedTags('')
+        setPressedTags(tag.value)
     }
 
     return(
@@ -56,7 +57,7 @@ export default function Feed({post, tag}){
             <div className={styles.leftlogo}><img src={'/images/Logo.svg'}/></div>
             <div className={styles.center}><Searchbar />
             <div className={styles.tagFeedButtons}>
-            <button className={styles.tagFeedButtonAll} onClick={() => setShowFilteredTag(false)}>alla</button>
+            <button className={styles.tagFeedButton} onClick={() => setShowFilteredTag(false)}>alla</button>
 
             {tag.map((tag) => {
             return(
@@ -66,7 +67,7 @@ export default function Feed({post, tag}){
             )
           })} 
           
-          
+          <button className={styles.tagFeedButtonExpand}>visa mer</button>
           </div></div>
             <div className={styles.right}><Profilefeed/><FollowingTags/></div></div>
         <div className={styles.content}>
@@ -78,7 +79,7 @@ export default function Feed({post, tag}){
 
                 {showFilteredTag ? 
                 <div>
-                {post.filter(post => post.tags.includes(pressedTags[0])).map((post) => (
+                {post.filter(post => post.tags.includes(pressedTags)).map((post) => (
                     <div key={post._id} className={styles.post}>
                      <Post post={post}></Post> 
                      </div>

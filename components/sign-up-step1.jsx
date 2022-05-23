@@ -71,7 +71,7 @@ export default function SignUpOne() {
           <label htmlFor="terms">Härmed godkänner jag WEMEs <Link href= '/auth/terms' passHref><a className={styles.link}>villkor.</a></Link></label>
         </div>
           <div className={styles.buttoncontainer}>
-          <Button onClick={toggleView} type={sumbit}>Skapa konto</Button>
+          <Button onClick={toggleView}>Skapa konto</Button>
           </div>
          </form>
       </div>

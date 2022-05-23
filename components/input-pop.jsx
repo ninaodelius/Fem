@@ -13,7 +13,7 @@ export default function Post(props){
   const onSubmit =  (event) => {
     event.preventDefault()
     const current = new Date();
-    const date = `${current.getHours()}:${current.getMinutes()}:${current.getSeconds()} ${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
+    const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()} ${current.getHours()}:${current.getMinutes()}:${current.getSeconds()} `;
     const tagsList = tags.split(" ");
     console.log(tagsList)
     console.log(post)
@@ -24,6 +24,7 @@ export default function Post(props){
       text : post,
       tags : tagsList,
       createdAt: date,
+      photo : "/images/Woman.svg",
     }).then((docRef) => {
       console.log("Document written with ID: ", docRef.id);
   })

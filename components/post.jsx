@@ -38,7 +38,7 @@ export default function Post({post}){
           <ul className={styles.dropdown}>
           <img src={'/images/xoptionsmenu.png'} onClick={() => setPopUpOptionsMenu(false)} />
             <button className={styles.liButton}><img src={'/images/editpost.png'}/>Redigera inlägg</button>
-            <button className={styles.liButton} onClick={deletePost}><img src={'/images/deletepost.png'}/>Ta bort</button>
+            <button className={styles.liButton}><img src={'/images/deletepost.png'}/>Ta bort</button>
           </ul>
         );
       }

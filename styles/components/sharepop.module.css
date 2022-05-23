@@ -101,7 +101,6 @@ font-style: normal;
 font-weight: 700;
 font-size: 12px;
 line-height: 16px;
-text-transform: uppercase;
 width: 100%;
 height: auto;
 padding: 1rem;
@@ -111,7 +110,12 @@ padding: 1rem;
     outline: none;
     border: 1px solid #DDDDDD;
     border-radius: 10px;
+    color:#826AC5;
 }
+
+input.textbox2::placeholder{
+    color:#826AC5;
+    }
 
 .textbox3{
     border: 1px solid #DDDDDD;

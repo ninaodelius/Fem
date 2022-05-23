@@ -10,6 +10,8 @@ import Footer from '../components/footer'
 import Profilefeed from "../components/profileFeed"
 import React, { useState } from 'react';
 import FollowingTags from "../components/following-tags"
+import RecommendedTags from "../components/recommended-tags"
+import TipsForYou from "../components/tips-for-you"
 
 
 
@@ -69,7 +71,7 @@ export default function Feed({post, tag}){
           
           <button className={styles.tagFeedButtonExpand}>visa mer</button>
           </div></div>
-            <div className={styles.right}><Profilefeed/><FollowingTags/></div></div>
+            <Profilefeed/></div>
         <div className={styles.content}>
             <div className={styles.left}><List/></div>
             <div className={styles.center}>
@@ -100,6 +102,11 @@ export default function Feed({post, tag}){
                 
                 </div>
                 </div>
+            </div>
+            <div className={styles.right}>
+            <FollowingTags/>
+            <RecommendedTags/>
+            <TipsForYou/>
             </div>
             <div className={styles.feedFooter}>
                 <div className={styles.feedBtnArrowUp}>

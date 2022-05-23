@@ -2,7 +2,7 @@ import styles from '/styles/components/post.module.css'
 import React, { useState } from 'react';
 import SharePop from "./share-pop"
 import Link from 'next/link';
-
+import ButtonFollow from './buttonFollow';
 
 export default function Post({post}){
 
@@ -45,11 +45,13 @@ export default function Post({post}){
 
     return(
         <div className={styles.popup}>
+           
             <SharePop trigger={sharePopup} setTrigger={setSharePopup} post={post}></SharePop>
             <div className={styles.postcontainer}>
                 <div className={styles.infocontainer}>
                     <div className={styles.photowrap}>
                         <div className={styles.photo}><img src={post.photo}/></div>
+                        <div className={styles.buttonfollow}><ButtonFollow/></div>
                         <div className={styles.nameAndTitle}>
                             <div className={styles.namewrap }>{post.author}</div>
                             <div className={styles.jobtitle}>{post.title}</div>  

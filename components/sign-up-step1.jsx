@@ -9,7 +9,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 
 export default function SignUpOne() {
     const [nextStep, setNextStep] = useState(false)
-   const toggleView = () =>{
+    const submit = 'submit'
+    const toggleView = () =>{
       setNextStep(nextStep => !nextStep)
     }
     
@@ -70,7 +71,7 @@ export default function SignUpOne() {
           <label htmlFor="terms">Härmed godkänner jag WEMEs <Link href= '/auth/terms' passHref><a className={styles.link}>villkor.</a></Link></label>
         </div>
           <div className={styles.buttoncontainer}>
-          <Button onClick={toggleView}><div type='sumbit'>Skapa konto</div></Button>
+          <Button onClick={toggleView} type={sumbit}>Skapa konto</Button>
           </div>
          </form>
       </div>

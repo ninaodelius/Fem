@@ -55,66 +55,64 @@ export default function Feed({post, tag}){
 
     return(
         <div className={styles.feedPage}>
-        <div className={styles.header}>
-            <div className={styles.leftlogo}><img src={'/images/Logo.svg'}/></div>
-            <div className={styles.center}><Searchbar />
-            <div className={styles.tagFeedButtons}>
-            <button className={styles.tagFeedButton} onClick={() => setShowFilteredTag(false)}>alla</button>
-
-            {tag.map((tag) => {
-            return(
-                <div key={tag._id}>
-               <button className={styles.tagFeedButton} onClick={() => onClick(tag)}>{tag.value}</button>
-               </div>
-            )
-          })} 
-          
-          <button className={styles.tagFeedButtonExpand}>visa mer</button>
-          </div></div>
-            <Profilefeed/></div>
-        <div className={styles.content}>
-            <div className={styles.left}><List/></div>
-            <div className={styles.center}>
-                <div className={styles.firstinput}><Input /> </div>
-                <div className={styles.feed}>
-                <div className={styles.posts}>
-
-                {showFilteredTag ? 
-                <div>
-                {post.filter(post => post.tags.includes(pressedTags)).map((post) => (
-                    <div key={post._id} className={styles.post}>
-                     <Post post={post}></Post> 
-                     </div>
-                ))}
+            <div className={styles.header}>
+                <div className={styles.leftheader}>
+                    <div className={styles.leftlogo}>
+                        <img src={'/images/Logo.svg'}/>
+                    </div>
                 </div>
-                : 
-                <div>
-                {post.map((post) => {
-                  return(
-                      <div key={post._id} className={styles.post}>
-                     <Post post={post}></Post>
-                     </div>
-                  )
-                })}
+                <div className={styles.centerheader}>
+                    <div className={styles.searchbar}><Searchbar /></div>
                 </div>
-                 }
-
-                
-                </div>
-                </div>
+                    <div className={styles.rightheader}><Profilefeed/></div>
             </div>
-            <div className={styles.right}>
-            <FollowingTags/>
-            <RecommendedTags/>
-            <TipsForYou/>
-            </div>
-            <div className={styles.feedFooter}>
-                <div className={styles.feedBtnArrowUp}>
-                <BtnArrowUp/></div>
-                <Footer/>
+            <div className={styles.content}>
+                <div className={styles.left}><List/></div>
+                <div className={styles.center}>
+                    <div className={styles.tagFeedButtons}>
+                        <button className={styles.tagFeedButton} onClick={() => setShowFilteredTag(false)}>alla</button>
+                        {tag.map((tag) => {
+                            return(
+                            <div key={tag._id}>
+                                <button className={styles.tagFeedButton} onClick={() => onClick(tag)}>{tag.value}</button>
+                            </div>)
+                        })}
+                        <button className={styles.tagFeedButtonExpand}>visa mer</button>
+                    </div>
+                    <div className={styles.firstinput}><Input /> </div>
+                    <div className={styles.feed}>
+                        <div className={styles.posts}>
+                            {showFilteredTag ? 
+                                <div>
+                                    {post.filter(post => post.tags.includes(pressedTags)).map((post) => (
+                                        <div key={post._id} className={styles.post}>
+                                        <Post post={post}></Post> 
+                                        </div>
+                                    ))}
+                                </div> : 
+                                <div>
+                                    {post.map((post) => {
+                                    return(
+                                        <div key={post._id} className={styles.post}>
+                                        <Post post={post}></Post>
+                                        </div>
+                                    )
+                                    })}
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div className={styles.right}>
+                    <FollowingTags/>
+                    <RecommendedTags/>
+                    <TipsForYou/>
+                </div>
+                <div className={styles.feedFooter}>
+                    <div className={styles.feedBtnArrowUp}><BtnArrowUp/></div>
+                    <Footer/>
+                </div>
             </div>
         </div>
-        </div>
-
     )
 }

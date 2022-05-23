@@ -5,12 +5,33 @@
 }
 
 .header{
+    margin-top: 5rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between center;
+    justify-content:center;
     align-items: center;
-    height: 120px;
+    height: 100px;
 }
+.leftheader{
+    width: 25%;
+}
+.leftlogo{
+    padding-left: 48%;
+    width: fit-content;
+}
+.centerheader{
+    width: 50%;
+}
+.searchbar{
+    width: 85%;
+    height: 100%;
+}
+.rightheader{
+    width: 25%;
+    padding-right: 10%;
+}
+
+
 .content{
     display: flex;
     flex-direction: row;
@@ -18,14 +39,12 @@
 }
 .left{
     width: 25%;
+    padding: 30px;
+    padding-left: 10%;
     
 }
-.leftlogo{
-    width: 25%;
-    padding: 30px;
-}
 .center{
-    margin-top: 10rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction:column;
     width: 50%;
@@ -35,6 +54,7 @@
     display: flex;
     flex-direction: column;
     width: 25%;
+    padding-top: 30px;
 
 }
 
@@ -61,6 +81,8 @@
     margin-bottom: 2rem;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    width: 85%;
     gap: 10px;
     flex-wrap: wrap;
     width: 85%;

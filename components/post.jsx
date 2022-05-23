@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 import SharePop from "./share-pop"
 import Link from 'next/link';
 import ButtonFollow from './buttonFollow';
-import { deleteDoc, getDoc } from 'firebase/firestore'
-import { db } from '../firebase/firebaseConfig'
 
 export default function Post({post}){
 
@@ -29,11 +27,6 @@ export default function Post({post}){
 
     function handleShowSave() {
         setShowSave(showSave => !showSave)
-    }
-
-    const deletePost = async() => {
-        const docRef = post
-        await deleteDoc(getDoc(db, "posts", docRef.id));
     }
 
     const [sharePopup, setSharePopup] = useState(false);

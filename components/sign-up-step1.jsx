@@ -74,7 +74,7 @@ export default function SignUpOne() {
 
         </div>
           <div className={styles.buttoncontainer}>
-          <Button onClick={toggleView} type={submit}>Skapa konto</Button>
+          <Button onClick={toggleView}>Skapa konto</Button>
           </div>
          </form>
       </div>

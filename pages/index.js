@@ -32,8 +32,10 @@ const handleClick = () => {
 
     
     <img src={'/images/graphic.png'}/>
-    <div className={styles.graphicContent}>kvinnor <br></br>inom x</div> 
+    <div className={styles.graphicwrap}>
+    <div className={styles.graphicContent}>kvinnor <br></br>inom <div className={styles.graphicContentSwitcheroo}></div></div>
     
+    </div>
     <div className={styles.graphicText}>
     Utvidga ditt nätverk, dela dina kunskaper och få hjälp av andra inom din bransch.
     <Button><Link href="/auth/sign-up" passHref>Gå med</Link></Button>

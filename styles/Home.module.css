@@ -67,6 +67,10 @@ margin-left: 2vh;
   position: absolute;
 }
 
+.graphicwrap{
+  display: flex;
+}
+
 .graphicContent{
   display: flex;
   font-family: 'Nunito';
@@ -78,6 +82,37 @@ text-transform: uppercase;
 color: #374146;
 padding-left: 15vh;
 padding-top: 10vh;
+animation: animate infinite 8s;
+
+}
+
+.graphicContentSwitcheroo::before{
+  content: 'ux';
+  display: flex;
+  font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 80px;
+line-height: 96px;
+text-transform: uppercase;
+color: #826AC5;
+animation: animate infinite 10s;
+padding-top: 13vh;
+}
+
+@keyframes animate {
+  0% {
+    content: "java";
+}
+
+50% {
+    content: "tech";
+}
+
+75% {
+    content: ".net";
+}
+  
 }
 
 .graphicText{

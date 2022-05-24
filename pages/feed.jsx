@@ -58,7 +58,7 @@ export default function Feed({post, tag}){
             <div className={styles.header}>
                 <div className={styles.leftheader}>
                     <div className={styles.leftlogo}>
-                        <img src={'/images/Logo.svg'}/>
+                        <img src={'/images/logonew.png'}/>
                     </div>
                 </div>
                 <div className={styles.centerheader}>

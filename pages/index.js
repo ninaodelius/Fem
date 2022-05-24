@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import Footer from '../components/footer.jsx'
+import FooterNoLogo from '../components/footernologo.jsx'
 import Button from '../components/buttonjoin'
 
 export default function Home() {
@@ -54,7 +54,7 @@ const handleClick = () => {
   </div> 
 
   </div>
-   <Footer/>
+   <FooterNoLogo/>
   </>
   )
 }

@@ -11,11 +11,10 @@
     position: absolute;
     flex-wrap: wrap;
     z-index: 10;
-    
-    
+
 }
 .postpopcontainer{
-    width: 40rem;
+    width: 47rem;
     height: 35rem;
     background: #FFFFFF;
     display: flex;

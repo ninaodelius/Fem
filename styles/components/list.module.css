@@ -21,3 +21,12 @@
     text-decoration-color: #826AC5;
     text-decoration-line: underline;
 }
+@media screen and (max-width: 1400px) {
+    .li{
+        font-weight: 700;
+        font-size: 1rem;
+    }
+    .left{
+        padding: 0px;
+    }
+    }

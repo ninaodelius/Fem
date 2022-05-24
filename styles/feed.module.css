@@ -8,22 +8,21 @@
     margin-top: 5rem;
     display: flex;
     flex-direction: row;
-    justify-content:center;
     align-items: center;
     height: 100px;
+    justify-content: space-between;
 }
 .leftheader{
-    width: 25%;
+    width: 15%;
 }
 .leftlogo{
-    padding-left: 48%;
-    width: fit-content;
+    margin-left: 50px;
 }
 .centerheader{
-    width: 50%;
+    width: 40%;
 }
 .searchbar{
-    width: 85%;
+    width: 100%;
     height: 100%;
 }
 .rightheader{
@@ -47,7 +46,7 @@
     margin-top: 2rem;
     display: flex;
     flex-direction:column;
-    width: 50%;
+    width: 40%;
     }
 .right{
     width: auto;
@@ -55,6 +54,7 @@
     flex-direction: column;
     width: 25%;
     padding-top: 30px;
+    padding-left: 20px;
 
 }
 
@@ -82,10 +82,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 85%;
+    width: 100%;
     gap: 10px;
     flex-wrap: wrap;
-    width: 85%;
 }
 .tagFeedButton{
     z-index: 10;
@@ -215,4 +214,35 @@
     margin-right: 10vh;
     z-index: 1;
 }
+
+@media screen and (max-width: 1400px) {
+.leftlogo{
+    padding: 0px;
+}
+.left{
+    padding: 30px;
+}
+
+}
+@media screen and (max-width: 600px) {
+    .leftlogo{
+        display: none;
+    }
+    .left{
+        display: none;
+    }
+    .right{
+        display: none;
+    }
+    .center{
+        width: 100%;
+    }
+    .centerheader{
+        margin-left: 10px;
+        width: 80%;
+    }
+    .leftheader{
+        display: none;
+    }
     
+    }

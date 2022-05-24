@@ -18,9 +18,10 @@
 .active{
     color: #000000;
     font-weight: 900;
-    text-decoration-color: #826AC5;
-    text-decoration-line: underline;
+    border-left: 5px solid #826AC5;
+    padding-left: 5px;
 }
+
 @media screen and (max-width: 1400px) {
     .li{
         font-weight: 700;

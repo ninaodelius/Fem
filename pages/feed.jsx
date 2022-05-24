@@ -18,7 +18,9 @@ import TipsForYou from "../components/tips-for-you"
 export const getServerSideProps = async() => {
     const res = await getDocs(collection(db, "posts"))
     const post = res.docs
-    .map((post) => post.data())
+    .map((post) =>  ({
+        id: post.id,
+        ...post.data()}))
     const res1 = await getDocs(collection(db, "tags"))
     const tag = res1.docs
     .map((tag) => tag.data())
@@ -38,9 +40,7 @@ export const getServerSideProps = async() => {
 }
 
 export default function Feed({post, tag}){
-    post.sort(function(a,b){
-        return new Date(b.createdAt) - new Date(a.createdAt);
-      });
+    
 
     const [showFilteredTag, setShowFilteredTag] = useState(false)
 

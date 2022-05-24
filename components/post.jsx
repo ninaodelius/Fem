@@ -2,9 +2,12 @@ import styles from '/styles/components/post.module.css'
 import React, { useState } from 'react';
 import SharePop from "./share-pop"
 import Link from 'next/link';
-import ButtonFollow from './buttonFollow';
+import ButtonFollow from './buttonFollow'
+import axios from 'axios'
+
 
 export default function Post({post}){
+    
 
     const [showHeart, setShowHeart] = useState(false);
 
@@ -28,6 +31,10 @@ export default function Post({post}){
     function handleShowSave() {
         setShowSave(showSave => !showSave)
     }
+    function deletePost() {
+        axios.delete(`api/posts/${post.id}`)
+
+    }
 
     const [sharePopup, setSharePopup] = useState(false);
 
@@ -38,7 +45,7 @@ export default function Post({post}){
           <ul className={styles.dropdown}>
           <img src={'/images/xoptionsmenu.png'} onClick={() => setPopUpOptionsMenu(false)} />
             <button className={styles.liButton}><img src={'/images/editpost.png'}/>Redigera inlägg</button>
-            <button className={styles.liButton}><img src={'/images/deletepost.png'}/>Ta bort</button>
+            <button className={styles.liButton} onClick={() => deletePost()}><img src={'/images/deletepost.png'}/>Ta bort</button>
           </ul>
         );
       }
@@ -67,7 +74,7 @@ export default function Post({post}){
             </div>
             <div className={styles.textcontainer}> 
                     <div className={styles.textboxwrap}>{post.text}</div>
-                    <Link href='./feed'><a className={styles.tags}>{post.tags}</a></Link>
+                    <Link href='/feed'><a className={styles.tags}>{post.tags}</a></Link>
                     <hr className={styles.hr}/>
                     </div>
                     <div className={styles.interactContainer}>

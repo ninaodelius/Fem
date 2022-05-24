@@ -6,7 +6,7 @@ export default function Footer(){
         <div className={styles.footerSection}>
 
         <div className={styles.wemeLogo}>
-        <img src={'/images/wemelogo.png'}/></div>
+        <img src={'/images/logonew.png'}/></div>
 
         <div className={styles.socialFooter}>
 

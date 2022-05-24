@@ -12,12 +12,6 @@
     justify-content: space-between;
   }
 
-  .footerSection p{
-    margin-left: 2px;
-    font-size: 10px;
-    float: right;
-  }
-
 .wemeLogo{
   display: flex;
   padding: 1rem;
@@ -29,8 +23,14 @@
     justify-content: space-evenly;
     font-size: 1vh;
     padding: 1rem;
-    flex-wrap: nowrap;
     align-content: space-around;
+    align-items: flex-start;
+  }
+
+  .socialFooter a{
+    display: flex;
+    align-items: flex-start;
+    margin-right: 1rem;
   }
 
   .facebookLogo img{
@@ -49,7 +49,14 @@
   }
 
   .socialMediaText{
+    display: flex;
     text-transform: uppercase;
+    font-family: 'Nunito';
+    font-style: normal;
     font-weight: 900;
+    font-size: 14px;
+    line-height: 18px;
     line-break: auto;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
   }

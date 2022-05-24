@@ -5,12 +5,33 @@
 }
 
 .header{
+    margin-top: 5rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between center;
+    justify-content:center;
     align-items: center;
-    height: 120px;
+    height: 100px;
 }
+.leftheader{
+    width: 25%;
+}
+.leftlogo{
+    padding-left: 48%;
+    width: fit-content;
+}
+.centerheader{
+    width: 50%;
+}
+.searchbar{
+    width: 85%;
+    height: 100%;
+}
+.rightheader{
+    width: 25%;
+    padding-right: 10%;
+}
+
+
 .content{
     display: flex;
     flex-direction: row;
@@ -18,11 +39,9 @@
 }
 .left{
     width: 25%;
-    
-}
-.leftlogo{
-    width: 25%;
     padding: 30px;
+    padding-left: 10%;
+    
 }
 .center{
     margin-top: 2rem;
@@ -31,12 +50,14 @@
     width: 50%;
     }
 .right{
-    width: 25%;
+    width: auto;
     display: flex;
     flex-direction: column;
-    align-items: right;
-    padding-right: 40px;
+    width: 25%;
+    padding-top: 30px;
+
 }
+
 .profilefeed{
     z-index: 12;
 }
@@ -60,8 +81,11 @@
     margin-bottom: 2rem;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    width: 85%;
     gap: 10px;
-
+    flex-wrap: wrap;
+    width: 85%;
 }
 .tagFeedButton{
     z-index: 10;
@@ -117,6 +141,24 @@
     color: #FFFFFF;
     cursor: pointer;
     opacity: 50%;
+}
+
+.tagFeedButton:focus{
+    z-index: 10;
+    position: relative;
+    height: auto;
+    background: #826AC5;
+    border: 1px solid #EDECEC;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
 }
 
 .tagFeedButtonExpand{

@@ -6,8 +6,8 @@ export default function Searchbar() {
   
       <div className={styles.normalcontainer}>
         <div className={styles.searchinput}>
-          <input className={styles.input} type={styles.text} autoComplete="name" placeholder='Sök efter t.ex användare, taggar...'/>
-           <SearchIcon className={styles.searchicon}/> 
+          <input className={styles.input} type={styles.text} autoComplete="name" placeholder='Sök efter t.ex användare, taggar...'></input>
+          <img src={'/images/searchicon.png'}/> 
            
         </div>
       </div>

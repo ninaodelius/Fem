@@ -10,6 +10,8 @@ import Footer from '../components/footer'
 import Profilefeed from "../components/profileFeed"
 import React, { useState } from 'react';
 import FollowingTags from "../components/following-tags"
+import RecommendedTags from "../components/recommended-tags"
+import TipsForYou from "../components/tips-for-you"
 
 
 
@@ -36,9 +38,9 @@ export const getServerSideProps = async() => {
 }
 
 export default function Feed({post, tag}){
-
-    const current = new Date();
-    const date = `${current.getHours()}:${current.getMinutes()}:${current.getSeconds()} ${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
+    post.sort(function(a,b){
+        return new Date(b.createdAt) - new Date(a.createdAt);
+      });
 
     const [showFilteredTag, setShowFilteredTag] = useState(false)
 
@@ -53,61 +55,64 @@ export default function Feed({post, tag}){
 
     return(
         <div className={styles.feedPage}>
-        <div className={styles.header}>
-            <div className={styles.leftlogo}><img src={'/images/Logo.svg'}/></div>
-            <div className={styles.center}><Searchbar />
-            <div className={styles.tagFeedButtons}>
-            <button className={styles.tagFeedButton} onClick={() => setShowFilteredTag(false)}>alla</button>
-
-            {tag.map((tag) => {
-            return(
-                <div key={tag._id}>
-               <button className={styles.tagFeedButton} onClick={() => onClick(tag)}>{tag.value}</button>
-               </div>
-            )
-          })} 
-          
-          <button className={styles.tagFeedButtonExpand}>visa mer</button>
-          </div></div>
-            <div className={styles.right}><Profilefeed/><FollowingTags/></div></div>
-        <div className={styles.content}>
-            <div className={styles.left}><List/></div>
-            <div className={styles.center}>
-                <div className={styles.firstinput}><Input /> </div>
-                <div className={styles.feed}>
-                <div className={styles.posts}>
-
-                {showFilteredTag ? 
-                <div>
-                {post.filter(post => post.tags.includes(pressedTags)).map((post) => (
-                    <div key={post._id} className={styles.post}>
-                     <Post post={post}></Post> 
-                     </div>
-                ))}
+            <div className={styles.header}>
+                <div className={styles.leftheader}>
+                    <div className={styles.leftlogo}>
+                        <img src={'/images/Logo.svg'}/>
+                    </div>
                 </div>
-                : 
-                <div>
-                {post.map((post) => {
-                  return(
-                      <div key={post._id} className={styles.post}>
-                     <Post post={post}></Post>
-                     </div>
-                  )
-                })}
+                <div className={styles.centerheader}>
+                    <div className={styles.searchbar}><Searchbar /></div>
                 </div>
-                 }
-
-                
+                    <div className={styles.rightheader}><Profilefeed/></div>
+            </div>
+            <div className={styles.content}>
+                <div className={styles.left}><List/></div>
+                <div className={styles.center}>
+                    <div className={styles.tagFeedButtons}>
+                        <button className={styles.tagFeedButton} onClick={() => setShowFilteredTag(false)}>alla</button>
+                        {tag.map((tag) => {
+                            return(
+                            <div key={tag._id}>
+                                <button className={styles.tagFeedButton} onClick={() => onClick(tag)}>{tag.value}</button>
+                            </div>)
+                        })}
+                        <button className={styles.tagFeedButtonExpand}>visa mer</button>
+                    </div>
+                    <div className={styles.firstinput}><Input /> </div>
+                    <div className={styles.feed}>
+                        <div className={styles.posts}>
+                            {showFilteredTag ? 
+                                <div>
+                                    {post.filter(post => post.tags.includes(pressedTags)).map((post) => (
+                                        <div key={post._id} className={styles.post}>
+                                        <Post post={post}></Post> 
+                                        </div>
+                                    ))}
+                                </div> : 
+                                <div>
+                                    {post.map((post) => {
+                                    return(
+                                        <div key={post._id} className={styles.post}>
+                                        <Post post={post}></Post>
+                                        </div>
+                                    )
+                                    })}
+                                </div>
+                            }
+                        </div>
+                    </div>
                 </div>
+                <div className={styles.right}>
+                    <FollowingTags/>
+                    <RecommendedTags/>
+                    <TipsForYou/>
+                </div>
+                <div className={styles.feedFooter}>
+                    <div className={styles.feedBtnArrowUp}><BtnArrowUp/></div>
+                    <Footer/>
                 </div>
             </div>
-            <div className={styles.feedFooter}>
-                <div className={styles.feedBtnArrowUp}>
-                <BtnArrowUp/></div>
-                <Footer/>
-            </div>
         </div>
-        </div>
-
     )
 }

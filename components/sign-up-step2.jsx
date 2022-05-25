@@ -55,7 +55,6 @@ export default function SignUpTwo() {
           <p className='error-message'>{errors.experience?.message}</p>
           <h3>Välj minst 5 taggar du är intresserad av</h3>
           <p>Genom att välja taggar du är intresserad av kan vi göra din upplevelse<br></br> på WEME mer personlig och maximera kunskapsutbytet!</p>
-          <ScrollbarTags></ScrollbarTags>
           <br></br>
           <br></br>
           <br></br>

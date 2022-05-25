@@ -57,7 +57,14 @@
     padding-left: 20px;
 
 }
-
+.refresh{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.refresh img{
+    height: 50px;
+}
 .profilefeed{
     z-index: 12;
 }

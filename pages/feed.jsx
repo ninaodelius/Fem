@@ -3,7 +3,7 @@ import styles from '/styles/feed.module.css'
 import List from "../components/list"
 import Searchbar from "../components/searchbar"
 import { db } from '../firebase/firebaseConfig'
-import { collection, addDoc, getDocs, getDoc } from 'firebase/firestore'
+import { collection, addDoc, getDocs, getDoc, query, orderBy } from 'firebase/firestore'
 import Post from '../components/post'
 import BtnArrowUp from '../components/btnArrowUp'
 import Footer from '../components/footer'
@@ -12,13 +12,18 @@ import React, { useState } from 'react';
 import FollowingTags from "../components/following-tags"
 import RecommendedTags from "../components/recommended-tags"
 import TipsForYou from "../components/tips-for-you"
+import axios from 'axios'
+import { SettingsInputCompositeSharp } from "@mui/icons-material"
 
 
 
 export const getServerSideProps = async() => {
-    const res = await getDocs(collection(db, "posts"))
-    const post = res.docs
-    .map((post) => post.data())
+    const q = query(collection(db, "posts"), orderBy('createdAt', 'desc'))
+    const querySnapshot = await getDocs(q)
+    const post = querySnapshot.docs.map(post => ({
+      id: post.id,
+      ...post.data()
+    }))
     const res1 = await getDocs(collection(db, "tags"))
     const tag = res1.docs
     .map((tag) => tag.data())
@@ -38,9 +43,7 @@ export const getServerSideProps = async() => {
 }
 
 export default function Feed({post, tag}){
-    post.sort(function(a,b){
-        return new Date(b.createdAt) - new Date(a.createdAt);
-      });
+    
 
     const [showFilteredTag, setShowFilteredTag] = useState(false)
 
@@ -51,6 +54,12 @@ export default function Feed({post, tag}){
         setShowFilteredTag(showFilteredTag => !showFilteredTag) }
         setPressedTags('')
         setPressedTags(tag.value)
+    }
+
+    function getData(){
+        axios.get(`/api/posts`).then(({data}) => {
+            
+        })
     }
 
     return(

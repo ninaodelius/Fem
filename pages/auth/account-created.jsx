@@ -16,7 +16,7 @@ export default function AccountCreated(){
             <img src={'/images/Woman3.png'}/>
             </div>
             <Button><Link href='/auth/sign-in' passHref>Logga in</Link></Button>
-            <Footer/>
+            
         </div>
         </div>
     )

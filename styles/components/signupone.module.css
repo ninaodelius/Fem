@@ -4,6 +4,9 @@
   z-index: 100;
   cursor: pointer;
 }
+.pagewrap{
+  padding-bottom: 80px;
+}
 
 .loginform {
   padding-top: 10vh;
@@ -59,7 +62,7 @@
     .buttoncontainer {
       display: flex;
       justify-content: center;
-      margin-bottom: 40px;
+      margin-bottom: 70px;
     }
     .checkboxcontainer{
       font-size: 14px;
@@ -95,7 +98,7 @@
       font-family: "Nunito";
       font-weight: 900;
       margin-top: 50px;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       color: #444444;
     }
     

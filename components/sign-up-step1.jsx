@@ -15,10 +15,10 @@ export default function SignUpOne() {
     
 
     const schema = yup.object().shape({
-      firstName: yup.string().required('Förnamn är nödvändigt').min(2, "Minimun 2 letters"),
-      lastName: yup.string().required('Efternamn är nödvändigt').min(2, "Minimun 2 letters"),
+      firstName: yup.string().required('Förnamn är nödvändigt').min(2, "Minimun 2 tecken"),
+      lastName: yup.string().required('Efternamn är nödvändigt').min(2, "Minimun 2 tecken"),
       email: yup.string().email().required('email är nödvändigt'),
-      password: yup.string().required('Lösenord är nödvändigt').min(10).max(25, "Maximum 15 letters"),
+      password: yup.string().required('Lösenord är nödvändigt').min(10).max(25, "Maximum 15 tecken"),
       terms: yup.bool().oneOf([true], 'Acceptera villkoren för att komma vidare')
 
     })
@@ -36,33 +36,32 @@ export default function SignUpOne() {
 
 
     const form = (
+      <div className={styles.pagewrap}>
     <div className={styles.loginform}>
       <img src={'/images/step1of3.png'}/>
         <h1 className={styles.title1}>Skapa konto!</h1>
         <div className={styles.form}>
 
-         <form onSubmit={handleSubmit(submitForm)}>
+         <form className={styles.form} onSubmit={handleSubmit(submitForm)}>
          <div className={styles.inputcontainer}>
             <label>
+              <h3>Förnamn</h3>
               <input type="text" id={styles.input} name="firstName" placeholder="Namn" {...register('firstName')} />
             </label> 
-          </div>
 
             <p className='error-message'>{errors.firstName?.message}</p>
-        <div className={styles.inputcontainer}>
             <label>
+            <h3>Efternamn</h3>
               <input type="text" id={styles.input} name="lastName" placeholder="Efternamn" {...register('lastName')}/>
             </label> 
-          </div>
           <p className='error-message'>{errors.lastName?.message}</p>
-        <div className={styles.inputcontainer}>
             <label>
+            <h3>E-mail</h3>
               <input type="text" id={styles.input} name="email" placeholder="E-mail" {...register('email')} />
             </label> 
-          </div>
           <p className='error-message'>{errors.email?.message}</p>
-          <div className={styles.inputcontainer}>
            <label>
+           <h3>Lösenord</h3>
              <input type="password" id={styles.input} name="password" placeholder="Lösenord" {...register('password')} />
            </label>
           </div>
@@ -78,6 +77,7 @@ export default function SignUpOne() {
           </div>
          </form>
       </div>
+    </div>
     </div>
     )
 

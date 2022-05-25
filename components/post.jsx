@@ -33,7 +33,7 @@ export default function Post({post}){
     }
     function deletePost() {
         axios.delete(`api/posts/${post.id}`)
-
+        setPopUpOptionsMenu(false)
     }
 
     const [sharePopup, setSharePopup] = useState(false);

@@ -12,6 +12,8 @@ import React, { useState } from 'react';
 import FollowingTags from "../components/following-tags"
 import RecommendedTags from "../components/recommended-tags"
 import TipsForYou from "../components/tips-for-you"
+import axios from 'axios'
+import { SettingsInputCompositeSharp } from "@mui/icons-material"
 
 
 
@@ -52,6 +54,12 @@ export default function Feed({post, tag}){
         setShowFilteredTag(showFilteredTag => !showFilteredTag) }
         setPressedTags('')
         setPressedTags(tag.value)
+    }
+
+    function getData(){
+        axios.get(`/api/posts`).then(({data}) => {
+            
+        })
     }
 
     return(
